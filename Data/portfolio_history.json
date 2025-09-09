@@ -1,0 +1,56 @@
+{
+  "daily_snapshots": [
+    {
+      "date": "2024-01-01",
+      "total_value": 10000.0,
+      "cash": 7000.0,
+      "holdings": {
+        "AAPL": {
+          "shares": 10,
+          "price": 150.0,
+          "value": 1500.0
+        },
+        "MSFT": {
+          "shares": 5,
+          "price": 300.0,
+          "value": 1500.0
+        }
+      }
+    },
+    {
+      "date": "2025-09-01",
+      "total_value": 11854.849999999999,
+      "cash": 7000.0,
+      "holdings": {
+        "AAPL": {
+          "shares": 10,
+          "price": 232.14,
+          "value": 2321.3999999999996
+        },
+        "MSFT": {
+          "shares": 5,
+          "price": 506.69,
+          "value": 2533.45
+        }
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2024-01-01",
+      "type": "buy",
+      "symbol": "AAPL",
+      "shares": 10,
+      "price": 150.0,
+      "total": 1500.0
+    },
+    {
+      "date": "2024-01-01",
+      "type": "buy",
+      "symbol": "MSFT",
+      "shares": 5,
+      "price": 300.0,
+      "total": 1500.0
+    }
+  ]
+}

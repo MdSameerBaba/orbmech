@@ -1,0 +1,18 @@
+{
+    "holdings": {
+        "AAPL": {
+            "shares": 10,
+            "avg_price": 150.00,
+            "invested": 1500.00,
+            "purchase_date": "2024-01-01"
+        },
+        "MSFT": {
+            "shares": 5,
+            "avg_price": 300.00,
+            "invested": 1500.00,
+            "purchase_date": "2024-01-01"
+        }
+    },
+    "cash": 7000.0,
+    "total_invested": 3000.0
+}

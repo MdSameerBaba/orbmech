@@ -1,0 +1,89 @@
+**Printing a Linked List in Reverse Order in C++**
+
+Here's an example implementation of a function that prints a linked list in reverse order in C++.
+
+### Code
+
+```cpp
+#include <iostream>
+
+// Node structure for the linked list
+struct Node {
+    int data;
+    Node* next;
+};
+
+// Function to create a new node
+Node* createNode(int value) {
+    Node* newNode = new Node();
+    newNode->data = value;
+    newNode->next = nullptr;
+    return newNode;
+}
+
+// Function to print the linked list in forward order
+void printForward(Node* head) {
+    Node* current = head;
+    while (current != nullptr) {
+        std::cout << current->data << " ";
+        current = current->next;
+    }
+    std::cout << std::endl;
+}
+
+// Function to print the linked list in reverse order
+void printReverse(Node* head) {
+    if (head == nullptr)
+        return;
+
+    printReverse(head->next);  // Recursively print the rest of the list
+    std::cout << head->data << " ";  // Print the current node's data
+}
+
+// Function to print the linked list in reverse order using a stack
+void printReverseStack(Node* head) {
+    Node* current = head;
+    std::stack<int> stack;
+
+    while (current != nullptr) {
+        stack.push(current->data);
+        current = current->next;
+    }
+
+    while (!stack.empty()) {
+        std::cout << stack.top() << " ";
+        stack.pop();
+    }
+    std::cout << std::endl;
+}
+
+// Example usage:
+int main() {
+    // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
+    Node* head = createNode(1);
+    head->next = createNode(2);
+    head->next->next = createNode(3);
+    head->next->next->next = createNode(4);
+    head->next->next->next->next = createNode(5);
+
+    std::cout << "Linked List (Forward): ";
+    printForward(head);
+
+    std::cout << "Linked List (Reverse): ";
+    printReverse(head);
+
+    std::cout << "Linked List (Reverse) using Stack: ";
+    printReverseStack(head);
+
+    return 0;
+}
+```
+
+### Explanation
+
+This code demonstrates two methods to print a linked list in reverse order:
+
+1.  **Recursive Method**: The `printReverse` function uses recursion to traverse the linked list in reverse order. It starts by printing the rest of the list and then prints the current node's data.
+2.  **Stack Method**: The `printReverseStack` function uses a stack to store the node data in reverse order. It pushes each node's data onto the stack and then pops the data from the stack to print it.
+
+Both methods print the linked list in reverse order, but the recursive method may cause a stack overflow for very large lists, while the stack method uses a stack to store the data, which can be more efficient for large lists.

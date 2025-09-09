@@ -1,0 +1,123 @@
+{
+  "platforms": {
+    "leetcode": {
+      "username": "sameerbaba2405",
+      "total_solved": 246,
+      "easy": {
+        "solved": 40,
+        "total": 800
+      },
+      "medium": {
+        "solved": 76,
+        "total": 1600
+      },
+      "hard": {
+        "solved": 7,
+        "total": 700
+      },
+      "contest_rating": 0,
+      "streak": 0
+    },
+    "codechef": {
+      "username": "sameerbaba2405",
+      "total_solved": 85,
+      "rating": 1654,
+      "stars": 8,
+      "contests_participated": 0,
+      "streak": 0
+    },
+    "codeforces": {
+      "username": "",
+      "total_solved": 0,
+      "rating": 0,
+      "rank": "Newbie",
+      "contests_participated": 0,
+      "streak": 0
+    },
+    "hackerrank": {
+      "username": "@sameerbaba2405",
+      "total_solved": 0,
+      "badges": 0,
+      "certificates": 0,
+      "streak": 0
+    }
+  },
+  "topics": {
+    "arrays": {
+      "solved": 0,
+      "total": 150,
+      "mastery": 0.0
+    },
+    "strings": {
+      "solved": 0,
+      "total": 100,
+      "mastery": 0.0
+    },
+    "linked_lists": {
+      "solved": 0,
+      "total": 80,
+      "mastery": 0.0
+    },
+    "trees": {
+      "solved": 0,
+      "total": 120,
+      "mastery": 0.0
+    },
+    "graphs": {
+      "solved": 0,
+      "total": 100,
+      "mastery": 0.0
+    },
+    "dynamic_programming": {
+      "solved": 0,
+      "total": 150,
+      "mastery": 0.0
+    },
+    "greedy": {
+      "solved": 0,
+      "total": 80,
+      "mastery": 0.0
+    },
+    "backtracking": {
+      "solved": 0,
+      "total": 60,
+      "mastery": 0.0
+    },
+    "binary_search": {
+      "solved": 0,
+      "total": 70,
+      "mastery": 0.0
+    },
+    "sorting": {
+      "solved": 0,
+      "total": 50,
+      "mastery": 0.0
+    }
+  },
+  "daily_activity": [
+    {
+      "date": "2025-01-01",
+      "problems_solved": 3,
+      "platforms_used": [
+        "leetcode",
+        "codeforces"
+      ],
+      "topics_practiced": [
+        "arrays",
+        "strings"
+      ],
+      "time_spent": 120
+    }
+  ],
+  "goals": {
+    "daily_target": 3,
+    "weekly_target": 20,
+    "monthly_target": 80,
+    "target_companies": [
+      "Google",
+      "Microsoft",
+      "Amazon"
+    ],
+    "interview_date": ""
+  }
+}

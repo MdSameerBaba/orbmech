@@ -1,0 +1,41 @@
+{
+  "current_mode": "project",
+  "available_modes": {
+    "general": {
+      "description": "General AI assistant mode",
+      "commands": [
+        "general queries",
+        "weather",
+        "jokes",
+        "conversations"
+      ]
+    },
+    "stock": {
+      "description": "Stock market analysis and portfolio tracking",
+      "commands": [
+        "portfolio",
+        "stock prices",
+        "market analysis",
+        "charts"
+      ]
+    },
+    "dsa": {
+      "description": "Data Structures & Algorithms learning assistant",
+      "commands": [
+        "progress",
+        "guides",
+        "problems",
+        "study plans"
+      ]
+    },
+    "project": {
+      "description": "Project management and tracking system",
+      "commands": [
+        "create project",
+        "track progress",
+        "deadlines",
+        "reminders"
+      ]
+    }
+  }
+}

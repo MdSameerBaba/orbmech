@@ -1,0 +1,305 @@
+{
+  "programming_language": "C++",
+  "guides": {
+    "arrays": {
+      "title": "Arrays & Two Pointers",
+      "youtube_videos": [
+        {
+          "title": "Arrays Complete Course",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=37E9ckMDdTk",
+          "duration": "2:30:00"
+        },
+        {
+          "title": "Two Pointer Technique",
+          "channel": "Love Babbar",
+          "url": "https://www.youtube.com/watch?v=OnLoX6Nhvmg",
+          "duration": "45:00"
+        },
+        {
+          "title": "Sliding Window Problems",
+          "channel": "Aditya Verma",
+          "url": "https://www.youtube.com/watch?v=GBuHSRDGZBY",
+          "duration": "1:15:00"
+        }
+      ],
+      "leetcode_problems": [
+        {
+          "name": "Two Sum",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/two-sum/"
+        },
+        {
+          "name": "Best Time to Buy and Sell Stock",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+        },
+        {
+          "name": "Maximum Subarray",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/maximum-subarray/"
+        },
+        {
+          "name": "Container With Most Water",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/container-with-most-water/"
+        },
+        {
+          "name": "3Sum",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/3sum/"
+        }
+      ],
+      "codechef_problems": [
+        {
+          "name": "LAPIN",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/LAPIN"
+        },
+        {
+          "name": "FLOW007",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/FLOW007"
+        },
+        {
+          "name": "SUMTRIAN",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/SUMTRIAN"
+        }
+      ]
+    },
+    "strings": {
+      "title": "String Manipulation & Pattern Matching",
+      "youtube_videos": [
+        {
+          "title": "String Algorithms Complete",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=GTJr8OvyEVQ",
+          "duration": "3:00:00"
+        },
+        {
+          "title": "KMP Algorithm",
+          "channel": "Aditya Verma",
+          "url": "https://www.youtube.com/watch?v=BXCEFAzhxGY",
+          "duration": "50:00"
+        },
+        {
+          "title": "String Problems DSA",
+          "channel": "Apna College",
+          "url": "https://www.youtube.com/watch?v=zWzOHWHbzHI",
+          "duration": "1:20:00"
+        }
+      ],
+      "leetcode_problems": [
+        {
+          "name": "Valid Anagram",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/valid-anagram/"
+        },
+        {
+          "name": "Longest Substring Without Repeating Characters",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+        },
+        {
+          "name": "Valid Parentheses",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/valid-parentheses/"
+        },
+        {
+          "name": "Group Anagrams",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/group-anagrams/"
+        }
+      ],
+      "codechef_problems": [
+        {
+          "name": "FLOW002",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/FLOW002"
+        },
+        {
+          "name": "FLOW017",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/FLOW017"
+        }
+      ]
+    },
+    "trees": {
+      "title": "Binary Trees & Binary Search Trees",
+      "youtube_videos": [
+        {
+          "title": "Binary Tree Complete Course",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=_SiwrPXG9-g",
+          "duration": "4:00:00"
+        },
+        {
+          "title": "Tree Traversals",
+          "channel": "Love Babbar",
+          "url": "https://www.youtube.com/watch?v=WLvU5EQVZqY",
+          "duration": "1:30:00"
+        },
+        {
+          "title": "BST Complete Playlist",
+          "channel": "Aditya Verma",
+          "url": "https://www.youtube.com/watch?v=YAdLFsTG70w",
+          "duration": "2:00:00"
+        }
+      ],
+      "leetcode_problems": [
+        {
+          "name": "Maximum Depth of Binary Tree",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+        },
+        {
+          "name": "Validate Binary Search Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/validate-binary-search-tree/"
+        },
+        {
+          "name": "Binary Tree Inorder Traversal",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+        },
+        {
+          "name": "Lowest Common Ancestor of a Binary Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+        }
+      ],
+      "codechef_problems": [
+        {
+          "name": "BTREE",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/BTREE"
+        },
+        {
+          "name": "TREEPATH",
+          "difficulty": "Hard",
+          "url": "https://www.codechef.com/problems/TREEPATH"
+        }
+      ]
+    },
+    "dynamic_programming": {
+      "title": "Dynamic Programming Mastery",
+      "youtube_videos": [
+        {
+          "title": "DP Complete Series",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=tyB0ztf0DNY",
+          "duration": "5:00:00"
+        },
+        {
+          "title": "DP Playlist",
+          "channel": "Aditya Verma",
+          "url": "https://www.youtube.com/watch?v=nqowUJzG-iM",
+          "duration": "8:00:00"
+        },
+        {
+          "title": "Dynamic Programming",
+          "channel": "Love Babbar",
+          "url": "https://www.youtube.com/watch?v=lVR2u9lsxl8",
+          "duration": "3:30:00"
+        }
+      ],
+      "leetcode_problems": [
+        {
+          "name": "Climbing Stairs",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/climbing-stairs/"
+        },
+        {
+          "name": "House Robber",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/house-robber/"
+        },
+        {
+          "name": "Coin Change",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/coin-change/"
+        },
+        {
+          "name": "Longest Increasing Subsequence",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+        },
+        {
+          "name": "Edit Distance",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/edit-distance/"
+        }
+      ],
+      "codechef_problems": [
+        {
+          "name": "FIBO",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/FIBO"
+        },
+        {
+          "name": "COINS",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/COINS"
+        }
+      ]
+    },
+    "graphs": {
+      "title": "Graph Theory & Algorithms",
+      "youtube_videos": [
+        {
+          "title": "Graph Series Complete",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=M3_pLsDdeuU",
+          "duration": "6:00:00"
+        },
+        {
+          "title": "Graph Algorithms",
+          "channel": "Love Babbar",
+          "url": "https://www.youtube.com/watch?v=5hPfm_uqXmw",
+          "duration": "4:00:00"
+        },
+        {
+          "title": "BFS DFS Complete",
+          "channel": "Apna College",
+          "url": "https://www.youtube.com/watch?v=uDWljP2PGmU",
+          "duration": "2:30:00"
+        }
+      ],
+      "leetcode_problems": [
+        {
+          "name": "Number of Islands",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/number-of-islands/"
+        },
+        {
+          "name": "Clone Graph",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/clone-graph/"
+        },
+        {
+          "name": "Course Schedule",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/course-schedule/"
+        },
+        {
+          "name": "Network Delay Time",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/network-delay-time/"
+        }
+      ],
+      "codechef_problems": [
+        {
+          "name": "FIRESC",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/FIRESC"
+        },
+        {
+          "name": "DIGJUMP",
+          "difficulty": "Hard",
+          "url": "https://www.codechef.com/problems/DIGJUMP"
+        }
+      ]
+    }
+  }
+}
