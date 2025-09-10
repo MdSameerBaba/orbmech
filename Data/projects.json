@@ -1,41 +1,180 @@
 {
-  "active_projects": [],
+  "active_projects": [
+    {
+      "id": 1,
+      "name": "TestRepo",
+      "description": "Test repository for GitHub integration",
+      "type": "software_development",
+      "created_date": "2025-09-10 22:24:57",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-10 22:24:57"
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-10 22:24:57"
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-10 22:24:57"
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-10 22:24:57"
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-10 22:24:57"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-10 22:24:57",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\TestRepo",
+      "github_repo": "",
+      "git_initialized": false
+    }
+  ],
   "completed_projects": [],
   "project_templates": {
     "software_development": {
-      "phases": ["Planning", "Design", "Development", "Testing", "Deployment"],
+      "phases": [
+        "Planning",
+        "Design",
+        "Development",
+        "Testing",
+        "Deployment"
+      ],
       "default_tasks": [
-        {"name": "Requirements Analysis", "phase": "Planning", "estimated_hours": 8},
-        {"name": "System Architecture", "phase": "Design", "estimated_hours": 12},
-        {"name": "Core Development", "phase": "Development", "estimated_hours": 40},
-        {"name": "Unit Testing", "phase": "Testing", "estimated_hours": 16},
-        {"name": "Production Deployment", "phase": "Deployment", "estimated_hours": 4}
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4
+        }
       ]
     },
     "research_project": {
-      "phases": ["Research", "Analysis", "Writing", "Review"],
+      "phases": [
+        "Research",
+        "Analysis",
+        "Writing",
+        "Review"
+      ],
       "default_tasks": [
-        {"name": "Literature Review", "phase": "Research", "estimated_hours": 20},
-        {"name": "Data Collection", "phase": "Research", "estimated_hours": 15},
-        {"name": "Data Analysis", "phase": "Analysis", "estimated_hours": 25},
-        {"name": "Draft Writing", "phase": "Writing", "estimated_hours": 30},
-        {"name": "Final Review", "phase": "Review", "estimated_hours": 10}
+        {
+          "name": "Literature Review",
+          "phase": "Research",
+          "estimated_hours": 20
+        },
+        {
+          "name": "Data Collection",
+          "phase": "Research",
+          "estimated_hours": 15
+        },
+        {
+          "name": "Data Analysis",
+          "phase": "Analysis",
+          "estimated_hours": 25
+        },
+        {
+          "name": "Draft Writing",
+          "phase": "Writing",
+          "estimated_hours": 30
+        },
+        {
+          "name": "Final Review",
+          "phase": "Review",
+          "estimated_hours": 10
+        }
       ]
     },
     "web_development": {
-      "phases": ["Planning", "Frontend", "Backend", "Integration", "Launch"],
+      "phases": [
+        "Planning",
+        "Frontend",
+        "Backend",
+        "Integration",
+        "Launch"
+      ],
       "default_tasks": [
-        {"name": "UI/UX Design", "phase": "Planning", "estimated_hours": 16},
-        {"name": "Frontend Development", "phase": "Frontend", "estimated_hours": 35},
-        {"name": "Backend API", "phase": "Backend", "estimated_hours": 30},
-        {"name": "Database Setup", "phase": "Backend", "estimated_hours": 12},
-        {"name": "Testing & Launch", "phase": "Launch", "estimated_hours": 8}
+        {
+          "name": "UI/UX Design",
+          "phase": "Planning",
+          "estimated_hours": 16
+        },
+        {
+          "name": "Frontend Development",
+          "phase": "Frontend",
+          "estimated_hours": 35
+        },
+        {
+          "name": "Backend API",
+          "phase": "Backend",
+          "estimated_hours": 30
+        },
+        {
+          "name": "Database Setup",
+          "phase": "Backend",
+          "estimated_hours": 12
+        },
+        {
+          "name": "Testing & Launch",
+          "phase": "Launch",
+          "estimated_hours": 8
+        }
       ]
     }
   },
   "notification_settings": {
     "daily_reminder": true,
-    "deadline_alerts": [7, 3, 1],
+    "deadline_alerts": [
+      7,
+      3,
+      1
+    ],
     "progress_check_interval": 24
   }
 }

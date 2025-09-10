@@ -1,6 +1,7 @@
 import subprocess
 import os
 import json
+import requests
 from datetime import datetime
 
 def run_git_command(command, cwd=None):
@@ -47,12 +48,18 @@ def create_github_repo(repo_name, description="", private=True):
     visibility = "--private" if private else "--public"
     desc_flag = f'--description "{description}"' if description else ""
     
-    command = f'gh repo create {repo_name} {visibility} {desc_flag} --confirm'
+    # Updated command without deprecated --confirm flag
+    command = f'gh repo create {repo_name} {visibility} {desc_flag}'
     success, stdout, stderr = run_git_command(command)
     
     if success:
         return True, f"GitHub repository '{repo_name}' created successfully"
     else:
+        # Check for specific error types
+        if "token has not been granted" in stderr.lower() or "scopes" in stderr.lower():
+            return False, f"❌ GitHub token missing required permissions.\n\nYour token needs 'repo' or 'public_repo' scope.\n\n🔧 To fix:\n1. Go to https://github.com/settings/tokens\n2. Edit your token or create new one\n3. Check 'repo' scope (full repository access)\n4. Update GITHUB_TOKEN in .env file\n5. Restart the application\n\nCurrent error: {stderr}"
+        elif "--confirm has been deprecated" in stderr:
+            return False, f"❌ GitHub CLI version issue. Command updated but still failing.\n\nError: {stderr}"
         return False, f"Failed to create GitHub repo: {stderr}"
 
 def add_remote_origin(project_path, repo_url):
@@ -118,8 +125,15 @@ def handle_git_command(command, project_data):
     project_name = project_data.get("name", "")
     project_path = project_data.get("local_path", "")
     
-    if not project_path or not os.path.exists(project_path):
+    if not project_path:
         return False, "Project path not found. Please set project directory first."
+    
+    # Create directory if it doesn't exist
+    if not os.path.exists(project_path):
+        try:
+            os.makedirs(project_path, exist_ok=True)
+        except Exception as e:
+            return False, f"Could not create directory {project_path}: {e}"
     
     command_lower = command.lower()
     

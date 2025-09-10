@@ -4,18 +4,14 @@ from dotenv import dotenv_values
 
 def setup_github_credentials():
     """Setup GitHub credentials for Git integration"""
-    print("🔧 GITHUB SETUP")
-    print("=" * 40)
-    
     env_vars = dotenv_values(".env")
     current_username = env_vars.get("GITHUB_USERNAME", "")
     current_token = env_vars.get("GITHUB_TOKEN", "")
     
+    # If credentials exist, use them automatically
     if current_username and current_token:
-        print(f"Current GitHub username: {current_username}")
-        update = input("Update GitHub credentials? (y/n): ").lower()
-        if update != 'y':
-            return True
+        print(f"✅ Using existing GitHub credentials for: {current_username}")
+        return True
     
     print("\n📋 To use GitHub integration, you need:")
     print("1. Your GitHub username")

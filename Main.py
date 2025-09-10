@@ -90,8 +90,11 @@ def ProcessQuery(Query: str):
         try: p = subprocess.Popen([sys.executable, r'Backend\ImageGeneration.py', prompt]); subprocesses.append(p)
         except Exception as e: print(f"Error starting ImageGeneration.py: {e}")
 
+    # Check for project commands first (higher priority)
+    is_project_cmd = any(d.startswith("project") for d in Decision)
+    
     automation_queries = [q for q in Decision if any(q.startswith(func) for func in Functions)]
-    if automation_queries: TaskExecution = True; run(Automation(automation_queries))
+    if automation_queries and not is_project_cmd: TaskExecution = True; run(Automation(automation_queries))
 
     if not TaskExecution and not ImageExecution:
         # Check for mode switching
@@ -152,6 +155,23 @@ def ProcessQuery(Query: str):
                     query = " ".join([" ".join(i.split()[1:]) for i in Decision if i.startswith("project")])
                 print(f"📈 Calling ProjectAgent with query: '{query}'")
                 Answer = ProjectAgent(query)
+                print(f"📈 ProjectAgent Response: {Answer[:200]}...")  # Debug: Show first 200 chars
+                
+                # Save to chat history
+                try:
+                    with open(r'Data\Chatlog.json', 'r', encoding='utf-8') as f:
+                        chat_log = json.load(f)
+                except (FileNotFoundError, json.JSONDecodeError):
+                    chat_log = []
+                
+                chat_log.append({"role": "user", "content": Query})
+                chat_log.append({"role": "assistant", "content": Answer})
+                
+                try:
+                    with open(r'Data\Chatlog.json', 'w', encoding='utf-8') as f:
+                        json.dump(chat_log, f, indent=4)
+                except IOError as e:
+                    print(f"❌ Error saving chat log: {e}")
             elif is_dsa:
                 if is_dsa_guide:
                     query = Query  # Use original query for guide requests

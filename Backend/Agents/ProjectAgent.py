@@ -260,7 +260,25 @@ def ProjectAgent(query: str):
     
     # Handle project creation
     if "create project" in query_lower or "new project" in query_lower:
-        return """🚀 CREATE NEW PROJECT
+        # Try to parse full project creation command
+        import re
+        
+        # Pattern to match: create project NAME with description DESC deadline DATE type TYPE
+        pattern = r"create project\s+([\w]+)(?:\s+with description\s+['\"]([^'\"]+)['\"])?(?:\s+deadline\s+(\d{4}-\d{2}-\d{2}))?(?:\s+type\s+(\w+))?"
+        match = re.search(pattern, query, re.IGNORECASE)
+        
+        if match:
+            name = match.group(1).strip()
+            description = match.group(2) or f"Project: {name}"
+            deadline = match.group(3) or "2024-12-31"
+            project_type = match.group(4) or "custom"
+            
+            # Create the project
+            result = create_project(name, description, deadline, project_type)
+            return result
+        else:
+            # Show help if parsing fails
+            return """🚀 CREATE NEW PROJECT
 
 To create a project, provide:
 • Project name
@@ -327,8 +345,26 @@ Or just say: "Create project Mobile App" and I'll guide you through the setup!""
         # Get current project (assume first active project for now)
         current_project = active_projects[0]
         
-        if "set path" in query_lower:
-            return """📁 SET PROJECT PATH
+        # Reload project data to get updated path
+        data = load_projects()
+        for project in data["active_projects"]:
+            if project["id"] == current_project["id"]:
+                current_project = project
+                break
+        
+        if "set path" in query_lower or "set project path" in query_lower:
+            # Parse path from command
+            import re
+            path_pattern = r"(?:set project path to|set path to|link project to)\s+(.+)"
+            match = re.search(path_pattern, query, re.IGNORECASE)
+            
+            if match:
+                project_path = match.group(1).strip()
+                # Set path for the first active project
+                result = set_project_path(current_project["id"], project_path)
+                return result
+            else:
+                return """📁 SET PROJECT PATH
 
 To link your project to a local directory:
 • "set project path to C:\\Users\\username\\MyProject"
@@ -352,6 +388,27 @@ Examples:
 • "Log work: 4 hours debugging"
 
 I'll track your time and update project progress!"""
+    
+    # Handle show projects
+    elif "show" in query_lower and "project" in query_lower:
+        active_projects = get_active_projects()
+        
+        if not active_projects:
+            return "📋 No active projects found. Create your first project with 'create project [name]'!"
+        
+        result = "📊 ACTIVE PROJECTS:\n\n"
+        for project in active_projects:
+            deadline = datetime.strptime(project["deadline"], "%Y-%m-%d")
+            days_left = (deadline - datetime.now()).days
+            
+            result += f"🔹 **{project['name']}** (ID: {project['id']})\n"
+            result += f"   📝 {project['description']}\n"
+            result += f"   📅 Deadline: {project['deadline']} ({days_left} days left)\n"
+            result += f"   📈 Progress: {project['progress']}%\n"
+            result += f"   ⏱️ Time spent: {project['time_spent']} hours\n"
+            result += f"   🏷️ Type: {project['type']}\n\n"
+        
+        return result
     
     else:
         # General project advice using AI

@@ -39,7 +39,7 @@ RULES:
    - 'stock (query)': For portfolio analysis, stock prices, or investment questions.
    - 'dsa (query)': For coding problems, algorithm practice, LeetCode, CodeChef, Codeforces, HackerRank progress, DSA guides, prep guides, study plans, arrays guide, trees guide, etc.
    - 'setup_dsa': To configure DSA platform usernames for tracking.
-   - 'project (query)': For project management, tracking progress, creating projects, deadlines, work logging, project dashboard.
+   - 'project (query)': For project management, tracking progress, creating projects with technologies (like Python, React, etc.), deadlines, work logging, project dashboard, creating GitHub repositories, Git operations.
    - 'setup_github': To configure GitHub credentials and authentication for Git integration.
    - 'mode (mode_name)': To switch between different assistant modes (general, stock, dsa, project).
    - 'exit': If the user indicates they want to end the conversation.
@@ -55,8 +55,10 @@ ChatHistory = [
     {"role": "assistant", "content": "general how are you?"},
     {"role": "user", "content": "open chrome and tell me about mahatma gandhi."},
     {"role": "assistant", "content": "open chrome, realtime tell me about mahatma gandhi."},
-    {"role": "user", "content": "open chrome and firefox"},
-    {"role": "assistant", "content": "open chrome, open firefox"},
+    {"role": "user", "content": "create new project ECommerceApp with Python and React"},
+    {"role": "assistant", "content": "project create new project ECommerceApp with Python and React"},
+    {"role": "user", "content": "create github repo for TestRepo"},
+    {"role": "assistant", "content": "project create github repo for TestRepo"},
     {"role": "user", "content": "email maria that the project is complete"},
     {"role": "assistant", "content": "mail maria about the project is complete"},
     {"role": "user", "content": "arrays guide"},
