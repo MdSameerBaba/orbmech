@@ -56,6 +56,22 @@
       "local_path": "C:\\Users\\mdsam\\Desktop\\TestRepo",
       "github_repo": "",
       "git_initialized": false
+    },
+    {
+      "id": 2,
+      "name": "MyNewApp",
+      "description": "Project: MyNewApp",
+      "type": "custom",
+      "created_date": "2025-09-22 22:40:35",
+      "deadline": "2024-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [],
+      "time_spent": 0,
+      "last_activity": "2025-09-22 22:40:35",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\MyNewApp",
+      "github_repo": "",
+      "git_initialized": false
     }
   ],
   "completed_projects": [],

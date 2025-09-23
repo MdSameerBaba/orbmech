@@ -251,6 +251,69 @@ def get_project_exit_warning():
     
     return warnings
 
+# Global variable to track current active project
+current_project_id = None
+
+def get_current_project():
+    """Get the currently selected project"""
+    global current_project_id
+    active_projects = get_active_projects()
+    
+    if current_project_id:
+        for project in active_projects:
+            if project["id"] == current_project_id:
+                return project
+    
+    # Default to project with ID 2 (MyNewApp) if available, otherwise first project
+    for project in active_projects:
+        if project["id"] == 2:  # MyNewApp
+            current_project_id = 2
+            return project
+    
+    # Fallback to first project
+    if active_projects:
+        current_project_id = active_projects[0]["id"]
+        return active_projects[0]
+    
+    return None
+
+def switch_to_project(project_identifier):
+    """Switch to a specific project by name or ID"""
+    global current_project_id
+    active_projects = get_active_projects()
+    
+    # Try to find by ID first
+    if str(project_identifier).isdigit():
+        project_id = int(project_identifier)
+        for project in active_projects:
+            if project["id"] == project_id:
+                current_project_id = project_id
+                return f"✅ Switched to project: {project['name']} (ID: {project_id})"
+    
+    # Try to find by name
+    for project in active_projects:
+        if project["name"].lower() == str(project_identifier).lower():
+            current_project_id = project["id"]
+            return f"✅ Switched to project: {project['name']} (ID: {project['id']})"
+    
+    # Project not found
+    available = ", ".join([f"{p['name']} (ID: {p['id']})" for p in active_projects])
+    return f"❌ Project '{project_identifier}' not found.\n\nAvailable projects: {available}"
+
+def validate_project_name(name):
+    """Check if project name already exists and suggest alternatives"""
+    active_projects = get_active_projects()
+    existing_names = [p["name"].lower() for p in active_projects]
+    
+    if name.lower() in existing_names:
+        # Suggest alternatives
+        suggestions = [f"{name}2", f"{name}_v2", f"New{name}", f"{name}App"]
+        available_suggestions = [s for s in suggestions if s.lower() not in existing_names]
+        
+        return False, f"❌ Project name '{name}' already exists.\n\n💡 Suggested alternatives:\n" + "\n".join([f"• {s}" for s in available_suggestions[:3]])
+    
+    return True, f"✅ Project name '{name}' is available."
+
 def ProjectAgent(query: str):
     """Main Project Agent function"""
     if not client:
@@ -258,8 +321,26 @@ def ProjectAgent(query: str):
     
     query_lower = query.lower()
     
-    # Handle project creation
-    if "create project" in query_lower or "new project" in query_lower:
+    # Handle project switching
+    if "switch to project" in query_lower or "select project" in query_lower:
+        import re
+        # Extract project identifier (name or ID)
+        switch_pattern = r"(?:switch to project|select project)\s+([\w\s]+)"
+        match = re.search(switch_pattern, query, re.IGNORECASE)
+        
+        if match:
+            project_identifier = match.group(1).strip()
+            return switch_to_project(project_identifier)
+        else:
+            active_projects = get_active_projects()
+            if not active_projects:
+                return "❌ No projects available. Create a project first."
+            
+            project_list = "\n".join([f"• {p['name']} (ID: {p['id']})" for p in active_projects])
+            return f"📋 AVAILABLE PROJECTS:\n\n{project_list}\n\nUse: 'switch to project [name]' or 'select project [ID]'"
+    
+    # Handle project creation with validation
+    elif "create project" in query_lower or "new project" in query_lower:
         # Try to parse full project creation command
         import re
         
@@ -273,8 +354,21 @@ def ProjectAgent(query: str):
             deadline = match.group(3) or "2024-12-31"
             project_type = match.group(4) or "custom"
             
+            # Validate project name first
+            is_valid, validation_msg = validate_project_name(name)
+            if not is_valid:
+                return validation_msg
+            
             # Create the project
             result = create_project(name, description, deadline, project_type)
+            
+            # Auto-switch to the new project
+            if "successfully" in result:
+                active_projects = get_active_projects()
+                new_project = active_projects[-1]  # Last created project
+                switch_to_project(new_project["id"])
+                result += f"\n\n🎯 Automatically switched to '{name}' project."
+            
             return result
         else:
             # Show help if parsing fails
@@ -342,8 +436,10 @@ Or just say: "Create project Mobile App" and I'll guide you through the setup!""
         if not active_projects:
             return "❌ No active projects found. Create a project first."
         
-        # Get current project (assume first active project for now)
-        current_project = active_projects[0]
+        # Get current project
+        current_project = get_current_project()
+        if not current_project:
+            return "❌ No project selected. Use 'switch to project [name]' first."
         
         # Reload project data to get updated path
         data = load_projects()
@@ -360,9 +456,9 @@ Or just say: "Create project Mobile App" and I'll guide you through the setup!""
             
             if match:
                 project_path = match.group(1).strip()
-                # Set path for the first active project
+                # Set path for the current project
                 result = set_project_path(current_project["id"], project_path)
-                return result
+                return f"📁 {result}\n\n🎯 Current project: {current_project['name']} (ID: {current_project['id']})"
             else:
                 return """📁 SET PROJECT PATH
 
@@ -396,18 +492,26 @@ I'll track your time and update project progress!"""
         if not active_projects:
             return "📋 No active projects found. Create your first project with 'create project [name]'!"
         
+        current_project = get_current_project()
+        current_id = current_project["id"] if current_project else None
+        
         result = "📊 ACTIVE PROJECTS:\n\n"
         for project in active_projects:
             deadline = datetime.strptime(project["deadline"], "%Y-%m-%d")
             days_left = (deadline - datetime.now()).days
             
-            result += f"🔹 **{project['name']}** (ID: {project['id']})\n"
+            # Mark current project
+            marker = "🎯 " if project["id"] == current_id else "🔹 "
+            status = " (CURRENT)" if project["id"] == current_id else ""
+            
+            result += f"{marker}**{project['name']}** (ID: {project['id']}){status}\n"
             result += f"   📝 {project['description']}\n"
             result += f"   📅 Deadline: {project['deadline']} ({days_left} days left)\n"
             result += f"   📈 Progress: {project['progress']}%\n"
             result += f"   ⏱️ Time spent: {project['time_spent']} hours\n"
             result += f"   🏷️ Type: {project['type']}\n\n"
         
+        result += "💡 Use 'switch to project [name]' to change current project."
         return result
     
     else:
