@@ -6,7 +6,6 @@ from groq import Groq
 import threading
 import time
 import warnings
-import re
 from .GitIntegration import handle_git_command, check_exit_warning, get_project_git_info
 from .GitHubSetup import setup_github_credentials, verify_github_setup, get_github_credentials
 import sys
@@ -30,9 +29,6 @@ except Exception as e:
     client = None
 
 PROJECTS_FILE = r"Data\projects.json"
-
-# Global state for current active project
-current_active_project = None
 
 # --- PROJECT MANAGEMENT FUNCTIONS ---
 def load_projects():
@@ -69,7 +65,7 @@ def create_project(name, description, deadline, project_type="custom"):
         "tasks": [],
         "time_spent": 0,
         "last_activity": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "local_path": f"C:\\Users\\mdsam\\Desktop\\{re.sub(r'[^a-zA-Z0-9\\s]', '', name).replace(' ', '_')}",
+        "local_path": "",
         "github_repo": "",
         "git_initialized": False
     }
@@ -292,7 +288,7 @@ def get_current_project():
 
 def switch_to_project(project_identifier):
     """Switch to a specific project by name or ID"""
-    global current_active_project
+    global current_project_id
     active_projects = get_active_projects()
     
     # Try to find by ID first
@@ -300,13 +296,13 @@ def switch_to_project(project_identifier):
         project_id = int(project_identifier)
         for project in active_projects:
             if project["id"] == project_id:
-                current_active_project = project
+                current_project_id = project_id
                 return f"✅ Switched to project: {project['name']} (ID: {project_id})"
     
     # Try to find by name
     for project in active_projects:
         if project["name"].lower() == str(project_identifier).lower():
-            current_active_project = project
+            current_project_id = project["id"]
             return f"✅ Switched to project: {project['name']} (ID: {project['id']})"
     
     # Project not found

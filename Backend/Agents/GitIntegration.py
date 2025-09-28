@@ -85,7 +85,7 @@ def push_to_github(project_path, branch="main", commit_message=None):
     
     for cmd in commands:
         success, stdout, stderr = run_git_command(cmd, cwd=project_path)
-        if not success and "nothing to commit" not in stderr:
+        if not success and "nothing to commit" not in stderr and "up-to-date" not in stderr:
             return False, f"Failed: {cmd} - {stderr}"
     
     return True, "Successfully pushed to GitHub"
@@ -146,6 +146,25 @@ def handle_git_command(command, project_data):
         description = project_data.get("description", "")
         return create_github_repo(project_name, description)
     
+    # Commit changes
+    elif "commit" in command_lower:
+        # Extract commit message if provided
+        import re
+        msg_match = re.search(r'commit[\s"\']+(.*?)(?:["\']|$)', command, re.IGNORECASE)
+        commit_msg = msg_match.group(1).strip() if msg_match else f"Update: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+        
+        commands = [
+            "git add .",
+            f'git commit -m "{commit_msg}"'
+        ]
+        
+        for cmd in commands:
+            success, stdout, stderr = run_git_command(cmd, cwd=project_path)
+            if not success and "nothing to commit" not in stderr:
+                return False, f"Commit failed: {stderr}"
+        
+        return True, f"✅ Changes committed: '{commit_msg}'"
+    
     # Push to GitHub
     elif "push" in command_lower:
         git_info = get_project_git_info(project_path)
@@ -156,11 +175,35 @@ def handle_git_command(command, project_data):
         if not git_info["has_remote"]:
             return False, "No remote repository configured. Create GitHub repo first."
         
-        if not git_info["has_changes"]:
-            return True, "No changes to push"
+        # Auto-commit if there are changes
+        if git_info["has_changes"]:
+            commit_msg = f"Auto-commit: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+            success, stdout, stderr = run_git_command(f'git add . && git commit -m "{commit_msg}"', cwd=project_path)
+            if not success and "nothing to commit" not in stderr:
+                return False, f"Auto-commit failed: {stderr}"
         
-        commit_msg = f"Project update: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
-        return push_to_github(project_path, git_info["branch"], commit_msg)
+        # Push to remote
+        success, stdout, stderr = run_git_command(f"git push origin {git_info['branch']}", cwd=project_path)
+        if success:
+            return True, f"✅ Successfully pushed to GitHub ({git_info['branch']} branch)"
+        else:
+            return False, f"Push failed: {stderr}"
+    
+    # Pull from GitHub
+    elif "pull" in command_lower:
+        git_info = get_project_git_info(project_path)
+        
+        if not git_info["is_git_repo"]:
+            return False, "Not a git repository. Initialize first with 'git init'"
+        
+        if not git_info["has_remote"]:
+            return False, "No remote repository configured."
+        
+        success, stdout, stderr = run_git_command(f"git pull origin {git_info['branch']}", cwd=project_path)
+        if success:
+            return True, f"✅ Successfully pulled from GitHub\n{stdout}"
+        else:
+            return False, f"Pull failed: {stderr}"
     
     # Check status
     elif "status" in command_lower:
@@ -169,16 +212,42 @@ def handle_git_command(command, project_data):
         if not git_info["is_git_repo"]:
             return True, "❌ Not a git repository"
         
-        status_msg = f"""📋 GIT STATUS:
+        # Get detailed status
+        success, status_output, _ = run_git_command("git status --short", cwd=project_path)
+        
+        status_msg = f"""📋 GIT STATUS for '{project_name}':
 • Repository: ✅ Initialized
 • Remote: {'✅ ' + git_info['remote_url'] if git_info['has_remote'] else '❌ Not configured'}
 • Branch: {git_info['branch']}
 • Changes: {'⚠️ Uncommitted changes' if git_info['has_changes'] else '✅ Clean working directory'}"""
         
+        if git_info["has_changes"] and status_output:
+            status_msg += f"\n\n📝 Modified files:\n{status_output}"
+        
         return True, status_msg
     
+    # Add specific files
+    elif "add" in command_lower:
+        # Extract file pattern if provided
+        import re
+        file_match = re.search(r'add\s+(.+)', command, re.IGNORECASE)
+        files = file_match.group(1).strip() if file_match else "."
+        
+        success, stdout, stderr = run_git_command(f"git add {files}", cwd=project_path)
+        if success:
+            return True, f"✅ Added files to staging: {files}"
+        else:
+            return False, f"Add failed: {stderr}"
+    
     else:
-        return False, "Unknown git command. Available: init, create repo, push, status"
+        return False, """❌ Unknown git command. Available commands:
+• 'git init' - Initialize repository
+• 'git status' - Check repository status
+• 'git add .' - Stage all changes
+• 'git commit "message"' - Commit changes
+• 'git push' - Push to GitHub (auto-commits if needed)
+• 'git pull' - Pull from GitHub
+• 'create github repo' - Create GitHub repository"""
 
 def check_exit_warning(project_data):
     """Check if project has uncommitted changes when exiting project mode"""

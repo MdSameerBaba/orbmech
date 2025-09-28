@@ -1,0 +1,204 @@
+{
+  "timestamp": "2025-09-26T22:04:28.716038",
+  "summary": {
+    "total_tests": 29,
+    "passed": 29,
+    "failed": 0,
+    "warnings": 0,
+    "success_rate": 100.0
+  },
+  "detailed_results": {
+    "environment": [
+      {
+        "test": ".env Configuration",
+        "status": "PASS",
+        "message": "All required environment variables present",
+        "timestamp": "2025-09-26T22:04:06.158748"
+      },
+      {
+        "test": "Import groq",
+        "status": "PASS",
+        "message": "Groq API client available",
+        "timestamp": "2025-09-26T22:04:07.620864"
+      },
+      {
+        "test": "Import pygame",
+        "status": "PASS",
+        "message": "Audio system available",
+        "timestamp": "2025-09-26T22:04:08.313877"
+      },
+      {
+        "test": "Import PyQt5",
+        "status": "PASS",
+        "message": "GUI framework available",
+        "timestamp": "2025-09-26T22:04:08.321580"
+      },
+      {
+        "test": "Import yfinance",
+        "status": "PASS",
+        "message": "Stock data available",
+        "timestamp": "2025-09-26T22:04:11.321574"
+      },
+      {
+        "test": "Import requests",
+        "status": "PASS",
+        "message": "HTTP requests available",
+        "timestamp": "2025-09-26T22:04:11.321574"
+      },
+      {
+        "test": "Import bs4",
+        "status": "PASS",
+        "message": "Web scraping available",
+        "timestamp": "2025-09-26T22:04:11.321574"
+      }
+    ],
+    "core_system": [
+      {
+        "test": "Decision Making",
+        "status": "PASS",
+        "message": "Query classified as: ['general how are you today?']",
+        "timestamp": "2025-09-26T22:04:13.385944"
+      },
+      {
+        "test": "Mode Manager",
+        "status": "PASS",
+        "message": "Current mode: project",
+        "timestamp": "2025-09-26T22:04:13.390511"
+      },
+      {
+        "test": "Shared Services",
+        "status": "PASS",
+        "message": "Communication queues initialized",
+        "timestamp": "2025-09-26T22:04:13.392042"
+      }
+    ],
+    "general_mode": [
+      {
+        "test": "Chatbot",
+        "status": "PASS",
+        "message": "Response length: 256 chars",
+        "timestamp": "2025-09-26T22:04:14.697403"
+      },
+      {
+        "test": "Automation",
+        "status": "PASS",
+        "message": "Automation module loaded",
+        "timestamp": "2025-09-26T22:04:17.897024"
+      },
+      {
+        "test": "Realtime Search",
+        "status": "PASS",
+        "message": "Search engine responding",
+        "timestamp": "2025-09-26T22:04:19.547129"
+      },
+      {
+        "test": "File Reader",
+        "status": "PASS",
+        "message": "PDF processing module loaded",
+        "timestamp": "2025-09-26T22:04:20.837024"
+      }
+    ],
+    "stock_mode": [
+      {
+        "test": "Stock Price Fetch",
+        "status": "PASS",
+        "message": "AAPL price: $255.52",
+        "timestamp": "2025-09-26T22:04:22.776617"
+      },
+      {
+        "test": "Portfolio Loading",
+        "status": "PASS",
+        "message": "Portfolio loaded with 2 holdings",
+        "timestamp": "2025-09-26T22:04:22.777659"
+      },
+      {
+        "test": "Stock Agent",
+        "status": "PASS",
+        "message": "Stock agent responding",
+        "timestamp": "2025-09-26T22:04:23.235654"
+      }
+    ],
+    "dsa_mode": [
+      {
+        "test": "DSA Agent",
+        "status": "PASS",
+        "message": "DSA agent responding",
+        "timestamp": "2025-09-26T22:04:24.998386"
+      },
+      {
+        "test": "DSA Data File (dsa_progress.json)",
+        "status": "PASS",
+        "message": "Data file exists",
+        "timestamp": "2025-09-26T22:04:24.998386"
+      },
+      {
+        "test": "DSA Data File (dsa_study_guides.json)",
+        "status": "PASS",
+        "message": "Data file exists",
+        "timestamp": "2025-09-26T22:04:24.998386"
+      }
+    ],
+    "project_mode": [
+      {
+        "test": "Project Agent",
+        "status": "PASS",
+        "message": "Project agent responding",
+        "timestamp": "2025-09-26T22:04:25.900922"
+      },
+      {
+        "test": "Git Integration",
+        "status": "PASS",
+        "message": "Git available: git version 2.47.1.windows.2",
+        "timestamp": "2025-09-26T22:04:25.977081"
+      }
+    ],
+    "voice_tts": [
+      {
+        "test": "Text-to-Speech",
+        "status": "PASS",
+        "message": "TTS module loaded",
+        "timestamp": "2025-09-26T22:04:26.308923"
+      },
+      {
+        "test": "Speech-to-Text",
+        "status": "PASS",
+        "message": "STT module loaded",
+        "timestamp": "2025-09-26T22:04:26.724774"
+      },
+      {
+        "test": "Audio System",
+        "status": "PASS",
+        "message": "Pygame audio system working",
+        "timestamp": "2025-09-26T22:04:28.538086"
+      }
+    ],
+    "gui": [
+      {
+        "test": "GUI Import",
+        "status": "PASS",
+        "message": "GUI module loaded successfully",
+        "timestamp": "2025-09-26T22:04:28.711362"
+      },
+      {
+        "test": "GUI Resource (activate.wav)",
+        "status": "PASS",
+        "message": "Resource exists",
+        "timestamp": "2025-09-26T22:04:28.711362"
+      },
+      {
+        "test": "GUI Resource (Graphics)",
+        "status": "PASS",
+        "message": "Resource exists",
+        "timestamp": "2025-09-26T22:04:28.711362"
+      },
+      {
+        "test": "GUI Resource (Files)",
+        "status": "PASS",
+        "message": "Resource exists",
+        "timestamp": "2025-09-26T22:04:28.711362"
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": []
+}

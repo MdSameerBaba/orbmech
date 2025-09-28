@@ -15,7 +15,7 @@ except Exception as e:
 
 funcs = [
     "exit", "general", "realtime", "open", "close", "play", "generate",
-    "system", "content", "google search", "youtube search", "remainder", "mail", "stock", "dsa", "setup_dsa", "mode", "project", "setup_github"
+    "system", "content", "google search", "youtube search", "remainder", "mail", "stock", "dsa", "setup_dsa", "mode", "project", "setup_github", "reminder"
 ]
   
 # --- IMPROVEMENT: A slightly more robust preamble ---
@@ -39,8 +39,9 @@ RULES:
    - 'stock (query)': For portfolio analysis, stock prices, or investment questions.
    - 'dsa (query)': For coding problems, algorithm practice, LeetCode, CodeChef, Codeforces, HackerRank progress, DSA guides, prep guides, study plans, arrays guide, trees guide, etc.
    - 'setup_dsa': To configure DSA platform usernames for tracking.
-   - 'project (query)': For project management, tracking progress, creating projects with technologies (like Python, React, etc.), deadlines, work logging, project dashboard, creating GitHub repositories, Git operations.
+   - 'project (query)': For project management, tracking progress, creating projects with technologies (like Python, React, etc.), deadlines, work logging, project dashboard, creating GitHub repositories, Git operations (git init, git commit, git push, git pull, git status, git add), and SWITCHING BETWEEN PROJECTS (switch to ProjectName, select project).
    - 'setup_github': To configure GitHub credentials and authentication for Git integration.
+   - 'reminder (query)': For setting reminders, alarms, scheduling tasks, or managing reminder system (set reminder, remind me, list reminders, start/stop reminders).
    - 'mode (mode_name)': To switch between different assistant modes (general, stock, dsa, project).
    - 'exit': If the user indicates they want to end the conversation.
 
@@ -67,6 +68,10 @@ ChatHistory = [
     {"role": "assistant", "content": "project switch to project MyApp"},
     {"role": "user", "content": "select project 2"},
     {"role": "assistant", "content": "project select project 2"},
+    {"role": "user", "content": "switch to NEXUS Test Project"},
+    {"role": "assistant", "content": "project switch to NEXUS Test Project"},
+    {"role": "user", "content": "switch to TestRepo"},
+    {"role": "assistant", "content": "project switch to TestRepo"},
     {"role": "user", "content": "git init"},
     {"role": "assistant", "content": "project git init"},
     {"role": "user", "content": "git status"},
@@ -77,6 +82,31 @@ ChatHistory = [
     {"role": "assistant", "content": "project create github repo"},
     {"role": "user", "content": "create github repository"},
     {"role": "assistant", "content": "project create github repository"},
+    {"role": "user", "content": "git commit with message fix bug"},
+    {"role": "assistant", "content": "project git commit with message fix bug"},
+    {"role": "user", "content": "current project"},
+    {"role": "assistant", "content": "project current project"},
+    {"role": "user", "content": "project status"},
+    {"role": "assistant", "content": "project project status"},
+    {"role": "user", "content": "active project"},
+    {"role": "assistant", "content": "project active project"},
+    {"role": "user", "content": "show current project"},
+    {"role": "assistant", "content": "project show current project"},
+    {"role": "user", "content": "what is my current project"},
+    {"role": "assistant", "content": "project what is my current project"},
+    {"role": "user", "content": "set reminder to call mom at 3pm"},
+    {"role": "assistant", "content": "reminder set reminder to call mom at 3pm"},
+    {"role": "user", "content": "remind me to exercise in 2 hours"},
+    {"role": "assistant", "content": "reminder remind me to exercise in 2 hours"},
+    {"role": "user", "content": "list my reminders"},
+    {"role": "assistant", "content": "reminder list my reminders"},
+    {"role": "assistant", "content": "project git commit with message fix bug"},
+    {"role": "user", "content": "push my changes"},
+    {"role": "assistant", "content": "project push my changes"},
+    {"role": "user", "content": "git pull"},
+    {"role": "assistant", "content": "project git pull"},
+    {"role": "user", "content": "check git status"},
+    {"role": "assistant", "content": "project check git status"},
     {"role": "user", "content": "bye nexus"},
     {"role": "assistant", "content": "exit"}
 ]

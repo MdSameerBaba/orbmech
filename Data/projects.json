@@ -63,13 +63,273 @@
       "description": "Project: MyNewApp",
       "type": "custom",
       "created_date": "2025-09-22 22:40:35",
-      "deadline": "2024-12-31",
+      "deadline": "2025-12-31",
       "status": "active",
       "progress": 0,
       "tasks": [],
       "time_spent": 0,
       "last_activity": "2025-09-22 22:40:35",
       "local_path": "C:\\Users\\mdsam\\Desktop\\MyNewApp",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 3,
+      "name": "TestApp",
+      "description": "Project: TestApp",
+      "type": "custom",
+      "created_date": "2025-09-26 22:08:57",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [],
+      "time_spent": 0,
+      "last_activity": "2025-09-26 22:08:57",
+      "local_path": "",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 4,
+      "name": "NEXUS Test Project",
+      "description": "Project: NEXUS Test Project",
+      "type": "software_development",
+      "created_date": "2025-09-26 23:23:21",
+      "deadline": "2025-12-01",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-26 23:23:21"
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-26 23:23:21"
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-26 23:23:21"
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-26 23:23:21"
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-26 23:23:21"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-26 23:23:21",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\NEXUS_Test_Project",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 5,
+      "name": "VS Code Test",
+      "description": "Testing VS Code integration",
+      "type": "software_development",
+      "created_date": "2025-09-27 11:01:46",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:01:46"
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:01:46"
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:01:46"
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:01:46"
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:01:46"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-27 11:01:46",
+      "local_path": "",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 6,
+      "name": "Test Integration Project",
+      "description": "Full integration test",
+      "type": "software_development",
+      "created_date": "2025-09-27 11:04:46",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:04:46"
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:04:46"
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:04:46"
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:04:46"
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:04:46"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-27 11:04:46",
+      "local_path": "",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 7,
+      "name": "Path_Test_Project",
+      "description": "Project: Path_Test_Project",
+      "type": "custom",
+      "created_date": "2025-09-27 11:06:22",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [],
+      "time_spent": 0,
+      "last_activity": "2025-09-27 11:06:22",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\PathTestProject",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 8,
+      "name": "Final Test Project",
+      "description": "Complete integration test",
+      "type": "software_development",
+      "created_date": "2025-09-27 11:08:35",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:08:35"
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:08:35"
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:08:35"
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:08:35"
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-27 11:08:35"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-27 11:08:35",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\FinalTestProject",
       "github_repo": "",
       "git_initialized": false
     }

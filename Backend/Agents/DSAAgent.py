@@ -8,6 +8,11 @@ from dotenv import dotenv_values
 from groq import Groq
 import requests
 from bs4 import BeautifulSoup
+import warnings
+
+# Suppress matplotlib font warnings
+warnings.filterwarnings("ignore", category=UserWarning, message=".*missing from font.*")
+plt.rcParams['font.family'] = ['DejaVu Sans', 'Arial', 'sans-serif']
 
 # --- CONFIGURATION ---
 env_vars = dotenv_values(".env")
@@ -544,6 +549,41 @@ Say: "set language to Python" (or your preferred language)"""
             return f"✅ Language preference set to {lang}! All future DSA guides will focus on {lang}."
         else:
             return "❌ Failed to update language preference."
+    
+    elif "analyze code" in query_lower or "code review" in query_lower or "code quality" in query_lower:
+        try:
+            from Backend.code_quality_analyzer import DSACodeAnalyzer
+            
+            # Ask for code input
+            return """📝 **CODE QUALITY ANALYZER**
+
+Please provide your code for analysis. You can:
+
+1. **Paste your code directly** in the next message
+2. **Specify problem name** for context (optional)
+3. **Mention language** if not Python
+
+Example:
+```python
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    return None
+```
+
+I'll analyze:
+• ⏱️ Time complexity
+• 🧠 Code complexity
+• 📊 Maintainability score
+• 💡 Optimization suggestions
+• 🎯 Overall rating
+
+**Ready for your code!**"""
+            
+        except ImportError:
+            return "❌ Code quality analyzer not available. Please install required dependencies."
     
     elif "add" in query_lower or "log" in query_lower:
         return """To log your DSA progress, tell me:
