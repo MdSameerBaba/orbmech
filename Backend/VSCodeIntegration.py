@@ -5,6 +5,9 @@ import os
 import json
 import subprocess
 from datetime import datetime
+import sys
+sys.path.append(os.path.dirname(__file__))
+from ProjectContext import load_current_project_context, get_current_project_path
 
 class VSCodeProjectManager:
     """Manages active VS Code projects and provides contextual assistance"""
@@ -62,11 +65,13 @@ class VSCodeProjectManager:
     
     def get_contextual_git_commands(self):
         """Get Git commands relevant to current project"""
-        if not self.current_project:
+        # Use persistent context instead of self.current_project
+        current_project = load_current_project_context()
+        if not current_project:
             return "⚠️ No active project set. Use 'switch to [project_name]' first."
             
-        project_name = self.current_project['name']
-        project_path = self.get_current_project_path()
+        project_name = current_project['name']
+        project_path = get_current_project_path()
         
         return f"""🔄 **Git Commands for {project_name}**
 
@@ -84,18 +89,20 @@ class VSCodeProjectManager:
 • `switch branch main` - Switch to main branch
 
 **Project Path:** `{project_path}`
-**Git Integration:** {'✅ Active' if self.current_project.get('git_initialized') else '❌ Not initialized'}"""
+**Git Integration:** {'✅ Active' if current_project.get('git_initialized') else '❌ Not initialized'}"""
     
     def execute_contextual_git_command(self, command):
         """Execute Git command in current project context"""
-        if not self.current_project:
+        # Use persistent context instead of self.current_project
+        current_project = load_current_project_context()
+        if not current_project:
             return False, "No active project set. Use 'switch to [project_name]' first."
             
-        project_path = self.get_current_project_path()
+        project_path = get_current_project_path()
         
         # Ensure we're in a git repository
         if not os.path.exists(os.path.join(project_path, '.git')):
-            return False, f"Project '{self.current_project['name']}' is not a Git repository. Use 'git init' first."
+            return False, f"Project '{current_project['name']}' is not a Git repository. Use 'git init' first."
         
         try:
             result = subprocess.run(
@@ -199,6 +206,10 @@ def handle_vscode_integration(query):
         elif query_lower in ["pull", "git pull"]:
             success, output = vscode_manager.execute_contextual_git_command("git pull")
             return f"⬇️ **Pulled from remote**\n```\n{output}\n```" if success else f"❌ {output}"
+        
+        elif query_lower in ["git init", "init"]:
+            # Special handling for git init - don't check if repo exists, just initialize
+            return None  # Let ProjectAgent handle git init
         
         else:
             # Generic git command

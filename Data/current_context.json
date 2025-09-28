@@ -1,0 +1,20 @@
+{
+  "current_project": {
+    "id": 13,
+    "name": "NEXUS Demo App v2",
+    "description": "testing complete GitHub integration",
+    "type": "custom",
+    "created_date": "2025-09-28 17:25:49",
+    "deadline": "2025-12-31",
+    "status": "active",
+    "progress": 0,
+    "tasks": [],
+    "time_spent": 0,
+    "last_activity": "2025-09-28 17:25:49",
+    "local_path": "C:\\Users\\mdsam\\Desktop\\NEXUS_Demo_App_v2",
+    "github_repo": "",
+    "git_initialized": false
+  },
+  "last_updated": "2025-09-28T17:25:49.511895",
+  "session_id": "20250928_172549"
+}

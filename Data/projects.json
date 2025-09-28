@@ -332,6 +332,168 @@
       "local_path": "C:\\Users\\mdsam\\Desktop\\FinalTestProject",
       "github_repo": "",
       "git_initialized": false
+    },
+    {
+      "id": 9,
+      "name": "Test Directory Creation",
+      "description": "Project: Test Directory Creation",
+      "type": "custom",
+      "created_date": "2025-09-28 13:07:11",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 13:07:11",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\Test_Directory_Creation",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 10,
+      "name": "NEXUS Feature Demo",
+      "description": "Complete feature demonstration project",
+      "type": "software_development",
+      "created_date": "2025-09-28 13:33:52",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "Requirements Analysis",
+          "phase": "Planning",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:33:52"
+        },
+        {
+          "name": "System Architecture",
+          "phase": "Design",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:33:52"
+        },
+        {
+          "name": "Core Development",
+          "phase": "Development",
+          "estimated_hours": 40,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:33:52"
+        },
+        {
+          "name": "Unit Testing",
+          "phase": "Testing",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:33:52"
+        },
+        {
+          "name": "Production Deployment",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:33:52"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 13:33:52",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\NEXUS_Feature_Demo",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 11,
+      "name": "My Awesome Web App",
+      "description": "A modern web application built with React and Node.js",
+      "type": "web_development",
+      "created_date": "2025-09-28 13:42:10",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [
+        {
+          "name": "UI/UX Design",
+          "phase": "Planning",
+          "estimated_hours": 16,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:42:10"
+        },
+        {
+          "name": "Frontend Development",
+          "phase": "Frontend",
+          "estimated_hours": 35,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:42:10"
+        },
+        {
+          "name": "Backend API",
+          "phase": "Backend",
+          "estimated_hours": 30,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:42:10"
+        },
+        {
+          "name": "Database Setup",
+          "phase": "Backend",
+          "estimated_hours": 12,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:42:10"
+        },
+        {
+          "name": "Testing & Launch",
+          "phase": "Launch",
+          "estimated_hours": 8,
+          "actual_hours": 0,
+          "status": "pending",
+          "created_date": "2025-09-28 13:42:10"
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 13:42:10",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\My_Awesome_Web_App",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 12,
+      "name": "NEXUS Demo App",
+      "description": "testing complete GitHub integration",
+      "type": "custom",
+      "created_date": "2025-09-28 17:24:01",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 17:24:01",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\NEXUS_Demo_App",
+      "github_repo": "",
+      "git_initialized": false
+    },
+    {
+      "id": 13,
+      "name": "NEXUS Demo App v2",
+      "description": "testing complete GitHub integration",
+      "type": "custom",
+      "created_date": "2025-09-28 17:25:49",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 0,
+      "tasks": [],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 17:25:49",
+      "local_path": "C:\\Users\\mdsam\\Desktop\\NEXUS_Demo_App_v2",
+      "github_repo": "",
+      "git_initialized": false
     }
   ],
   "completed_projects": [],

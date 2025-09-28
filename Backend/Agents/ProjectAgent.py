@@ -13,6 +13,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from VSCodeIntegration import handle_vscode_integration
+from Backend.ProjectContext import save_current_project_context, load_current_project_context, get_current_project_path
 
 # Suppress matplotlib font warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*missing from font.*")
@@ -31,8 +32,17 @@ except Exception as e:
 
 PROJECTS_FILE = r"Data\projects.json"
 
-# Global state for current active project
+# Global variables for project context
 current_active_project = None
+
+# Initialize with saved project context on module load
+try:
+    saved_project = load_current_project_context()
+    if saved_project:
+        current_active_project = saved_project
+        print(f"🔄 Loaded project context: {saved_project.get('name', 'Unknown')}")
+except Exception as e:
+    print(f"⚠️ Could not load saved project context: {e}")
 
 # --- PROJECT MANAGEMENT FUNCTIONS ---
 def load_projects():
@@ -54,8 +64,13 @@ def save_projects(data):
         return False
 
 def create_project(name, description, deadline, project_type="custom"):
-    """Create a new project"""
+    """Create a new project with physical directory"""
+    import os
     data = load_projects()
+    
+    # Generate safe directory name
+    safe_name = re.sub(r'[^a-zA-Z0-9\s]', '', name).replace(' ', '_')
+    local_path = f"C:\\Users\\mdsam\\Desktop\\{safe_name}"
     
     project = {
         "id": len(data["active_projects"]) + len(data["completed_projects"]) + 1,
@@ -69,10 +84,32 @@ def create_project(name, description, deadline, project_type="custom"):
         "tasks": [],
         "time_spent": 0,
         "last_activity": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "local_path": f"C:\\Users\\mdsam\\Desktop\\{re.sub(r'[^a-zA-Z0-9\\s]', '', name).replace(' ', '_')}",
+        "local_path": local_path,
         "github_repo": "",
         "git_initialized": False
     }
+    
+    # Create the physical directory
+    try:
+        os.makedirs(local_path, exist_ok=True)
+        print(f"📁 Created project directory: {local_path}")
+        
+        # Create a basic README.md file
+        readme_path = os.path.join(local_path, "README.md")
+        with open(readme_path, 'w', encoding='utf-8') as f:
+            f.write(f"# {name}\n\n")
+            f.write(f"{description}\n\n")
+            f.write(f"**Project Type:** {project_type}\n")
+            f.write(f"**Created:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"**Deadline:** {deadline}\n\n")
+            f.write("## Project Structure\n\n")
+            f.write("Created by NEXUS ProjectAgent\n")
+        
+        print(f"📄 Created README.md in project directory")
+        
+    except Exception as e:
+        print(f"❌ Error creating project directory: {e}")
+        return f"❌ Failed to create project directory: {e}"
     
     # Add template tasks if available
     templates = data.get("project_templates", {})
@@ -91,12 +128,48 @@ def create_project(name, description, deadline, project_type="custom"):
     data["active_projects"].append(project)
     save_projects(data)
     
-    return f"✅ Project '{name}' created successfully! ID: {project['id']}"
+    # Automatically switch to new project and save context
+    global current_active_project
+    current_active_project = project
+    save_current_project_context(project)
+    
+    return f"✅ Project '{name}' created successfully! ID: {project['id']}\n📁 Directory: {local_path}\n🎯 Switched to this project as active"
 
 def get_active_projects():
     """Get all active projects"""
     data = load_projects()
     return data.get("active_projects", [])
+
+def create_missing_directories():
+    """Create directories for existing projects that don't have physical folders"""
+    import os
+    data = load_projects()
+    created_dirs = []
+    
+    for project in data.get("active_projects", []):
+        local_path = project.get("local_path", "")
+        if local_path and not os.path.exists(local_path):
+            try:
+                os.makedirs(local_path, exist_ok=True)
+                
+                # Create a basic README.md if it doesn't exist
+                readme_path = os.path.join(local_path, "README.md")
+                if not os.path.exists(readme_path):
+                    with open(readme_path, 'w', encoding='utf-8') as f:
+                        f.write(f"# {project['name']}\n\n")
+                        f.write(f"{project.get('description', 'No description')}\n\n")
+                        f.write(f"**Project Type:** {project.get('type', 'custom')}\n")
+                        f.write(f"**Created:** {project.get('created_date', 'Unknown')}\n")
+                        f.write(f"**Deadline:** {project.get('deadline', 'Not set')}\n\n")
+                        f.write("## Project Structure\n\n")
+                        f.write("Created by NEXUS ProjectAgent\n")
+                
+                created_dirs.append(f"📁 {project['name']}: {local_path}")
+                
+            except Exception as e:
+                print(f"❌ Error creating directory for {project['name']}: {e}")
+    
+    return created_dirs
 
 def update_project_progress(project_id, progress):
     """Update project progress"""
@@ -265,33 +338,27 @@ def get_project_exit_warning():
     return warnings
 
 # Global variable to track current active project
-current_project_id = None
-
 def get_current_project():
-    """Get the currently selected project"""
-    global current_project_id
-    active_projects = get_active_projects()
-    
-    if current_project_id:
+    """Get the currently selected project using persistent context"""
+    # First try to load from persistent context
+    current_project = load_current_project_context()
+    if current_project:
+        # Verify project still exists in active projects
+        active_projects = get_active_projects()
         for project in active_projects:
-            if project["id"] == current_project_id:
+            if project["id"] == current_project["id"]:
                 return project
     
-    # Default to project with ID 2 (MyNewApp) if available, otherwise first project
-    for project in active_projects:
-        if project["id"] == 2:  # MyNewApp
-            current_project_id = 2
-            return project
+    # Fallback to global variable
+    global current_active_project
+    if current_active_project:
+        return current_active_project
     
-    # Fallback to first project
-    if active_projects:
-        current_project_id = active_projects[0]["id"]
-        return active_projects[0]
-    
+    # If no project selected, return None
     return None
 
 def switch_to_project(project_identifier):
-    """Switch to a specific project by name or ID"""
+    """Switch to a specific project by name or ID with persistent context"""
     global current_active_project
     active_projects = get_active_projects()
     
@@ -301,13 +368,15 @@ def switch_to_project(project_identifier):
         for project in active_projects:
             if project["id"] == project_id:
                 current_active_project = project
-                return f"✅ Switched to project: {project['name']} (ID: {project_id})"
+                save_current_project_context(project)  # Persist context
+                return f"✅ Switched to project: {project['name']} (ID: {project_id})\n📁 Path: {project.get('local_path', 'Not set')}"
     
     # Try to find by name
     for project in active_projects:
         if project["name"].lower() == str(project_identifier).lower():
             current_active_project = project
-            return f"✅ Switched to project: {project['name']} (ID: {project['id']})"
+            save_current_project_context(project)  # Persist context
+            return f"✅ Switched to project: {project['name']} (ID: {project['id']})\n📁 Path: {project.get('local_path', 'Not set')}"
     
     # Project not found
     available = ", ".join([f"{p['name']} (ID: {p['id']})" for p in active_projects])
@@ -365,16 +434,23 @@ def ProjectAgent(query: str):
         # Parse project creation command more flexibly
         import re
         
-        # Extract project name (handles quotes)
-        name_match = re.search(r'(?:create project|new project|add project)\s+["\']?([^"\']+?)["\']?(?:\s+with|\s*$)', query, re.IGNORECASE)
+        # Extract project name (handles quotes and more flexible patterns)
+        name_match = re.search(r'(?:create project|new project|add project)\s+["\']([^"\']+)["\']', query, re.IGNORECASE)
         if not name_match:
-            return "❌ Could not parse project name. Use: 'add project \"Project Name\" with deadline \"2025-12-01\" type \"software_development\"'"
+            # Try without quotes - capture until "for", "with", "deadline", or comma
+            name_match = re.search(r'(?:create project|new project|add project)\s+([^,]+?)(?:\s+(?:for|with|deadline|type)|\s*,|\s*$)', query, re.IGNORECASE)
+        
+        if not name_match:
+            return "❌ Could not parse project name. Use: 'create project \"Project Name\" for description, deadline next month, web app'"
         
         name = name_match.group(1).strip()
         
-        # Extract description
-        desc_match = re.search(r'with\s+description\s+["\']([^"\']+)["\']', query, re.IGNORECASE)
-        description = desc_match.group(1) if desc_match else f"Project: {name}"
+        # Extract description (handles both "for" and "with description" patterns)
+        desc_match = re.search(r'(?:for\s+([^,]+?)(?:\s*,|\s+deadline))', query, re.IGNORECASE)
+        if not desc_match:
+            desc_match = re.search(r'with\s+description\s+["\']([^"\']+)["\']', query, re.IGNORECASE)
+        
+        description = desc_match.group(1).strip() if desc_match else f"Project: {name}"
         
         # Extract deadline
         deadline_match = re.search(r'deadline\s+["\']?(\d{4}-\d{2}-\d{2})["\']?', query, re.IGNORECASE)
@@ -400,6 +476,17 @@ def ProjectAgent(query: str):
             result += f"\n\n🎯 Automatically switched to '{name}' project."
         
         return result
+    
+    # Fix missing directories for existing projects
+    elif "fix projects" in query_lower or "create directories" in query_lower or "fix directories" in query_lower:
+        created_dirs = create_missing_directories()
+        if created_dirs:
+            result = "✅ **Fixed Missing Project Directories**\n\n"
+            result += "\n".join(created_dirs)
+            result += "\n\n💡 You can now use Git commands with these projects!"
+            return result
+        else:
+            return "✅ All project directories already exist!"
     
     # Handle dashboard/progress
     elif "dashboard" in query_lower or "progress" in query_lower or "status" in query_lower:
@@ -453,10 +540,10 @@ def ProjectAgent(query: str):
         if not active_projects:
             return "❌ No active projects found. Create a project first."
         
-        # Get current project
-        current_project = get_current_project()
+        # Get current project using persistent context
+        current_project = load_current_project_context()
         if not current_project:
-            return "❌ No project selected. Use 'switch to project [name]' first."
+            return "❌ No active project selected. Use 'switch to project' command first."
         
         # Reload project data to get updated path
         data = load_projects()
@@ -493,6 +580,11 @@ This enables Git integration and automatic push warnings."""
             elif "sync" in query_lower:
                 from .QuickGit import handle_quick_git
                 return handle_quick_git(query)
+            
+            # Load current project context for Git commands
+            current_project = load_current_project_context()
+            if not current_project:
+                return "❌ No active project selected. Use 'switch to project' command first."
             
             success, message = handle_git_command(query, current_project)
             return f"{'✅' if success else '❌'} {message}"

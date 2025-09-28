@@ -43,13 +43,30 @@ def init_git_repo(project_path, project_name):
     
     return True, "Git repository initialized successfully"
 
+def generate_alternative_repo_names(base_name):
+    """Generate alternative repository names"""
+    import re
+    # Clean the base name
+    clean_name = re.sub(r'\s+', '-', base_name.lower())
+    clean_name = re.sub(r'[^a-zA-Z0-9\-_]', '', clean_name)
+    
+    alternatives = [
+        f"{clean_name}-v2",
+        f"{clean_name}-new", 
+        f"{clean_name}-project",
+        f"{clean_name}-{datetime.now().strftime('%Y%m%d')}",
+        f"{clean_name}-repo",
+        f"my-{clean_name}"
+    ]
+    return alternatives
+
 def create_github_repo(repo_name, description="", private=True):
     """Create GitHub repository using GitHub CLI"""
     visibility = "--private" if private else "--public"
     desc_flag = f'--description "{description}"' if description else ""
     
-    # Updated command without deprecated --confirm flag
-    command = f'gh repo create {repo_name} {visibility} {desc_flag}'
+    # Updated command without deprecated --confirm flag - quote repo name to handle spaces
+    command = f'gh repo create "{repo_name}" {visibility} {desc_flag}'
     success, stdout, stderr = run_git_command(command)
     
     if success:
@@ -58,9 +75,34 @@ def create_github_repo(repo_name, description="", private=True):
         # Check for specific error types
         if "token has not been granted" in stderr.lower() or "scopes" in stderr.lower():
             return False, f"❌ GitHub token missing required permissions.\n\nYour token needs 'repo' or 'public_repo' scope.\n\n🔧 To fix:\n1. Go to https://github.com/settings/tokens\n2. Edit your token or create new one\n3. Check 'repo' scope (full repository access)\n4. Update GITHUB_TOKEN in .env file\n5. Restart the application\n\nCurrent error: {stderr}"
+        elif "name already exists" in stderr.lower() or "already exists" in stderr.lower():
+            # Repository name already exists - suggest alternatives
+            alternatives = generate_alternative_repo_names(repo_name)
+            alt_list = "\n".join([f"   • {alt}" for alt in alternatives[:4]])
+            return False, f"❌ Repository name '{repo_name}' already exists on GitHub.\n\n💡 **Solutions:**\n\n1. **Choose new name:** Try one of these alternatives:\n{alt_list}\n\n2. **Connect to existing:** If you want to use the existing repo:\n   • git remote add origin https://github.com/[username]/{repo_name}.git\n   • Then use 'push' command\n\n3. **Delete existing:** Go to GitHub.com and delete the existing repo first\n\n🎯 **Quick fix:** Rename your project or try a suggested alternative name."
         elif "--confirm has been deprecated" in stderr:
             return False, f"❌ GitHub CLI version issue. Command updated but still failing.\n\nError: {stderr}"
         return False, f"Failed to create GitHub repo: {stderr}"
+
+def connect_to_existing_repo(project_path, repo_name, username):
+    """Connect local repository to existing GitHub repo"""
+    repo_url = f"https://github.com/{username}/{repo_name}.git"
+    
+    # Check if remote already exists
+    check_remote_cmd = "git remote -v"
+    success, stdout, stderr = run_git_command(check_remote_cmd, cwd=project_path)
+    
+    if success and "origin" in stdout:
+        return False, "❌ Remote origin already exists. Use 'git remote remove origin' first if you want to change it."
+    
+    # Add the remote
+    command = f"git remote add origin {repo_url}"
+    success, stdout, stderr = run_git_command(command, cwd=project_path)
+    
+    if success:
+        return True, f"✅ Connected to existing repository: {repo_url}"
+    else:
+        return False, f"❌ Failed to connect to repository: {stderr}"
 
 def add_remote_origin(project_path, repo_url):
     """Add remote origin to local repository"""
@@ -144,7 +186,10 @@ def handle_git_command(command, project_data):
     # Create GitHub repository
     elif "create repo" in command_lower or "create github" in command_lower:
         description = project_data.get("description", "")
-        return create_github_repo(project_name, description)
+        try:
+            return create_github_repo(project_name, description)
+        except Exception as e:
+            return False, f"Failed to create GitHub repo: {e}"
     
     # Commit changes
     elif "commit" in command_lower:
