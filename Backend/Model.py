@@ -48,6 +48,13 @@ RULES:
 2. If the query requires multiple actions, separate the function calls with a comma.
    EXAMPLE: "open chrome and tell me a joke" -> "open chrome, general tell me a joke"
    EXAMPLE: "email john about the meeting and play some music" -> "mail john about the meeting, play some music"
+
+3. AI PROJECT GENERATION: For natural language project creation requests like "create react app", "build todo app", "make ecommerce site", these should be classified as 'project' commands:
+   EXAMPLE: "create react todo app" -> "project create react todo app"
+   EXAMPLE: "build me a vue.js ecommerce site" -> "project build me a vue.js ecommerce site"
+   EXAMPLE: "generate python flask api" -> "project generate python flask api"
+   EXAMPLE: "make angular dashboard" -> "project make angular dashboard"
+   EXAMPLE: "create mobile app with react native" -> "project create mobile app with react native"
 """
 # --- END IMPROVEMENT ---
 
@@ -78,6 +85,14 @@ ChatHistory = [
     {"role": "assistant", "content": "project git status"},
     {"role": "user", "content": "push to git"},
     {"role": "assistant", "content": "project push to git"},
+    {"role": "user", "content": "create react todo app with authentication"},
+    {"role": "assistant", "content": "project create react todo app with authentication"},
+    {"role": "user", "content": "build me a vue.js ecommerce site"},
+    {"role": "assistant", "content": "project build me a vue.js ecommerce site"},
+    {"role": "user", "content": "generate python flask api with database"},
+    {"role": "assistant", "content": "project generate python flask api with database"},
+    {"role": "user", "content": "make angular dashboard with charts"},
+    {"role": "assistant", "content": "project make angular dashboard with charts"},
     {"role": "user", "content": "create github repo"},
     {"role": "assistant", "content": "project create github repo"},
     {"role": "user", "content": "create github repository"},

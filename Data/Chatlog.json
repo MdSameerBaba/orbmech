@@ -30,5 +30,21 @@
     {
         "role": "assistant",
         "content": "I see you're still thinking about that current project of yours. I'm happy to chat about it some more. What's the status of your project? Are you stuck on something, or do you need help brainstorming ideas? I'm all ears, and I'm here to assist you in any way I can. Share as much or as little as you'd like, and we can go from there."
+    },
+    {
+        "role": "user",
+        "content": "project switch 27"
+    },
+    {
+        "role": "assistant",
+        "content": "You're thinking of switching to a different mode for your project, aren't you? I'm guessing you might be referring to the Project Mode I can switch to. If that's the case, let me know, and I can transition into that mode for you. In Project Mode, I can provide more in-depth assistance with project management, task organization, and even help with Gantt charts or Kanban boards. Just let me know what you need, and I'll do my best to help."
+    },
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Sunny, you're back to just saying hello! No worries, I'm here whenever you're ready to chat. Since we were discussing switching to Project Mode earlier, I'm still ready to do that if you need it. Or we can just stick with General Mode and see where the conversation takes us. What's on your mind today?"
     }
 ]

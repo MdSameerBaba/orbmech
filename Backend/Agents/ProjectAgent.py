@@ -35,6 +35,14 @@ PROJECTS_FILE = r"Data\projects.json"
 # Global variables for project context
 current_active_project = None
 
+# Import AI Project Generator
+try:
+    from .ProjectMode.AIProjectManager import AIProjectManager
+    ai_project_manager = AIProjectManager()
+except ImportError as e:
+    print(f"⚠️ AI Project Generator not available: {e}")
+    ai_project_manager = None
+
 # Initialize with saved project context on module load
 try:
     saved_project = load_current_project_context()
@@ -396,6 +404,99 @@ def validate_project_name(name):
     
     return True, f"✅ Project name '{name}' is available."
 
+def is_ai_project_generation_request(query: str) -> bool:
+    """Detect if the query is an AI project generation request"""
+    query_lower = query.lower()
+    
+    # Keywords that indicate AI project generation
+    generation_keywords = [
+        'create react app', 'build react app', 'make react app', 'generate react app',
+        'create vue app', 'build vue app', 'make vue app', 'generate vue app',  
+        'create angular app', 'build angular app', 'make angular app', 'generate angular app',
+        'create python app', 'build python app', 'make python app', 'generate python app',
+        'create node app', 'build node app', 'make node app', 'generate node app',
+        'create nodejs app', 'build nodejs app', 'make nodejs app', 'generate nodejs app',
+        'node.js chat', 'nodejs chat', 'build node.js', 'create node.js',
+        'create todo app', 'build todo app', 'make todo app', 'generate todo app',
+        'create ecommerce', 'build ecommerce', 'make ecommerce', 'generate ecommerce',
+        'create dashboard', 'build dashboard', 'make dashboard', 'generate dashboard',
+        'create chat app', 'build chat app', 'make chat app', 'generate chat app',
+        'create api', 'build api', 'make api', 'generate api',
+        'create mobile app', 'build mobile app', 'make mobile app', 'generate mobile app',
+        'create flask app', 'build flask app', 'make flask app', 'generate flask app'
+    ]
+    
+    # Technology stack keywords
+    tech_keywords = ['react', 'vue', 'angular', 'python', 'flask', 'nodejs', 'express', 'mongodb', 'postgresql']
+    
+    # Feature keywords  
+    feature_keywords = ['authentication', 'auth', 'login', 'drag', 'drop', 'dark mode', 'payment', 'stripe', 'charts']
+    
+    # Check if query contains generation keywords
+    has_generation_keyword = any(keyword in query_lower for keyword in generation_keywords)
+    
+    # Check if query contains tech keywords along with creation verbs
+    creation_verbs = ['create', 'build', 'make', 'generate', 'develop']
+    has_creation_verb = any(verb in query_lower for verb in creation_verbs)
+    has_tech_keyword = any(tech in query_lower for tech in tech_keywords)
+    
+    # Exclude traditional project creation commands
+    traditional_commands = ['create project', 'new project', 'add project']
+    is_traditional = any(cmd in query_lower for cmd in traditional_commands)
+    
+    return (has_generation_keyword or (has_creation_verb and has_tech_keyword)) and not is_traditional
+
+def handle_ai_project_generation(query: str) -> str:
+    """Handle AI project generation requests"""
+    if not ai_project_manager:
+        return "❌ AI Project Generator is not available. Please check the system configuration."
+    
+    try:
+        print(f"🤖 Processing AI project generation: {query}")
+        result = ai_project_manager.create_ai_project(query)
+        
+        if result["success"]:
+            response = f"🎉 **AI Project Generated Successfully!**\n\n"
+            response += f"📛 **Project:** {result['project_name']}\n"
+            response += f"📁 **Location:** {result['project_path']}\n"
+            response += f"🛠️ **Tech Stack:** {', '.join(f'{k}: {v}' for k, v in result['tech_stack'].items())}\n"
+            response += f"⚡ **Features:** {', '.join(result['features'])}\n"
+            response += f"📄 **Files Generated:** {result['files_generated']}\n\n"
+            
+            response += f"🚀 **Setup Instructions:**\n"
+            for i, instruction in enumerate(result['setup_instructions'], 1):
+                response += f"   {i}. {instruction}\n"
+            
+            if result.get('recommendations'):
+                response += f"\n💡 **Recommendations:**\n"
+                for category, items in result['recommendations'].items():
+                    if items:
+                        response += f"   • **{category.replace('_', ' ').title()}:** {', '.join(items[:3])}\n"
+            
+            response += f"\n🆔 **Project ID:** {result['project_id']} (saved to NEXUS database)"
+            
+            # Auto-switch to project mode if not already
+            from Backend.ModeManager import get_current_mode, switch_mode
+            if get_current_mode() != "project":
+                switch_mode("project")
+                response += f"\n\n🎯 **Switched to Project Mode** for easier project management!"
+            
+            # Auto-switch to the newly created project
+            try:
+                switch_result = switch_to_project(result['project_id'])
+                response += f"\n🎯 **Auto-switched to new project:** {result['project_name']}"
+            except Exception as e:
+                print(f"⚠️ Warning: Could not auto-switch to project: {e}")
+                response += f"\n⚠️ **Note:** Use 'switch to {result['project_name']}' to activate this project"
+            
+            return response
+        else:
+            return f"❌ **AI Project Generation Failed**\n\nError: {result['error']}\n\nPlease try rephrasing your request or check the system logs."
+            
+    except Exception as e:
+        print(f"❌ Error in AI project generation: {e}")
+        return f"❌ **Unexpected Error**\n\nSomething went wrong during AI project generation: {str(e)}\n\nPlease try again or contact support."
+
 def ProjectAgent(query: str):
     """Main Project Agent function"""
     if not client:
@@ -408,12 +509,21 @@ def ProjectAgent(query: str):
     if vscode_response:
         return vscode_response
     
-    # Handle project switching
-    if "switch to project" in query_lower or "select project" in query_lower:
+    # Handle project switching - Support multiple formats
+    if any(phrase in query_lower for phrase in ["switch to project", "select project", "switch to", "use project", "activate project"]):
         import re
-        # Extract project identifier (name or ID)
-        switch_pattern = r"(?:switch to project|select project)\s+([\w\s]+)"
-        match = re.search(switch_pattern, query, re.IGNORECASE)
+        # Extract project identifier (name or ID) - Support multiple patterns
+        switch_patterns = [
+            r"(?:switch to project|select project)\s+([\w\s]+)",
+            r"switch to\s+([\w\s]+)",
+            r"(?:use project|activate project)\s+([\w\s]+)"
+        ]
+        # Try each pattern until one matches
+        match = None
+        for pattern in switch_patterns:
+            match = re.search(pattern, query, re.IGNORECASE)
+            if match:
+                break
         
         if match:
             project_identifier = match.group(1).strip()
@@ -425,6 +535,11 @@ def ProjectAgent(query: str):
             
             project_list = "\n".join([f"• {p['name']} (ID: {p['id']})" for p in active_projects])
             return f"📋 AVAILABLE PROJECTS:\n\n{project_list}\n\nUse: 'switch to project [name]' or 'select project [ID]'"
+    
+    # Handle AI project generation (natural language project creation)
+    elif is_ai_project_generation_request(query):
+        print(f"🤖 Detected AI project generation request: {query}")
+        return handle_ai_project_generation(query)
     
     # Handle project creation with validation
     elif "create project" in query_lower or "new project" in query_lower or "add project" in query_lower:

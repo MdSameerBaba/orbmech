@@ -1,0 +1,1 @@
+// Controller for /api/products/:id\n

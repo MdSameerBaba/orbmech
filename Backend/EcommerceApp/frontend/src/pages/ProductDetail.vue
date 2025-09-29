@@ -1,0 +1,1 @@
+// ProductDetail page component\n

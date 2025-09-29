@@ -1,0 +1,1 @@
+// CreateProduct page component\n

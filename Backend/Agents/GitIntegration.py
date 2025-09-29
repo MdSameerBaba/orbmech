@@ -60,8 +60,8 @@ def generate_alternative_repo_names(base_name):
     ]
     return alternatives
 
-def create_github_repo(repo_name, description="", private=True):
-    """Create GitHub repository using GitHub CLI"""
+def create_github_repo(repo_name, description="", private=True, project_path=None):
+    """Create GitHub repository using GitHub CLI and optionally connect local repo"""
     visibility = "--private" if private else "--public"
     desc_flag = f'--description "{description}"' if description else ""
     
@@ -70,7 +70,32 @@ def create_github_repo(repo_name, description="", private=True):
     success, stdout, stderr = run_git_command(command)
     
     if success:
-        return True, f"GitHub repository '{repo_name}' created successfully"
+        message = f"GitHub repository '{repo_name}' created successfully"
+        
+        # If project_path is provided, automatically connect the local repo
+        if project_path and os.path.exists(project_path):
+            try:
+                # Get GitHub username from gh CLI
+                username_success, username, _ = run_git_command("gh api user --jq .login")
+                if username_success:
+                    repo_url = f"https://github.com/{username}/{repo_name}.git"
+                    
+                    # Check if remote already exists
+                    check_success, remotes, _ = run_git_command("git remote -v", cwd=project_path)
+                    if check_success and "origin" in remotes:
+                        # Remove existing remote
+                        run_git_command("git remote remove origin", cwd=project_path)
+                    
+                    # Add new remote
+                    remote_success, _, remote_error = run_git_command(f"git remote add origin {repo_url}", cwd=project_path)
+                    if remote_success:
+                        message += f" and connected to local repository"
+                    else:
+                        message += f" (Warning: Could not connect local repo: {remote_error})"
+            except Exception as e:
+                message += f" (Warning: Could not auto-connect local repo: {e})"
+        
+        return True, message
     else:
         # Check for specific error types
         if "token has not been granted" in stderr.lower() or "scopes" in stderr.lower():
@@ -187,7 +212,7 @@ def handle_git_command(command, project_data):
     elif "create repo" in command_lower or "create github" in command_lower:
         description = project_data.get("description", "")
         try:
-            return create_github_repo(project_name, description)
+            return create_github_repo(project_name, description, project_path=project_path)
         except Exception as e:
             return False, f"Failed to create GitHub repo: {e}"
     
@@ -210,6 +235,38 @@ def handle_git_command(command, project_data):
         
         return True, f"✅ Changes committed: '{commit_msg}'"
     
+    # Add remote repository (simplified version)
+    elif "remote add" in command_lower or "add remote" in command_lower:
+        git_info = get_project_git_info(project_path)
+        
+        if not git_info["is_git_repo"]:
+            return False, "Not a git repository. Initialize first with 'git init'"
+        
+        # Check if remote already exists
+        if git_info["has_remote"]:
+            return False, f"Remote origin already configured: {git_info['remote_url']}"
+        
+        # Auto-construct GitHub URL using project name
+        # Try to get GitHub username from gh CLI or git config
+        success, username, stderr = run_git_command("gh api user --jq .login", cwd=project_path)
+        
+        if not success:
+            # Fallback: try git config
+            success, username, stderr = run_git_command("git config user.name", cwd=project_path)
+            if not success:
+                return False, "❌ Could not determine GitHub username. Please run 'gh auth login' first or set 'git config user.name'"
+        
+        username = username.strip()
+        github_url = f"https://github.com/{username}/{project_name}.git"
+        
+        # Add remote origin
+        success, stdout, stderr = run_git_command(f"git remote add origin {github_url}", cwd=project_path)
+        
+        if success:
+            return True, f"✅ Added remote origin: {github_url}"
+        else:
+            return False, f"Failed to add remote: {stderr}"
+    
     # Push to GitHub
     elif "push" in command_lower:
         git_info = get_project_git_info(project_path)
@@ -227,10 +284,47 @@ def handle_git_command(command, project_data):
             if not success and "nothing to commit" not in stderr:
                 return False, f"Auto-commit failed: {stderr}"
         
-        # Push to remote
-        success, stdout, stderr = run_git_command(f"git push origin {git_info['branch']}", cwd=project_path)
+        # Push to remote - Enhanced with multiple fallback strategies
+        branch = git_info['branch'] if git_info['branch'] else 'main'
+        
+        print(f"🚀 Attempting to push branch '{branch}' to GitHub...")
+        
+        # Strategy 1: Try simple push first
+        success, stdout, stderr = run_git_command("git push", cwd=project_path)
+        
         if success:
-            return True, f"✅ Successfully pushed to GitHub ({git_info['branch']} branch)"
+            return True, f"✅ Successfully pushed to GitHub ({branch} branch)"
+        
+        # Strategy 2: If that fails, try with origin and branch
+        if not success:
+            print(f"🔧 Simple push failed, trying with origin {branch}...")
+            success, stdout, stderr = run_git_command(f"git push origin {branch}", cwd=project_path)
+            
+            if success:
+                return True, f"✅ Successfully pushed to GitHub ({branch} branch)"
+        
+        # Strategy 3: If still fails, check for upstream issues and set upstream
+        if not success and ("no upstream" in stderr.lower() or "no tracking information" in stderr.lower() or "fatal" in stderr.lower() or "destination" in stderr.lower()):
+            print(f"🔧 Setting upstream branch for {branch}...")
+            
+            # Ensure we're on the right branch first
+            run_git_command(f"git checkout -b {branch}", cwd=project_path)  # Create branch if needed
+            run_git_command(f"git branch -M {branch}", cwd=project_path)    # Rename to main/master
+            
+            # Set upstream and push
+            success, stdout, stderr = run_git_command(f"git push --set-upstream origin {branch}", cwd=project_path)
+            
+            if success:
+                return True, f"✅ Successfully pushed to GitHub with upstream setup ({branch} branch)"
+            else:
+                # Strategy 4: Last resort - force push with upstream
+                print(f"🔧 Trying force push with upstream...")
+                success, stdout, stderr = run_git_command(f"git push -u origin {branch} --force", cwd=project_path)
+                
+                if success:
+                    return True, f"✅ Successfully force pushed to GitHub with upstream setup ({branch} branch)"
+                else:
+                    return False, f"❌ All push strategies failed. Last error: {stderr}\n\n💡 Suggestions:\n1. Check if GitHub repo exists\n2. Verify remote origin is set: git remote -v\n3. Check GitHub authentication: gh auth status"
         else:
             return False, f"Push failed: {stderr}"
     
@@ -290,6 +384,7 @@ def handle_git_command(command, project_data):
 • 'git status' - Check repository status
 • 'git add .' - Stage all changes
 • 'git commit "message"' - Commit changes
+• 'git remote add' - Connect to GitHub repository (auto-detects URL)
 • 'git push' - Push to GitHub (auto-commits if needed)
 • 'git pull' - Pull from GitHub
 • 'create github repo' - Create GitHub repository"""

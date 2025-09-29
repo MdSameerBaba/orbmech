@@ -1,0 +1,1 @@
+-- Migration for User table\n

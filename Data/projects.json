@@ -494,6 +494,2305 @@
       "local_path": "C:\\Users\\mdsam\\Desktop\\NEXUS_Demo_App_v2",
       "github_repo": "",
       "git_initialized": false
+    },
+    {
+      "id": 14,
+      "name": "React Todo",
+      "description": "create react todo app with drag and drop, user authentication, and dark mode",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:41:22",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:41:22",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:41:22",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react",
+        "database": "mongodb"
+      },
+      "features": [
+        "authentication",
+        "crud",
+        "drag-drop",
+        "dark-mode"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/LoginForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/RegisterForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/ProtectedRoute.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/AuthProvider.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Login.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Register.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Profile.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/server/config/database.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/API.md"
+      ],
+      "components": [
+        "EditForm",
+        "LoginForm",
+        "DeleteModal",
+        "RegisterForm",
+        "App",
+        "CreateForm",
+        "DataTable",
+        "ProtectedRoute",
+        "AuthProvider"
+      ],
+      "pages": [
+        "Login",
+        "Register",
+        "Profile",
+        "Home"
+      ],
+      "dependencies": [
+        "bcryptjs",
+        "react-dom",
+        "react-beautiful-dnd",
+        "axios",
+        "react-router-dom",
+        "styled-components",
+        "react-dnd",
+        "jsonwebtoken",
+        "react",
+        "passport"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "AI Generated Project",
+      "description": "build vue.js ecommerce app with stripe payments and product catalog",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:43:35",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Integrate Payment System",
+          "phase": "Development",
+          "estimated_hours": 12,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Setup Stripe/Payment Provider",
+          "phase": "Backend",
+          "estimated_hours": 6,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:43:35",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "vue"
+      },
+      "features": [
+        "payment",
+        "ecommerce"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "ProductCard",
+        "CheckoutSummary",
+        "App",
+        "ShoppingCart",
+        "ProductDetail",
+        "PaymentSuccess",
+        "PaymentForm"
+      ],
+      "pages": [
+        "Products",
+        "Checkout",
+        "ProductDetail",
+        "Home",
+        "Cart"
+      ],
+      "dependencies": [
+        "vuex",
+        "vue-router",
+        "stripe",
+        "@stripe/stripe-js",
+        "vue"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "AI Generated Project",
+      "description": "create python flask api with jwt authentication and postgresql database",
+      "type": "backend_development",
+      "created_date": "2025-09-28 18:43:35",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Create REST API Endpoints",
+          "phase": "Backend",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add API Documentation",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:43:35",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "backend": "python",
+        "database": "postgresql"
+      },
+      "features": [
+        "authentication",
+        "crud",
+        "api"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "ProtectedRoute",
+        "DataTable",
+        "App",
+        "AuthProvider",
+        "DeleteModal",
+        "EditForm",
+        "CreateForm",
+        "RegisterForm",
+        "LoginForm"
+      ],
+      "pages": [
+        "Profile",
+        "Login",
+        "Home",
+        "Register"
+      ],
+      "dependencies": [
+        "passport",
+        "python-dotenv",
+        "axios",
+        "fetch",
+        "jsonwebtoken",
+        "bcryptjs",
+        "flask",
+        "requests"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "AI Generated Project",
+      "description": "make node.js chat application with socket.io and mongodb",
+      "type": "backend_development",
+      "created_date": "2025-09-28 18:43:35",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:43:35",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "backend": "nodejs",
+        "database": "mongodb"
+      },
+      "features": [
+        "real-time"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/server/server.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/server/config/database.js"
+      ],
+      "components": [
+        "App"
+      ],
+      "pages": [
+        "Home"
+      ],
+      "dependencies": [
+        "dotenv",
+        "cors",
+        "express"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "AI Generated Project",
+      "description": "develop angular dashboard with charts and user management",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:43:35",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Build Admin Dashboard",
+          "phase": "Frontend",
+          "estimated_hours": 10,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Analytics & Charts",
+          "phase": "Frontend",
+          "estimated_hours": 6,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:43:35",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "angular",
+        "database": "mongodb"
+      },
+      "features": [
+        "authentication",
+        "dashboard",
+        "charts"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/server/config/database.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "ProtectedRoute",
+        "BarChart",
+        "App",
+        "AuthProvider",
+        "PieChart",
+        "Chart",
+        "Sidebar",
+        "LineChart",
+        "Header",
+        "Dashboard",
+        "RegisterForm",
+        "StatsCard",
+        "LoginForm"
+      ],
+      "pages": [
+        "Profile",
+        "Login",
+        "Home",
+        "Analytics",
+        "Dashboard",
+        "Register"
+      ],
+      "dependencies": [
+        "passport",
+        "chart.js",
+        "@angular/router",
+        "react-chartjs-2",
+        "jsonwebtoken",
+        "bcryptjs",
+        "@angular/common",
+        "@angular/core"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "AI Generated Project",
+      "description": "build react native mobile app with push notifications",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:43:35",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:43:35",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:43:35",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react",
+        "mobile": "react-native"
+      },
+      "features": [
+        "notifications"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/src/components/NotificationItem.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/src/components/NotificationCenter.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/src/pages/Home.js"
+      ],
+      "components": [
+        "NotificationItem",
+        "NotificationCenter",
+        "App"
+      ],
+      "pages": [
+        "Home"
+      ],
+      "dependencies": [
+        "styled-components",
+        "axios",
+        "react-dom",
+        "react-router-dom",
+        "react"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "React Todo",
+      "description": "create react todo app with drag and drop and authentication",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:48:16",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:48:16",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:48:16",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react"
+      },
+      "features": [
+        "authentication",
+        "crud",
+        "drag-drop"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/AuthProvider.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/RegisterForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/LoginForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/ProtectedRoute.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Profile.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Login.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Register.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/API.md"
+      ],
+      "components": [
+        "App",
+        "AuthProvider",
+        "DataTable",
+        "DeleteModal",
+        "CreateForm",
+        "RegisterForm",
+        "LoginForm",
+        "EditForm",
+        "ProtectedRoute"
+      ],
+      "pages": [
+        "Home",
+        "Profile",
+        "Login",
+        "Register"
+      ],
+      "dependencies": [
+        "react-dnd",
+        "react",
+        "axios",
+        "react-router-dom",
+        "react-beautiful-dnd",
+        "styled-components",
+        "passport",
+        "jsonwebtoken",
+        "bcryptjs",
+        "react-dom"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "React Todo",
+      "description": "create react todo app with authentication and dark mode",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:49:50",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:49:50",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react"
+      },
+      "features": [
+        "authentication",
+        "crud",
+        "dark-mode"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/LoginForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/RegisterForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/ProtectedRoute.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/AuthProvider.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Profile.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Register.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Login.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/API.md"
+      ],
+      "components": [
+        "LoginForm",
+        "RegisterForm",
+        "DeleteModal",
+        "DataTable",
+        "ProtectedRoute",
+        "CreateForm",
+        "AuthProvider",
+        "App",
+        "EditForm"
+      ],
+      "pages": [
+        "Home",
+        "Profile",
+        "Register",
+        "Login"
+      ],
+      "dependencies": [
+        "passport",
+        "axios",
+        "react-dom",
+        "bcryptjs",
+        "styled-components",
+        "react",
+        "react-router-dom",
+        "jsonwebtoken"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "AI Generated Project",
+      "description": "build me a vue.js ecommerce site with stripe payments",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:49:50",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Integrate Payment System",
+          "phase": "Development",
+          "estimated_hours": 12,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Setup Stripe/Payment Provider",
+          "phase": "Backend",
+          "estimated_hours": 6,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:49:50",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "vue"
+      },
+      "features": [
+        "payment",
+        "ecommerce"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "PaymentSuccess",
+        "ShoppingCart",
+        "PaymentForm",
+        "ProductDetail",
+        "CheckoutSummary",
+        "ProductCard",
+        "App"
+      ],
+      "pages": [
+        "Products",
+        "Home",
+        "Cart",
+        "ProductDetail",
+        "Checkout"
+      ],
+      "dependencies": [
+        "@stripe/stripe-js",
+        "vue-router",
+        "vuex",
+        "stripe",
+        "vue"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "AI Generated Project",
+      "description": "make python flask api with jwt authentication",
+      "type": "backend_development",
+      "created_date": "2025-09-28 18:49:50",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Create REST API Endpoints",
+          "phase": "Backend",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add API Documentation",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:50",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:49:50",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "backend": "python"
+      },
+      "features": [
+        "authentication",
+        "api"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "LoginForm",
+        "RegisterForm",
+        "ProtectedRoute",
+        "AuthProvider",
+        "App"
+      ],
+      "pages": [
+        "Home",
+        "Profile",
+        "Register",
+        "Login"
+      ],
+      "dependencies": [
+        "python-dotenv",
+        "requests",
+        "passport",
+        "axios",
+        "flask",
+        "bcryptjs",
+        "fetch",
+        "jsonwebtoken"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "AI Generated Project",
+      "description": "generate angular dashboard with charts",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:49:51",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Build Admin Dashboard",
+          "phase": "Frontend",
+          "estimated_hours": 10,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Analytics & Charts",
+          "phase": "Frontend",
+          "estimated_hours": 6,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:49:51",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:49:51",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "angular"
+      },
+      "features": [
+        "dashboard",
+        "charts"
+      ],
+      "generated_files": [],
+      "components": [
+        "PieChart",
+        "LineChart",
+        "BarChart",
+        "Header",
+        "Dashboard",
+        "StatsCard",
+        "Chart",
+        "App",
+        "Sidebar"
+      ],
+      "pages": [
+        "Dashboard",
+        "Home",
+        "Analytics"
+      ],
+      "dependencies": [
+        "@angular/router",
+        "chart.js",
+        "@angular/core",
+        "@angular/common",
+        "react-chartjs-2"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Mobile",
+      "description": "create mobile app with react native",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:50:02",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:50:02",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:50:02",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:50:02",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:50:02",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:50:02",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:50:02",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:50:02",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react",
+        "mobile": "react-native"
+      },
+      "features": [
+        "crud"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\Mobile/API.md"
+      ],
+      "components": [
+        "DeleteModal",
+        "DataTable",
+        "CreateForm",
+        "App",
+        "EditForm"
+      ],
+      "pages": [
+        "Home"
+      ],
+      "dependencies": [
+        "axios",
+        "react-dom",
+        "styled-components",
+        "react",
+        "react-router-dom"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "React Todo",
+      "description": "create react todo app with authentication and drag and drop",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 18:53:23",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 18:53:23",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 18:53:23",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react"
+      },
+      "features": [
+        "authentication",
+        "crud",
+        "drag-drop"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/LoginForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/RegisterForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/AuthProvider.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/ProtectedRoute.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Register.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Login.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Profile.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactTodo/API.md"
+      ],
+      "components": [
+        "DataTable",
+        "CreateForm",
+        "App",
+        "LoginForm",
+        "RegisterForm",
+        "AuthProvider",
+        "ProtectedRoute",
+        "DeleteModal",
+        "EditForm"
+      ],
+      "pages": [
+        "Register",
+        "Login",
+        "Profile",
+        "Home"
+      ],
+      "dependencies": [
+        "bcryptjs",
+        "styled-components",
+        "react-dom",
+        "jsonwebtoken",
+        "react-dnd",
+        "axios",
+        "react",
+        "react-router-dom",
+        "react-beautiful-dnd",
+        "passport"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "AI Generated Project",
+      "description": "build vue ecommerce store with payment processing",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 22:03:32",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Integrate Payment System",
+          "phase": "Development",
+          "estimated_hours": 12,
+          "status": "pending",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Setup Stripe/Payment Provider",
+          "phase": "Backend",
+          "estimated_hours": 6,
+          "status": "pending",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-28 22:03:32",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-28 22:03:32",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "vue",
+        "database": "mongodb"
+      },
+      "features": [
+        "payment",
+        "ecommerce"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/server/config/database.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "ProductCard",
+        "ProductDetail",
+        "PaymentForm",
+        "App",
+        "ShoppingCart",
+        "CheckoutSummary",
+        "PaymentSuccess"
+      ],
+      "pages": [
+        "ProductDetail",
+        "Checkout",
+        "Home",
+        "Products",
+        "Cart"
+      ],
+      "dependencies": [
+        "vue",
+        "vuex",
+        "@stripe/stripe-js",
+        "stripe",
+        "vue-router"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Enhanced Vue Ecommerce",
+      "description": "Full-stack Vue ecommerce store with payment processing - Enhanced Architecture (43 files)",
+      "type": "frontend_development",
+      "created_date": "2025-09-28 22:31:36",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 100,
+      "tasks": [
+        {
+          "name": "Enhanced Architecture Generated",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-28 22:31:36",
+          "actual_hours": 0.1
+        }
+      ],
+      "time_spent": 0.1,
+      "last_activity": "2025-09-28 22:31:36",
+      "local_path": "C:\\Users\\mdsam\\OneDrive\\Desktop\\orbmech\\Backend\\EcommerceApp",
+      "github_repo": "",
+      "git_initialized": false,
+      "tech_stack": {
+        "frontend": "Vue",
+        "backend": "Node.js",
+        "database": "MongoDB"
+      },
+      "features": [
+        "authentication",
+        "payment",
+        "ecommerce",
+        "full-stack"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "React Social Media",
+      "description": "create react social media app with real-time chat",
+      "type": "frontend_development",
+      "created_date": "2025-09-29 10:28:43",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-29 10:28:43",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-29 10:28:43",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-29 10:28:43",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 10:28:43",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-29 10:28:43",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-29 10:28:43",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-29 10:28:43",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react"
+      },
+      "features": [
+        "real-time",
+        "crud",
+        "social"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\ReactSocialMedia/API.md"
+      ],
+      "components": [
+        "CreateForm",
+        "DeleteModal",
+        "EditForm",
+        "DataTable",
+        "App"
+      ],
+      "pages": [
+        "Home"
+      ],
+      "dependencies": [
+        "styled-components",
+        "react-router-dom",
+        "react-dom",
+        "axios",
+        "react"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "AI Generated Project",
+      "description": "create angular dashboard with charts",
+      "type": "frontend_development",
+      "created_date": "2025-09-29 13:53:13",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Build Admin Dashboard",
+          "phase": "Frontend",
+          "estimated_hours": 10,
+          "status": "pending",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Analytics & Charts",
+          "phase": "Frontend",
+          "estimated_hours": 6,
+          "status": "pending",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-29 13:53:13",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-29 13:53:13",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "angular"
+      },
+      "features": [
+        "dashboard",
+        "crud",
+        "charts"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "LineChart",
+        "DeleteModal",
+        "StatsCard",
+        "EditForm",
+        "PieChart",
+        "CreateForm",
+        "Chart",
+        "Sidebar",
+        "App",
+        "DataTable",
+        "BarChart",
+        "Header",
+        "Dashboard"
+      ],
+      "pages": [
+        "Analytics",
+        "Dashboard",
+        "Home"
+      ],
+      "dependencies": [
+        "react-chartjs-2",
+        "chart.js",
+        "@angular/router",
+        "@angular/common",
+        "@angular/core"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "crud",
+      "description": "create python fastapi with jwt authentication",
+      "type": "backend_development",
+      "created_date": "2025-09-29 14:04:14",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Create REST API Endpoints",
+          "phase": "Backend",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add API Documentation",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-29 14:04:14",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-29 14:04:14",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "backend": "python"
+      },
+      "features": [
+        "authentication",
+        "crud",
+        "api"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AIGeneratedProject/API.md"
+      ],
+      "components": [
+        "LoginForm",
+        "CreateForm",
+        "DeleteModal",
+        "ProtectedRoute",
+        "DataTable",
+        "AuthProvider",
+        "RegisterForm",
+        "App",
+        "EditForm"
+      ],
+      "pages": [
+        "Login",
+        "Profile",
+        "Register",
+        "Home"
+      ],
+      "dependencies": [
+        "python-dotenv",
+        "requests",
+        "jsonwebtoken",
+        "bcryptjs",
+        "fetch",
+        "flask",
+        "passport",
+        "axios"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "A Modern Personal Finance Tracker Web",
+      "description": "Create a modern personal finance tracker web app with the following features:\n    - React frontend with TypeScript\n    - Node.js Express backend with MongoDB\n    - User authentication and registration\n    - Expense tracking with categories\n    - Budget management system\n    - Financial goals tracking\n    - Interactive charts for spending analysis\n    - Monthly/yearly financial reports\n    - Bill reminders and notifications\n    \n    Make it a complete full-stack application with proper database schema and API endpoints.",
+      "type": "fullstack_development",
+      "created_date": "2025-09-29 15:53:09",
+      "deadline": "2025-12-31",
+      "status": "active",
+      "progress": 20,
+      "tasks": [
+        {
+          "name": "Setup Development Environment",
+          "phase": "Setup",
+          "estimated_hours": 2,
+          "status": "completed",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Project Structure Created",
+          "phase": "Setup",
+          "estimated_hours": 1,
+          "status": "completed",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Basic Components Generated",
+          "phase": "Development",
+          "estimated_hours": 4,
+          "status": "completed",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Implement User Authentication",
+          "phase": "Development",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add Login/Register Forms",
+          "phase": "Frontend",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Create REST API Endpoints",
+          "phase": "Backend",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Add API Documentation",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Testing & Bug Fixes",
+          "phase": "Testing",
+          "estimated_hours": 8,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Deployment Setup",
+          "phase": "Deployment",
+          "estimated_hours": 4,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        },
+        {
+          "name": "Documentation & README",
+          "phase": "Documentation",
+          "estimated_hours": 3,
+          "status": "pending",
+          "created_date": "2025-09-29 15:53:09",
+          "actual_hours": 0
+        }
+      ],
+      "time_spent": 0,
+      "last_activity": "2025-09-29 15:53:09",
+      "local_path": "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb",
+      "github_repo": "",
+      "git_initialized": false,
+      "ai_generated": true,
+      "tech_stack": {
+        "frontend": "react",
+        "backend": "nodejs",
+        "database": "mongodb"
+      },
+      "features": [
+        "authentication",
+        "notifications",
+        "crud",
+        "api",
+        "charts"
+      ],
+      "generated_files": [
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/package.json",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/.gitignore",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/README.md",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/App.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/index.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/public/index.html",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/NotificationCenter.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/NotificationItem.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/DeleteModal.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/LineChart.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/DataTable.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/BarChart.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/Chart.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/EditForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/RegisterForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/AuthProvider.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/ProtectedRoute.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/PieChart.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/CreateForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/components/LoginForm.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/pages/Home.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/pages/Login.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/pages/Profile.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/src/pages/Register.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/server/server.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/server/config/database.js",
+        "C:\\\\Users\\\\mdsam\\\\Desktop\\AModernPersonalFinanceTrackerWeb/API.md"
+      ],
+      "components": [
+        "NotificationCenter",
+        "NotificationItem",
+        "DeleteModal",
+        "LineChart",
+        "DataTable",
+        "BarChart",
+        "Chart",
+        "EditForm",
+        "RegisterForm",
+        "AuthProvider",
+        "ProtectedRoute",
+        "PieChart",
+        "CreateForm",
+        "LoginForm",
+        "App"
+      ],
+      "pages": [
+        "Home",
+        "Login",
+        "Profile",
+        "Register"
+      ],
+      "dependencies": [
+        "express",
+        "bcryptjs",
+        "axios",
+        "dotenv",
+        "fetch",
+        "styled-components",
+        "react",
+        "react-dom",
+        "cors",
+        "react-chartjs-2",
+        "jsonwebtoken",
+        "passport",
+        "react-router-dom",
+        "chart.js"
+      ]
     }
   ],
   "completed_projects": [],

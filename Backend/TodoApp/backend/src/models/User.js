@@ -1,0 +1,1 @@
+// User model for nodejs with mongodb\n
