@@ -9,6 +9,24 @@ from groq import Groq
 import requests
 from bs4 import BeautifulSoup
 import warnings
+import sys
+import os
+
+# Add Backend path for WhatsApp integration
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+try:
+    from WhatsAppIntegration import (
+        send_dsa_progress_to_whatsapp, 
+        send_study_guide_to_whatsapp,
+        send_scraped_content_to_whatsapp,
+        is_whatsapp_configured
+    )
+    WHATSAPP_ENABLED = True
+    print("✅ WhatsApp integration loaded successfully!")
+except ImportError as e:
+    print(f"⚠️ WhatsApp integration not available: {e}")
+    WHATSAPP_ENABLED = False
 
 # Suppress matplotlib font warnings
 warnings.filterwarnings("ignore", category=UserWarning, message=".*missing from font.*")
@@ -460,6 +478,114 @@ I'll remember your preference for future guides!"""
 5. Track progress in your DSA dashboard
 
 💡 TIP: Follow Striver's A2Z DSA sheet for structured learning!"""
+    
+    # 🚀 NEW: Send study guide to WhatsApp if configured
+    if WHATSAPP_ENABLED and is_whatsapp_configured():
+        print(f"📱 Sending {topic_name} study guide to WhatsApp...")
+        guide_data = {
+            'youtube_videos': guide.get('youtube_videos', []),
+            'leetcode_problems': guide.get('leetcode_problems', []),
+            'codechef_problems': guide.get('codechef_problems', []),
+            'key_concepts': [
+                f"Programming Language: {lang}",
+                "Watch videos for concepts",
+                "Solve problems for practice",
+                "Track progress regularly"
+            ]
+        }
+        whatsapp_sent = send_study_guide_to_whatsapp(topic, guide_data)
+        
+        if whatsapp_sent:
+            return f"""{topic_name} STUDY GUIDE
+💻 Programming Language: {lang}
+
+📺 RECOMMENDED YOUTUBE VIDEOS:
+{youtube_section}
+
+💻 LEETCODE PROBLEMS:
+{leetcode_section}
+
+🏆 CODECHEF PROBLEMS:
+{codechef_section}
+
+📚 STUDY PLAN:
+1. Watch YouTube videos for theory and concepts
+2. Solve LeetCode problems for interview prep
+3. Practice CodeChef problems for competitive programming
+4. Code in {lang} and optimize solutions
+5. Track progress in your DSA dashboard
+
+💡 TIP: Follow Striver's A2Z DSA sheet for structured learning!
+
+📱 Study guide sent to your WhatsApp!"""
+        else:
+            return f"""🎯 {topic_name} STUDY GUIDE
+💻 Programming Language: {lang}
+
+📺 RECOMMENDED YOUTUBE VIDEOS:
+{youtube_section}
+
+💻 LEETCODE PROBLEMS:
+{leetcode_section}
+
+🏆 CODECHEF PROBLEMS:
+{codechef_section}
+
+📚 STUDY PLAN:
+1. Watch YouTube videos for theory and concepts
+2. Solve LeetCode problems for interview prep
+3. Practice CodeChef problems for competitive programming
+4. Code in {lang} and optimize solutions
+5. Track progress in your DSA dashboard
+
+💡 TIP: Follow Striver's A2Z DSA sheet for structured learning!
+
+⚠️ Could not send to WhatsApp (check your phone number in .env)"""
+    elif WHATSAPP_ENABLED:
+        return f"""🎯 {topic_name} STUDY GUIDE
+💻 Programming Language: {lang}
+
+📺 RECOMMENDED YOUTUBE VIDEOS:
+{youtube_section}
+
+💻 LEETCODE PROBLEMS:
+{leetcode_section}
+
+🏆 CODECHEF PROBLEMS:
+{codechef_section}
+
+📚 STUDY PLAN:
+1. Watch YouTube videos for theory and concepts
+2. Solve LeetCode problems for interview prep
+3. Practice CodeChef problems for competitive programming
+4. Code in {lang} and optimize solutions
+5. Track progress in your DSA dashboard
+
+💡 TIP: Follow Striver's A2Z DSA sheet for structured learning!
+
+💡 Tip: Set USER_PHONE in .env to receive study guides on WhatsApp!"""
+    
+    # Return original guide if WhatsApp not enabled
+    return f"""🎯 {topic_name} STUDY GUIDE
+💻 Programming Language: {lang}
+
+📺 RECOMMENDED YOUTUBE VIDEOS:
+{youtube_section}
+
+💻 LEETCODE PROBLEMS:
+{leetcode_section}
+
+🏆 CODECHEF PROBLEMS:
+{codechef_section}
+
+📚 STUDY PLAN:
+1. Watch YouTube videos for theory and concepts
+2. Solve LeetCode problems for interview prep
+3. Practice CodeChef problems for competitive programming
+4. Code in {lang} and optimize solutions
+5. Track progress in your DSA dashboard
+
+💡 TIP: Follow Striver's A2Z DSA sheet for structured learning!"""
 
 def DSAAgent(query: str):
     """Main DSA Agent function"""
@@ -473,7 +599,91 @@ def DSAAgent(query: str):
     query_lower = query.lower()
     
     # Handle different DSA commands
-    if "progress" in query_lower or "summary" in query_lower:
+    
+    # 🚀 NEW: WhatsApp-specific commands
+    if "whatsapp" in query_lower or "send to whatsapp" in query_lower:
+        if not WHATSAPP_ENABLED:
+            return "❌ WhatsApp integration is not available. Please install pywhatkit."
+        
+        if not is_whatsapp_configured():
+            return """❌ WhatsApp not configured! 
+
+To enable WhatsApp integration:
+1. Add your phone number to .env file:
+   USER_PHONE=+1234567890
+2. Include country code (e.g., +91 for India, +1 for US)
+3. Restart NEXUS
+
+Commands available after setup:
+• "send progress to whatsapp"
+• "whatsapp my dsa summary" 
+• "send arrays guide to whatsapp"
+"""
+        
+        if "progress" in query_lower or "summary" in query_lower:
+            # Send progress to WhatsApp
+            try:
+                print("📱 Preparing DSA progress for WhatsApp...")
+                update_platform_data()
+                dsa_data = load_dsa_progress()
+                
+                whatsapp_sent = send_dsa_progress_to_whatsapp(dsa_data)
+                if whatsapp_sent:
+                    return "✅ DSA progress report scheduled for WhatsApp! Check your phone in ~1 minute."
+                else:
+                    return "❌ Failed to send to WhatsApp. Please check your phone number configuration."
+            except Exception as e:
+                return f"❌ Error sending to WhatsApp: {e}"
+        
+        elif any(topic in query_lower for topic in ['arrays', 'strings', 'trees', 'graphs', 'dynamic', 'guide', 'study']):
+            # Send study guide to WhatsApp
+            topics = ['arrays', 'strings', 'linked_lists', 'trees', 'graphs', 'dynamic_programming']
+            topic = None
+            for t in topics:
+                if t.replace('_', ' ') in query_lower or t in query_lower:
+                    topic = t
+                    break
+            
+            if not topic:
+                topic = 'arrays'  # Default
+            
+            try:
+                print(f"📱 Preparing {topic} study guide for WhatsApp...")
+                guides_data = load_study_guides()
+                guide = guides_data.get("guides", {}).get(topic, {})
+                
+                guide_data = {
+                    'youtube_videos': guide.get('youtube_videos', []),
+                    'leetcode_problems': guide.get('leetcode_problems', []),
+                    'codechef_problems': guide.get('codechef_problems', []),
+                    'key_concepts': [
+                        "Watch videos for concepts",
+                        "Solve problems for practice", 
+                        "Track progress regularly"
+                    ]
+                }
+                
+                whatsapp_sent = send_study_guide_to_whatsapp(topic, guide_data)
+                if whatsapp_sent:
+                    return f"✅ {topic.replace('_', ' ').title()} study guide scheduled for WhatsApp! Check your phone in ~1 minute."
+                else:
+                    return "❌ Failed to send study guide to WhatsApp. Please check your phone number configuration."
+            except Exception as e:
+                return f"❌ Error sending study guide to WhatsApp: {e}"
+        
+        else:
+            return """📱 WhatsApp DSA Commands:
+
+• "send progress to whatsapp" - Send full DSA progress report
+• "whatsapp my dsa summary" - Send progress summary
+• "send arrays guide to whatsapp" - Send arrays study guide
+• "whatsapp trees study guide" - Send trees guide
+• "send dynamic programming guide to whatsapp" - Send DP guide
+
+Available topics: arrays, strings, trees, graphs, dynamic programming
+"""
+    
+    elif "progress" in query_lower or "summary" in query_lower:
         try:
             # Update with real data first
             print("🔄 Updating platform data...")
@@ -497,6 +707,19 @@ def DSAAgent(query: str):
                     summary += f"• {platform.title()}: {data['total_solved']} problems\n"
             
             summary += f"\n📈 Charts saved to: {chart_path}"
+            
+            # 🚀 NEW: Send progress to WhatsApp if configured
+            if WHATSAPP_ENABLED and is_whatsapp_configured():
+                print("📱 Sending DSA progress to WhatsApp...")
+                dsa_data = load_dsa_progress()
+                whatsapp_sent = send_dsa_progress_to_whatsapp(dsa_data)
+                if whatsapp_sent:
+                    summary += "\n📱 Progress report sent to your WhatsApp!"
+                else:
+                    summary += "\n⚠️ Could not send to WhatsApp (check your phone number in .env)"
+            elif WHATSAPP_ENABLED:
+                summary += "\n💡 Tip: Set USER_PHONE in .env to receive progress on WhatsApp!"
+            
             return summary
             
         except Exception as e:

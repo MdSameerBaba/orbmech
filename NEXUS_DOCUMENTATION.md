@@ -314,6 +314,7 @@ Edit `Data/portfolio.json`:
 - **Study Guides**: Curated resources with YouTube videos
 - **Language Preferences**: Python, Java, C++, JavaScript support
 - **Visual Analytics**: Progress charts and topic mastery
+- **🚀 WhatsApp Integration**: Send progress reports and study guides to WhatsApp
 
 ### Setup Process
 1. **Switch to DSA Mode**: `"dsa mode"`
@@ -338,6 +339,9 @@ System: Enter your HackerRank username: @sameerbaba2405
 | `"show my progress"` | Visual dashboard | 4-panel analytics |
 | `"set language to Java"` | Change programming language | Updates all guides |
 | `"trees prep"` | Study guide for trees | Curated learning path |
+| `"send progress to whatsapp"` | 📱 WhatsApp progress report | Detailed stats via WhatsApp |
+| `"send arrays guide to whatsapp"` | 📱 WhatsApp study guide | Study resources via WhatsApp |
+| `"whatsapp my dsa summary"` | 📱 WhatsApp summary | Quick progress via WhatsApp |
 
 ### Study Guide Topics
 - **Arrays & Two Pointers**: Sliding window, two-sum patterns
@@ -379,6 +383,74 @@ System: Enter your HackerRank username: @sameerbaba2405
 - **Topic Mastery**: Percentage completion by topic
 - **Weekly Activity**: Daily problem-solving trends
 - **Goals Tracking**: Daily/weekly/monthly targets
+
+### 📱 **WhatsApp Integration (NEW)**
+
+#### **Setup WhatsApp for DSA**
+```bash
+# 1. Configure your phone number in .env
+USER_PHONE=+1234567890  # Include country code
+
+# 2. Test integration
+python test_whatsapp_dsa_integration.py
+
+# 3. Use WhatsApp commands in DSA mode
+"dsa mode"
+"send progress to whatsapp"
+```
+
+#### **WhatsApp DSA Commands**
+```python
+# Progress Reports
+"send progress to whatsapp"          # Complete DSA progress
+"whatsapp my dsa summary"           # Quick progress summary
+
+# Study Guides  
+"send arrays guide to whatsapp"     # Arrays study guide
+"whatsapp trees study guide"        # Trees guide via WhatsApp
+"send dynamic programming guide to whatsapp"  # DP guide
+
+# Check Status
+"whatsapp"                          # Show available commands
+```
+
+#### **WhatsApp Message Features**
+- **📊 Progress Reports**: Platform stats, topic mastery, recent activity
+- **📚 Study Guides**: YouTube videos, practice problems, key concepts
+- **⏰ Smart Scheduling**: Messages sent with 1-minute delay
+- **📱 Mobile-Optimized**: Formatted for WhatsApp readability
+- **🔗 Direct Links**: Clickable YouTube and problem URLs
+
+#### **Sample WhatsApp Messages**
+```
+🚀 NEXUS DSA Progress Report 📊
+
+Hi Sunny! Here's your coding progress:
+
+📱 PLATFORM STATS:
+🔥 LeetCode: 156 problems
+   Easy: 45/800
+   Medium: 89/1600  
+   Hard: 22/700
+   Rating: 1847
+
+🎯 TOPIC MASTERY:
+📚 Arrays: 23/150 (15.3%)
+📚 Trees: 18/120 (15.0%)
+📚 Dynamic Programming: 12/150 (8.0%)
+
+💪 Keep coding! You're doing great!
+📅 Report generated: 2025-09-29 21:30
+
+Powered by NEXUS AI Career Acceleration System 🚀
+```
+
+#### **WhatsApp Integration Benefits**
+- **📱 Mobile Access**: Get content anywhere, anytime
+- **🔄 Automatic Delivery**: No need to manually copy-paste
+- **📊 Rich Formatting**: Well-structured, easy-to-read messages
+- **🔗 Direct Access**: Clickable links to resources
+- **📈 Progress Tracking**: Regular updates on coding journey
 
 ---
 
