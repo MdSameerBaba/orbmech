@@ -1,0 +1,208 @@
+{
+  "session": {
+    "session_id": "test_test_user_phase3_1759151997",
+    "user_id": "test_user_phase3",
+    "test_config": {
+      "company": "Test Company",
+      "role": "Test Role",
+      "experience_level": "Mid Level",
+      "time_limit": 5,
+      "total_questions": 4,
+      "assessment_config": {
+        "assessment_id": "assessment_1759151997",
+        "name": "Test Role Assessment - Test Company",
+        "description": "Comprehensive assessment for Test Role position",
+        "assessment_types": [
+          "AssessmentType.DSA_CODING",
+          "AssessmentType.TECHNICAL_MCQ",
+          "AssessmentType.APTITUDE_QUANTITATIVE"
+        ],
+        "total_questions": 20,
+        "time_limit_minutes": 5,
+        "company_name": "Test Company",
+        "target_role": "Test Role",
+        "experience_level": "Mid Level",
+        "passing_score": 70.0,
+        "dsa_questions": 8,
+        "mcq_questions": 8,
+        "aptitude_questions": 4,
+        "easy_percent": 30.0,
+        "medium_percent": 50.0,
+        "hard_percent": 20.0
+      }
+    },
+    "questions": [
+      {
+        "type": "MCQ",
+        "id": "apt_009",
+        "question": "If today is Wednesday, what day will it be 100 days from now?",
+        "difficulty": "MEDIUM",
+        "category": "LOGICAL_PUZZLES",
+        "options": [
+          {
+            "id": "a",
+            "text": "Monday"
+          },
+          {
+            "id": "b",
+            "text": "Tuesday"
+          },
+          {
+            "id": "c",
+            "text": "Wednesday"
+          },
+          {
+            "id": "d",
+            "text": "Friday"
+          }
+        ],
+        "time_estimate": 2
+      },
+      {
+        "type": "MCQ",
+        "id": "apt_005",
+        "question": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+        "difficulty": "MEDIUM",
+        "category": "LOGICAL_PUZZLES",
+        "options": [
+          {
+            "id": "a",
+            "text": "5 minutes"
+          },
+          {
+            "id": "b",
+            "text": "20 minutes"
+          },
+          {
+            "id": "c",
+            "text": "100 minutes"
+          },
+          {
+            "id": "d",
+            "text": "500 minutes"
+          }
+        ],
+        "time_estimate": 2
+      },
+      {
+        "type": "MCQ",
+        "id": "apt_002",
+        "question": "Find the next number in the sequence: 2, 6, 12, 20, 30, ?",
+        "difficulty": "MEDIUM",
+        "category": "PATTERN_RECOGNITION",
+        "options": [
+          {
+            "id": "a",
+            "text": "40"
+          },
+          {
+            "id": "b",
+            "text": "42"
+          },
+          {
+            "id": "c",
+            "text": "44"
+          },
+          {
+            "id": "d",
+            "text": "46"
+          }
+        ],
+        "time_estimate": 2
+      },
+      {
+        "type": "MCQ",
+        "id": "apt_001",
+        "question": "If a train travels 120 km in 2 hours, what is its average speed?",
+        "difficulty": "EASY",
+        "category": "MATHEMATICS",
+        "options": [
+          {
+            "id": "a",
+            "text": "50 km/h"
+          },
+          {
+            "id": "b",
+            "text": "60 km/h"
+          },
+          {
+            "id": "c",
+            "text": "70 km/h"
+          },
+          {
+            "id": "d",
+            "text": "80 km/h"
+          }
+        ],
+        "time_estimate": 2
+      }
+    ],
+    "start_time": "2025-09-29 18:49:57.728620",
+    "time_limit": 5,
+    "current_question": 0,
+    "responses": {},
+    "is_active": false,
+    "paused_time": 0,
+    "warnings_sent": []
+  },
+  "results": {
+    "session_id": "test_test_user_phase3_1759151997",
+    "user_id": "test_user_phase3",
+    "total_questions": 4,
+    "answered_questions": 0,
+    "correct_answers": 0,
+    "overall_percentage": 0.0,
+    "category_breakdown": {
+      "LOGICAL_PUZZLES": {
+        "percentage": 0.0,
+        "correct": 0,
+        "total": 2
+      },
+      "PATTERN_RECOGNITION": {
+        "percentage": 0.0,
+        "correct": 0,
+        "total": 1
+      },
+      "MATHEMATICS": {
+        "percentage": 0.0,
+        "correct": 0,
+        "total": 1
+      }
+    },
+    "time_taken": 0,
+    "time_limit": 300,
+    "completion_rate": 0.0,
+    "test_config": {
+      "company": "Test Company",
+      "role": "Test Role",
+      "experience_level": "Mid Level",
+      "time_limit": 5,
+      "total_questions": 4,
+      "assessment_config": {
+        "assessment_id": "assessment_1759151997",
+        "name": "Test Role Assessment - Test Company",
+        "description": "Comprehensive assessment for Test Role position",
+        "assessment_types": [
+          "AssessmentType.DSA_CODING",
+          "AssessmentType.TECHNICAL_MCQ",
+          "AssessmentType.APTITUDE_QUANTITATIVE"
+        ],
+        "total_questions": 20,
+        "time_limit_minutes": 5,
+        "company_name": "Test Company",
+        "target_role": "Test Role",
+        "experience_level": "Mid Level",
+        "passing_score": 70.0,
+        "dsa_questions": 8,
+        "mcq_questions": 8,
+        "aptitude_questions": 4,
+        "easy_percent": 30.0,
+        "medium_percent": 50.0,
+        "hard_percent": 20.0
+      }
+    },
+    "started_at": "2025-09-29T18:49:57.728620",
+    "completed_at": "2025-09-29T18:49:57.728620"
+  },
+  "archived_at": "2025-09-29T18:49:57.730020"
+}

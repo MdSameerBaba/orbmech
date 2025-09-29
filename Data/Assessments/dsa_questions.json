@@ -1,0 +1,416 @@
+[
+  {
+    "id": "dsa_001",
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.",
+    "category": "ARRAYS",
+    "difficulty": "EASY",
+    "test_cases": [
+      {
+        "input_data": "nums = [2,7,11,15], target = 9",
+        "expected_output": "[0,1]",
+        "explanation": "Because nums[0] + nums[1] == 9, we return [0, 1]",
+        "is_hidden": false
+      },
+      {
+        "input_data": "nums = [3,2,4], target = 6",
+        "expected_output": "[1,2]",
+        "explanation": "Because nums[1] + nums[2] == 6, we return [1, 2]",
+        "is_hidden": false
+      },
+      {
+        "input_data": "nums = [3,3], target = 6",
+        "expected_output": "[0,1]",
+        "explanation": "Because nums[0] + nums[1] == 6, we return [0, 1]",
+        "is_hidden": true
+      }
+    ],
+    "hints": [
+      "Try using a hash map to store values and their indices",
+      "For each element, check if target - element exists in the map",
+      "The complement of nums[i] is target - nums[i]"
+    ],
+    "solution_approach": "Use a hash map to store elements and their indices. For each element, check if (target - element) exists in the map. If found, return the indices.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(n)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/two-sum/",
+    "tags": ["hash-table", "array", "easy"]
+  },
+  {
+    "id": "dsa_002",
+    "title": "Valid Parentheses",
+    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets, open brackets must be closed in the correct order, and every close bracket has a corresponding open bracket of the same type.",
+    "category": "STACK_QUEUE",
+    "difficulty": "EASY",
+    "test_cases": [
+      {
+        "input_data": "s = \"()\"",
+        "expected_output": "true",
+        "explanation": "Valid parentheses",
+        "is_hidden": false
+      },
+      {
+        "input_data": "s = \"()[]{}\"",
+        "expected_output": "true",
+        "explanation": "All types are properly matched",
+        "is_hidden": false
+      },
+      {
+        "input_data": "s = \"(]\"",
+        "expected_output": "false",
+        "explanation": "Mismatched brackets",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Use a stack to keep track of opening brackets",
+      "When you see a closing bracket, check if it matches the most recent opening bracket",
+      "The string is valid if the stack is empty at the end"
+    ],
+    "solution_approach": "Use a stack. Push opening brackets onto the stack. For closing brackets, pop from stack and check if they match.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(n)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook"],
+    "leetcode_link": "https://leetcode.com/problems/valid-parentheses/",
+    "tags": ["stack", "string", "easy"]
+  },
+  {
+    "id": "dsa_003",
+    "title": "Merge Two Sorted Lists",
+    "description": "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists in a sorted manner and return the head of the merged linked list. The list should be made by splicing together the nodes of the first two lists.",
+    "category": "LINKED_LISTS",
+    "difficulty": "EASY",
+    "test_cases": [
+      {
+        "input_data": "list1 = [1,2,4], list2 = [1,3,4]",
+        "expected_output": "[1,1,2,3,4,4]",
+        "explanation": "Merge both sorted lists",
+        "is_hidden": false
+      },
+      {
+        "input_data": "list1 = [], list2 = []",
+        "expected_output": "[]",
+        "explanation": "Both lists are empty",
+        "is_hidden": false
+      },
+      {
+        "input_data": "list1 = [], list2 = [0]",
+        "expected_output": "[0]",
+        "explanation": "One list is empty",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Use a dummy head to simplify the logic",
+      "Compare the values of the two current nodes and choose the smaller one",
+      "Move the pointer of the chosen list forward"
+    ],
+    "solution_approach": "Use two pointers to iterate through both lists. Compare values and link the smaller node to the result list.",
+    "time_complexity": "O(n + m)",
+    "space_complexity": "O(1)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "tags": ["linked-list", "recursion", "easy"]
+  },
+  {
+    "id": "dsa_004",
+    "title": "Best Time to Buy and Sell Stock",
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.",
+    "category": "ARRAYS",
+    "difficulty": "EASY",
+    "test_cases": [
+      {
+        "input_data": "prices = [7,1,5,3,6,4]",
+        "expected_output": "5",
+        "explanation": "Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5",
+        "is_hidden": false
+      },
+      {
+        "input_data": "prices = [7,6,4,3,1]",
+        "expected_output": "0",
+        "explanation": "No profit can be made as prices are decreasing",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Keep track of the minimum price seen so far",
+      "For each price, calculate the profit if we sell at that price",
+      "Update the maximum profit accordingly"
+    ],
+    "solution_approach": "Single pass algorithm keeping track of minimum price and maximum profit at each step.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(1)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "tags": ["array", "dynamic-programming", "easy"]
+  },
+  {
+    "id": "dsa_005",
+    "title": "Maximum Subarray",
+    "description": "Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.",
+    "category": "DYNAMIC_PROGRAMMING",
+    "difficulty": "MEDIUM",
+    "test_cases": [
+      {
+        "input_data": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        "expected_output": "6",
+        "explanation": "[4,-1,2,1] has the largest sum = 6",
+        "is_hidden": false
+      },
+      {
+        "input_data": "nums = [1]",
+        "expected_output": "1",
+        "explanation": "Single element",
+        "is_hidden": false
+      },
+      {
+        "input_data": "nums = [5,4,-1,7,8]",
+        "expected_output": "23",
+        "explanation": "All elements sum to 23",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Think about Kadane's algorithm",
+      "At each position, decide whether to start a new subarray or extend the existing one",
+      "Keep track of the maximum sum seen so far"
+    ],
+    "solution_approach": "Use Kadane's algorithm: at each position, choose between starting new subarray or extending current one.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(1)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/maximum-subarray/",
+    "tags": ["array", "dynamic-programming", "divide-and-conquer", "medium"]
+  },
+  {
+    "id": "dsa_006",
+    "title": "Binary Tree Inorder Traversal", 
+    "description": "Given the root of a binary tree, return the inorder traversal of its nodes' values. Inorder traversal visits nodes in the order: left subtree, root, right subtree.",
+    "category": "TREES",
+    "difficulty": "EASY",
+    "test_cases": [
+      {
+        "input_data": "root = [1,null,2,3]",
+        "expected_output": "[1,3,2]",
+        "explanation": "Inorder: left, root, right",
+        "is_hidden": false
+      },
+      {
+        "input_data": "root = []",
+        "expected_output": "[]",
+        "explanation": "Empty tree",
+        "is_hidden": false
+      },
+      {
+        "input_data": "root = [1]",
+        "expected_output": "[1]",
+        "explanation": "Single node",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "You can solve this recursively or iteratively",
+      "For recursive: left subtree, current node, right subtree",
+      "For iterative: use a stack to simulate recursion"
+    ],
+    "solution_approach": "Recursive: traverse left, visit node, traverse right. Iterative: use stack to simulate recursion call stack.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(n)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook"],
+    "leetcode_link": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+    "tags": ["tree", "depth-first-search", "stack", "binary-tree", "easy"]
+  },
+  {
+    "id": "dsa_007",
+    "title": "Climbing Stairs",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "category": "DYNAMIC_PROGRAMMING",
+    "difficulty": "EASY",
+    "test_cases": [
+      {
+        "input_data": "n = 2",
+        "expected_output": "2",
+        "explanation": "1+1 or 2",
+        "is_hidden": false
+      },
+      {
+        "input_data": "n = 3", 
+        "expected_output": "3",
+        "explanation": "1+1+1, 1+2, or 2+1",
+        "is_hidden": false
+      },
+      {
+        "input_data": "n = 4",
+        "expected_output": "5",
+        "explanation": "1+1+1+1, 1+1+2, 1+2+1, 2+1+1, 2+2",
+        "is_hidden": true
+      }
+    ],
+    "hints": [
+      "This is similar to the Fibonacci sequence",
+      "To reach step n, you can come from step n-1 or step n-2",
+      "f(n) = f(n-1) + f(n-2)"
+    ],
+    "solution_approach": "Dynamic programming: f(n) = f(n-1) + f(n-2). Can be optimized to use O(1) space.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(1)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook"],
+    "leetcode_link": "https://leetcode.com/problems/climbing-stairs/",
+    "tags": ["dynamic-programming", "math", "memoization", "easy"]
+  },
+  {
+    "id": "dsa_008",
+    "title": "Longest Common Subsequence",
+    "description": "Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0. A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.",
+    "category": "DYNAMIC_PROGRAMMING",
+    "difficulty": "MEDIUM",
+    "test_cases": [
+      {
+        "input_data": "text1 = \"abcde\", text2 = \"ace\"",
+        "expected_output": "3",
+        "explanation": "The longest common subsequence is \"ace\" and its length is 3",
+        "is_hidden": false
+      },
+      {
+        "input_data": "text1 = \"abc\", text2 = \"abc\"",
+        "expected_output": "3",
+        "explanation": "The longest common subsequence is \"abc\" and its length is 3",
+        "is_hidden": false
+      },
+      {
+        "input_data": "text1 = \"abc\", text2 = \"def\"",
+        "expected_output": "0",
+        "explanation": "There is no such common subsequence",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Use dynamic programming with a 2D table",
+      "If characters match, add 1 to the diagonal value",
+      "If characters don't match, take the maximum of left and top values"
+    ],
+    "solution_approach": "2D DP table where dp[i][j] represents LCS length of text1[0..i-1] and text2[0..j-1].",
+    "time_complexity": "O(m*n)",
+    "space_complexity": "O(m*n)", 
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Adobe"],
+    "leetcode_link": "https://leetcode.com/problems/longest-common-subsequence/",
+    "tags": ["string", "dynamic-programming", "medium"]
+  },
+  {
+    "id": "dsa_009",
+    "title": "Course Schedule",
+    "description": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai. Return true if you can finish all courses. Otherwise, return false.",
+    "category": "GRAPHS",
+    "difficulty": "MEDIUM",
+    "test_cases": [
+      {
+        "input_data": "numCourses = 2, prerequisites = [[1,0]]",
+        "expected_output": "true",
+        "explanation": "Take course 0, then course 1",
+        "is_hidden": false
+      },
+      {
+        "input_data": "numCourses = 2, prerequisites = [[1,0],[0,1]]",
+        "expected_output": "false",
+        "explanation": "Circular dependency",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "This is a cycle detection problem in a directed graph",
+      "Use topological sorting or DFS with coloring",
+      "If there's a cycle, courses cannot be completed"
+    ],
+    "solution_approach": "Model as directed graph and check for cycles using DFS or topological sort with Kahn's algorithm.",
+    "time_complexity": "O(V + E)",
+    "space_complexity": "O(V + E)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/course-schedule/",
+    "tags": ["depth-first-search", "breadth-first-search", "graph", "topological-sort", "medium"]
+  },
+  {
+    "id": "dsa_010",
+    "title": "LRU Cache",
+    "description": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement the LRUCache class with get(key) and put(key, value) methods. Both operations should run in O(1) average time complexity.",
+    "category": "HASH_TABLE",
+    "difficulty": "MEDIUM",
+    "test_cases": [
+      {
+        "input_data": "operations = [\"LRUCache\", \"put\", \"put\", \"get\", \"put\", \"get\", \"put\", \"get\", \"get\", \"get\"], values = [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]",
+        "expected_output": "[null, null, null, 1, null, -1, null, -1, 3, 4]",
+        "explanation": "LRU operations with capacity 2",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Use a combination of hash map and doubly linked list",
+      "Hash map provides O(1) access, doubly linked list maintains order",
+      "Move accessed items to the front, remove from the back when capacity exceeded"
+    ],
+    "solution_approach": "Hash map + doubly linked list. Map stores key->node mapping, list maintains LRU order.",
+    "time_complexity": "O(1)",
+    "space_complexity": "O(capacity)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/lru-cache/",
+    "tags": ["hash-table", "linked-list", "design", "doubly-linked-list", "medium"]
+  },
+  {
+    "id": "dsa_011", 
+    "title": "Word Ladder",
+    "description": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that every adjacent pair of words differs by a single letter and every si for 1 <= i <= k is in wordList. Given two words, beginWord and endWord, and a dictionary wordList, return the length of the shortest transformation sequence from beginWord to endWord, or 0 if no such sequence exists.",
+    "category": "GRAPHS",
+    "difficulty": "HARD",
+    "test_cases": [
+      {
+        "input_data": "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+        "expected_output": "5",
+        "explanation": "hit -> hot -> dot -> dog -> cog",
+        "is_hidden": false
+      },
+      {
+        "input_data": "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]",
+        "expected_output": "0",
+        "explanation": "endWord \"cog\" is not in wordList",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Model this as a graph problem where each word is a node",
+      "Two words are connected if they differ by exactly one character",
+      "Use BFS to find the shortest path"
+    ],
+    "solution_approach": "BFS on word graph. Build adjacency list of words differing by one character, then find shortest path.",
+    "time_complexity": "O(M^2 * N)",
+    "space_complexity": "O(M^2 * N)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook"],
+    "leetcode_link": "https://leetcode.com/problems/word-ladder/",
+    "tags": ["hash-table", "string", "breadth-first-search", "hard"]
+  },
+  {
+    "id": "dsa_012",
+    "title": "Serialize and Deserialize Binary Tree",
+    "description": "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer. Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work.",
+    "category": "TREES",
+    "difficulty": "HARD",
+    "test_cases": [
+      {
+        "input_data": "root = [1,2,3,null,null,4,5]",
+        "expected_output": "[1,2,3,null,null,4,5]",
+        "explanation": "Serialize then deserialize should return original tree",
+        "is_hidden": false
+      }
+    ],
+    "hints": [
+      "Use preorder traversal for serialization",
+      "Include null markers for missing nodes",
+      "For deserialization, use the same traversal order"
+    ],
+    "solution_approach": "Preorder traversal with null markers. Serialize using DFS, deserialize by rebuilding tree from serialized string.",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(n)",
+    "companies": ["Google", "Amazon", "Microsoft", "Facebook", "Apple"],
+    "leetcode_link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "tags": ["string", "tree", "depth-first-search", "breadth-first-search", "design", "binary-tree", "hard"]
+  }
+]

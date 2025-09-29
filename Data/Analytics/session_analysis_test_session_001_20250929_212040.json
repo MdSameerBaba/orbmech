@@ -1,0 +1,163 @@
+{
+  "session_id": "test_session_001",
+  "user_id": "test_user_001",
+  "analysis_timestamp": "2025-09-29T21:20:40.453549",
+  "performance_metrics": {
+    "overall_score": 78.5,
+    "communication_score": 80.0,
+    "confidence_score": 75.0,
+    "professionalism_score": 82.0,
+    "technical_score": 77.0,
+    "detailed_video_scores": {
+      "eye_contact": 78.0,
+      "confidence": 75.0,
+      "professionalism": 82.0,
+      "attention": 76.0
+    },
+    "detailed_audio_scores": {
+      "clarity": 80.0,
+      "pace": 150.0,
+      "confidence": 75.0,
+      "filler_words": 3
+    },
+    "session_duration": 1800,
+    "questions_answered": 8
+  },
+  "video_analysis": {
+    "eye_contact_performance": {
+      "score": 78.0,
+      "grade": "B+",
+      "feedback": "Good eye contact with room for more consistency"
+    },
+    "confidence_display": {
+      "score": 75.0,
+      "grade": "B+",
+      "feedback": "Shows good confidence with some moments of uncertainty"
+    },
+    "professionalism": {
+      "score": 82.0,
+      "grade": "A-",
+      "feedback": "Good professional demeanor with minor areas for polish"
+    },
+    "body_language": {
+      "score": 76.0,
+      "grade": "B+",
+      "feedback": "Good body language with consistent engagement"
+    },
+    "overall_video_performance": {
+      "score": 77.75,
+      "grade": "B+",
+      "strengths": [
+        "eye_contact_performance",
+        "professionalism",
+        "body_language"
+      ],
+      "improvements": []
+    }
+  },
+  "audio_analysis": {
+    "speech_clarity": {
+      "score": 80.0,
+      "grade": "A-",
+      "feedback": "Generally clear speech with good articulation"
+    },
+    "speaking_pace": {
+      "score": 100,
+      "wpm": 150.0,
+      "grade": "A+",
+      "feedback": "Perfect speaking pace - clear and engaging"
+    },
+    "voice_confidence": {
+      "score": 75.0,
+      "grade": "B+",
+      "feedback": "Good voice confidence with steady delivery"
+    },
+    "filler_words": {
+      "count": 3,
+      "score": 85,
+      "grade": "A",
+      "feedback": "Good control of filler words with room for improvement"
+    },
+    "overall_audio_performance": {
+      "score": 85.0,
+      "grade": "A",
+      "strengths": [
+        "speech_clarity",
+        "speaking_pace",
+        "filler_words"
+      ],
+      "improvements": []
+    }
+  },
+  "content_analysis": {
+    "technical_competency": {
+      "score": 77.0,
+      "grade": "B+",
+      "feedback": "Strong technical competency with clear explanations"
+    },
+    "question_completion": {
+      "rate": 80.0,
+      "answered": 8,
+      "total": 10,
+      "grade": "A-",
+      "feedback": "Good completion rate with thorough responses"
+    },
+    "response_quality": {
+      "score": 77.0,
+      "grade": "B+",
+      "feedback": "Good response quality with clear communication"
+    },
+    "overall_content_performance": {
+      "score": 78.5,
+      "grade": "B+",
+      "strengths": [
+        "technical_competency",
+        "question_completion",
+        "response_quality"
+      ],
+      "improvements": []
+    }
+  },
+  "recommendations": [],
+  "company_insights": {
+    "company_focus_areas": [
+      "Technical depth",
+      "Problem solving",
+      "Cultural fit"
+    ],
+    "company_culture_fit": {
+      "score": 75.0,
+      "areas": [
+        "Communication style matches company culture",
+        "Professional demeanor appropriate"
+      ],
+      "recommendations": [
+        "Continue demonstrating collaborative attitude"
+      ]
+    },
+    "role_specific_feedback": [
+      "Performance aligns well with Software Engineer expectations",
+      "Technical competency matches role requirements",
+      "Communication style appropriate for position level"
+    ],
+    "company_comparison": {
+      "meets_standards": true,
+      "above_average_areas": [
+        "Communication",
+        "Professionalism"
+      ],
+      "improvement_areas": [
+        "Technical depth"
+      ],
+      "percentile": 75
+    }
+  },
+  "overall_grade": "B+",
+  "key_strengths": [
+    "Strong communication skills",
+    "Professional demeanor"
+  ],
+  "improvement_priorities": [
+    "Continue practicing for consistency"
+  ]
+}

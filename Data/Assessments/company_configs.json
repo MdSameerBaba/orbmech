@@ -1,0 +1,202 @@
+{
+  "google": {
+    "name": "Google",
+    "assessment_config": {
+      "dsa_weight": 0.6,
+      "mcq_weight": 0.3,
+      "aptitude_weight": 0.1,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["algorithms", "system_design", "data_structures", "problem_solving"],
+      "time_limits": {
+        "dsa": 90,
+        "mcq": 60,
+        "aptitude": 30
+      },
+      "question_counts": {
+        "dsa": 3,
+        "mcq": 15,
+        "aptitude": 10
+      }
+    }
+  },
+  "amazon": {
+    "name": "Amazon",
+    "assessment_config": {
+      "dsa_weight": 0.5,
+      "mcq_weight": 0.3,
+      "aptitude_weight": 0.2,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["algorithms", "leadership_principles", "scalability", "optimization"],
+      "time_limits": {
+        "dsa": 75,
+        "mcq": 45,
+        "aptitude": 30
+      },
+      "question_counts": {
+        "dsa": 2,
+        "mcq": 12,
+        "aptitude": 8
+      }
+    }
+  },
+  "microsoft": {
+    "name": "Microsoft",
+    "assessment_config": {
+      "dsa_weight": 0.45,
+      "mcq_weight": 0.35,
+      "aptitude_weight": 0.2,
+      "preferred_difficulties": ["EASY", "MEDIUM", "HARD"],
+      "focus_areas": ["programming", "system_design", "technology_knowledge", "analytical_thinking"],
+      "time_limits": {
+        "dsa": 80,
+        "mcq": 50,
+        "aptitude": 35
+      },
+      "question_counts": {
+        "dsa": 3,
+        "mcq": 18,
+        "aptitude": 12
+      }
+    }
+  },
+  "apple": {
+    "name": "Apple",
+    "assessment_config": {
+      "dsa_weight": 0.4,
+      "mcq_weight": 0.4,
+      "aptitude_weight": 0.2,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["innovation", "design_thinking", "performance_optimization", "user_experience"],
+      "time_limits": {
+        "dsa": 70,
+        "mcq": 55,
+        "aptitude": 25
+      },
+      "question_counts": {
+        "dsa": 2,
+        "mcq": 16,
+        "aptitude": 8
+      }
+    }
+  },
+  "facebook": {
+    "name": "Meta (Facebook)",
+    "assessment_config": {
+      "dsa_weight": 0.55,
+      "mcq_weight": 0.3,
+      "aptitude_weight": 0.15,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["algorithms", "social_impact", "scalability", "data_analysis"],
+      "time_limits": {
+        "dsa": 85,
+        "mcq": 40,
+        "aptitude": 20
+      },
+      "question_counts": {
+        "dsa": 3,
+        "mcq": 14,
+        "aptitude": 6
+      }
+    }
+  },
+  "netflix": {
+    "name": "Netflix",
+    "assessment_config": {
+      "dsa_weight": 0.4,
+      "mcq_weight": 0.4,
+      "aptitude_weight": 0.2,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["streaming_technology", "data_processing", "machine_learning", "content_delivery"],
+      "time_limits": {
+        "dsa": 75,
+        "mcq": 50,
+        "aptitude": 30
+      },
+      "question_counts": {
+        "dsa": 2,
+        "mcq": 15,
+        "aptitude": 10
+      }
+    }
+  },
+  "linkedin": {
+    "name": "LinkedIn", 
+    "assessment_config": {
+      "dsa_weight": 0.35,
+      "mcq_weight": 0.4,
+      "aptitude_weight": 0.25,
+      "preferred_difficulties": ["EASY", "MEDIUM", "HARD"],
+      "focus_areas": ["networking", "social_graphs", "recommendation_systems", "professional_development"],
+      "time_limits": {
+        "dsa": 65,
+        "mcq": 55,
+        "aptitude": 40
+      },
+      "question_counts": {
+        "dsa": 2,
+        "mcq": 16,
+        "aptitude": 14
+      }
+    }
+  },
+  "uber": {
+    "name": "Uber",
+    "assessment_config": {
+      "dsa_weight": 0.45,
+      "mcq_weight": 0.35,
+      "aptitude_weight": 0.2,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["real_time_systems", "geospatial_algorithms", "optimization", "marketplace_dynamics"],
+      "time_limits": {
+        "dsa": 80,
+        "mcq": 45,
+        "aptitude": 25
+      },
+      "question_counts": {
+        "dsa": 3,
+        "mcq": 13,
+        "aptitude": 7
+      }
+    }
+  },
+  "airbnb": {
+    "name": "Airbnb",
+    "assessment_config": {
+      "dsa_weight": 0.4,
+      "mcq_weight": 0.35,
+      "aptitude_weight": 0.25,
+      "preferred_difficulties": ["MEDIUM", "HARD"],
+      "focus_areas": ["user_experience", "trust_safety", "search_algorithms", "marketplace_optimization"],
+      "time_limits": {
+        "dsa": 70,
+        "mcq": 50,
+        "aptitude": 35
+      },
+      "question_counts": {
+        "dsa": 2,
+        "mcq": 14,
+        "aptitude": 12
+      }
+    }
+  },
+  "default": {
+    "name": "Standard Tech Assessment",
+    "assessment_config": {
+      "dsa_weight": 0.4,
+      "mcq_weight": 0.4,
+      "aptitude_weight": 0.2,
+      "preferred_difficulties": ["EASY", "MEDIUM", "HARD"],
+      "focus_areas": ["general_programming", "problem_solving", "technical_knowledge", "analytical_thinking"],
+      "time_limits": {
+        "dsa": 75,
+        "mcq": 50,
+        "aptitude": 30
+      },
+      "question_counts": {
+        "dsa": 3,
+        "mcq": 15,
+        "aptitude": 10
+      }
+    }
+  }
+}

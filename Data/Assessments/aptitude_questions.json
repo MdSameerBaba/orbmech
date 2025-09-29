@@ -1,0 +1,527 @@
+[
+  {
+    "id": "apt_001",
+    "question": "If a train travels 120 km in 2 hours, what is its average speed?",
+    "category": "MATHEMATICS",
+    "difficulty": "EASY",
+    "options": [
+      {
+        "id": "a",
+        "text": "50 km/h",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "60 km/h",
+        "is_correct": true,
+        "explanation": "Speed = Distance / Time = 120 km / 2 hours = 60 km/h"
+      },
+      {
+        "id": "c",
+        "text": "70 km/h",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "80 km/h",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "Average speed is calculated as total distance divided by total time: 120 km ÷ 2 hours = 60 km/h",
+    "companies": [],
+    "tags": ["mathematics", "speed", "basic-arithmetic"]
+  },
+  {
+    "id": "apt_002",
+    "question": "Find the next number in the sequence: 2, 6, 12, 20, 30, ?",
+    "category": "PATTERN_RECOGNITION",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "40",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "42",
+        "is_correct": true,
+        "explanation": "Pattern: n(n+1) where n = 1,2,3,4,5,6. Next: 6×7 = 42"
+      },
+      {
+        "id": "c",
+        "text": "44",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "46",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "The sequence follows the pattern n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42",
+    "companies": [],
+    "tags": ["pattern", "sequence", "mathematical-reasoning"]
+  },
+  {
+    "id": "apt_003",
+    "question": "If 15% of a number is 45, what is the number?",
+    "category": "MATHEMATICS",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "200",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "250",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "300",
+        "is_correct": true,
+        "explanation": "If 15% of x = 45, then x = 45 ÷ 0.15 = 300"
+      },
+      {
+        "id": "d",
+        "text": "350",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "If 15% of a number equals 45, then the number = 45 ÷ 0.15 = 300. Check: 15% of 300 = 0.15 × 300 = 45 ✓",
+    "companies": [],
+    "tags": ["percentage", "mathematics", "algebra"]
+  },
+  {
+    "id": "apt_004",
+    "question": "Which word does NOT belong with the others?",
+    "category": "LOGICAL_PUZZLES",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rectangle",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "Square",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "Triangle",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "Circle",
+        "is_correct": true,
+        "explanation": "Circle is the only shape without straight sides/angles"
+      }
+    ],
+    "explanation": "Rectangle, Square, and Triangle are all polygons with straight sides and angles, while Circle is a curved shape without sides or angles.",
+    "companies": [],
+    "tags": ["logical-reasoning", "categorization", "geometry"]
+  },
+  {
+    "id": "apt_005",
+    "question": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+    "category": "LOGICAL_PUZZLES",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 minutes",
+        "is_correct": true,
+        "explanation": "Each machine makes 1 widget in 5 minutes, so 100 machines make 100 widgets in 5 minutes"
+      },
+      {
+        "id": "b",
+        "text": "20 minutes",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "100 minutes",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "500 minutes",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "If 5 machines make 5 widgets in 5 minutes, then each machine makes 1 widget in 5 minutes. Therefore, 100 machines working simultaneously would make 100 widgets in 5 minutes.",
+    "companies": [],
+    "tags": ["logical-reasoning", "proportions", "critical-thinking"]
+  },
+  {
+    "id": "apt_006",
+    "question": "A shopkeeper sells an item for $110, making a profit of 10%. What was the cost price?",
+    "category": "MATHEMATICS",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "$90",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "$95",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "$100",
+        "is_correct": true,
+        "explanation": "If selling price = cost price + 10% profit, then $110 = CP × 1.10, so CP = $100"
+      },
+      {
+        "id": "d",
+        "text": "$105",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "Selling Price = Cost Price + Profit. If SP = $110 with 10% profit, then $110 = CP × 1.10, therefore CP = $110 ÷ 1.10 = $100",
+    "companies": [],
+    "tags": ["profit-loss", "percentage", "business-mathematics"]
+  },
+  {
+    "id": "apt_007", 
+    "question": "Complete the analogy: BOOK is to READING as FORK is to ?",
+    "category": "READING_COMPREHENSION",
+    "difficulty": "EASY",
+    "options": [
+      {
+        "id": "a",
+        "text": "KITCHEN",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "EATING",
+        "is_correct": true,
+        "explanation": "A book is used for reading, similarly a fork is used for eating"
+      },
+      {
+        "id": "c",
+        "text": "SPOON",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "METAL",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "The relationship is tool-to-function: a book is a tool used for reading, and a fork is a tool used for eating.",
+    "companies": [],
+    "tags": ["analogy", "verbal-reasoning", "relationships"]
+  },
+  {
+    "id": "apt_008",
+    "question": "In how many ways can the letters of the word 'TEAM' be arranged?",
+    "category": "MATHEMATICS",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "12",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "16",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "20",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "24",
+        "is_correct": true,
+        "explanation": "4 distinct letters can be arranged in 4! = 4 × 3 × 2 × 1 = 24 ways"
+      }
+    ],
+    "explanation": "The number of arrangements of n distinct objects is n!. For 'TEAM' (4 distinct letters): 4! = 4 × 3 × 2 × 1 = 24 arrangements.",
+    "companies": [],
+    "tags": ["permutations", "combinatorics", "mathematics"]
+  },
+  {
+    "id": "apt_009",
+    "question": "If today is Wednesday, what day will it be 100 days from now?",
+    "category": "LOGICAL_PUZZLES",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "Monday",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "Tuesday",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "Wednesday",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "Friday",
+        "is_correct": true,
+        "explanation": "100 ÷ 7 = 14 remainder 2. So 100 days = 14 weeks + 2 days. Wednesday + 2 days = Friday"
+      }
+    ],
+    "explanation": "Since days repeat every 7 days, we find 100 mod 7 = 2. Starting from Wednesday and adding 2 days gives us Friday.",
+    "companies": [],
+    "tags": ["modular-arithmetic", "calendar", "logical-reasoning"]
+  },
+  {
+    "id": "apt_010",
+    "question": "A water tank can be filled by pipe A in 4 hours and by pipe B in 6 hours. How long will it take to fill the tank if both pipes work together?",
+    "category": "MATHEMATICS",
+    "difficulty": "HARD",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 hours",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "2.4 hours",
+        "is_correct": true,
+        "explanation": "Combined rate = 1/4 + 1/6 = 5/12 tanks per hour. Time = 1 ÷ (5/12) = 12/5 = 2.4 hours"
+      },
+      {
+        "id": "c",
+        "text": "3 hours",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",  
+        "text": "5 hours",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "Pipe A fills 1/4 tank per hour, pipe B fills 1/6 tank per hour. Together: 1/4 + 1/6 = 3/12 + 2/12 = 5/12 tanks per hour. Time to fill 1 tank = 12/5 = 2.4 hours.",
+    "companies": [],
+    "tags": ["work-rate", "fractions", "time-and-work"]
+  },
+  {
+    "id": "apt_011",
+    "question": "Which number should come next in the series: 1, 4, 9, 16, 25, ?",
+    "category": "PATTERN_RECOGNITION",
+    "difficulty": "EASY",
+    "options": [
+      {
+        "id": "a",
+        "text": "30",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "35",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "36",
+        "is_correct": true,
+        "explanation": "This is the sequence of perfect squares: 1², 2², 3², 4², 5², 6² = 36"
+      },
+      {
+        "id": "d",
+        "text": "49",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "The sequence represents perfect squares: 1² = 1, 2² = 4, 3² = 9, 4² = 16, 5² = 25, 6² = 36",
+    "companies": [],
+    "tags": ["perfect-squares", "pattern-recognition", "mathematics"]
+  },
+  {
+    "id": "apt_012",
+    "question": "Choose the word that is most similar in meaning to 'METICULOUS':",
+    "category": "GRAMMAR",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "Careless",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "Thorough",
+        "is_correct": true,
+        "explanation": "Meticulous means extremely careful and precise, similar to thorough"
+      },
+      {
+        "id": "c",
+        "text": "Quick",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "Lazy",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "Meticulous means showing great attention to detail; being very careful and precise. This is most similar to 'thorough'.",
+    "companies": [],
+    "tags": ["vocabulary", "synonyms", "verbal-ability"]
+  },
+  {
+    "id": "apt_013",
+    "question": "A cube has 6 faces. How many faces does a rectangular prism (cuboid) have?",
+    "category": "MATHEMATICS",
+    "difficulty": "EASY",
+    "options": [
+      {
+        "id": "a",
+        "text": "4",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "5",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "6",
+        "is_correct": true,
+        "explanation": "A rectangular prism also has 6 faces, just like a cube"
+      },
+      {
+        "id": "d",
+        "text": "8",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "A rectangular prism (cuboid) has 6 faces: top, bottom, front, back, left side, and right side. A cube is just a special case of a rectangular prism where all faces are squares.",
+    "companies": [],
+    "tags": ["geometry", "3d-shapes", "spatial-reasoning"]
+  },
+  {
+    "id": "apt_014",
+    "question": "If the ratio of boys to girls in a class is 3:2 and there are 15 boys, how many girls are there?",
+    "category": "MATHEMATICS",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "8",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "10",
+        "is_correct": true,
+        "explanation": "If boys:girls = 3:2 and boys = 15, then girls = (2/3) × 15 = 10"
+      },
+      {
+        "id": "c",
+        "text": "12",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "d",
+        "text": "20",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "If the ratio is 3:2, then for every 3 boys there are 2 girls. With 15 boys: 15 ÷ 3 = 5 groups of 3 boys, so there are 5 × 2 = 10 girls.",
+    "companies": [],
+    "tags": ["ratios", "proportions", "mathematics"]
+  },
+  {
+    "id": "apt_015",
+    "question": "What is the next letter in the sequence: A, D, G, J, ?",
+    "category": "PATTERN_RECOGNITION",
+    "difficulty": "MEDIUM",
+    "options": [
+      {
+        "id": "a",
+        "text": "K",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "b",
+        "text": "L",
+        "is_correct": false,
+        "explanation": null
+      },
+      {
+        "id": "c",
+        "text": "M",
+        "is_correct": true,
+        "explanation": "The pattern increases by 3 letters each time: A(+3)D(+3)G(+3)J(+3)M"
+      },
+      {
+        "id": "d",
+        "text": "N",
+        "is_correct": false,
+        "explanation": null
+      }
+    ],
+    "explanation": "The sequence advances by 3 letters each time: A to D (+3), D to G (+3), G to J (+3), J to M (+3).",
+    "companies": [],
+    "tags": ["letter-patterns", "alphabetical-sequence", "pattern-recognition"]
+  }
+]

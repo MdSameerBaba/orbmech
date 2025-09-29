@@ -1,0 +1,208 @@
+{
+  "session": {
+    "session_id": "test_test_user_phase3_1759152193",
+    "user_id": "test_user_phase3",
+    "test_config": {
+      "company": "Test Company",
+      "role": "Test Role",
+      "experience_level": "Mid Level",
+      "time_limit": 5,
+      "total_questions": 4,
+      "assessment_config": {
+        "assessment_id": "assessment_1759152193",
+        "name": "Test Role Assessment - Test Company",
+        "description": "Comprehensive assessment for Test Role position",
+        "assessment_types": [
+          "AssessmentType.DSA_CODING",
+          "AssessmentType.TECHNICAL_MCQ",
+          "AssessmentType.APTITUDE_QUANTITATIVE"
+        ],
+        "total_questions": 20,
+        "time_limit_minutes": 5,
+        "company_name": "Test Company",
+        "target_role": "Test Role",
+        "experience_level": "Mid Level",
+        "passing_score": 70.0,
+        "dsa_questions": 8,
+        "mcq_questions": 8,
+        "aptitude_questions": 4,
+        "easy_percent": 30.0,
+        "medium_percent": 50.0,
+        "hard_percent": 20.0
+      }
+    },
+    "questions": [
+      {
+        "type": "MCQ",
+        "id": "apt_013",
+        "question": "A cube has 6 faces. How many faces does a rectangular prism (cuboid) have?",
+        "difficulty": "EASY",
+        "category": "MATHEMATICS",
+        "options": [
+          {
+            "id": "a",
+            "text": "4"
+          },
+          {
+            "id": "b",
+            "text": "5"
+          },
+          {
+            "id": "c",
+            "text": "6"
+          },
+          {
+            "id": "d",
+            "text": "8"
+          }
+        ],
+        "time_estimate": 2
+      },
+      {
+        "type": "MCQ",
+        "id": "apt_007",
+        "question": "Complete the analogy: BOOK is to READING as FORK is to ?",
+        "difficulty": "EASY",
+        "category": "READING_COMPREHENSION",
+        "options": [
+          {
+            "id": "a",
+            "text": "KITCHEN"
+          },
+          {
+            "id": "b",
+            "text": "EATING"
+          },
+          {
+            "id": "c",
+            "text": "SPOON"
+          },
+          {
+            "id": "d",
+            "text": "METAL"
+          }
+        ],
+        "time_estimate": 2
+      },
+      {
+        "type": "MCQ",
+        "id": "apt_012",
+        "question": "Choose the word that is most similar in meaning to 'METICULOUS':",
+        "difficulty": "MEDIUM",
+        "category": "GRAMMAR",
+        "options": [
+          {
+            "id": "a",
+            "text": "Careless"
+          },
+          {
+            "id": "b",
+            "text": "Thorough"
+          },
+          {
+            "id": "c",
+            "text": "Quick"
+          },
+          {
+            "id": "d",
+            "text": "Lazy"
+          }
+        ],
+        "time_estimate": 2
+      },
+      {
+        "type": "MCQ",
+        "id": "apt_001",
+        "question": "If a train travels 120 km in 2 hours, what is its average speed?",
+        "difficulty": "EASY",
+        "category": "MATHEMATICS",
+        "options": [
+          {
+            "id": "a",
+            "text": "50 km/h"
+          },
+          {
+            "id": "b",
+            "text": "60 km/h"
+          },
+          {
+            "id": "c",
+            "text": "70 km/h"
+          },
+          {
+            "id": "d",
+            "text": "80 km/h"
+          }
+        ],
+        "time_estimate": 2
+      }
+    ],
+    "start_time": "2025-09-29 18:53:13.348732",
+    "time_limit": 5,
+    "current_question": 0,
+    "responses": {},
+    "is_active": false,
+    "paused_time": 0,
+    "warnings_sent": []
+  },
+  "results": {
+    "session_id": "test_test_user_phase3_1759152193",
+    "user_id": "test_user_phase3",
+    "total_questions": 4,
+    "answered_questions": 0,
+    "correct_answers": 0,
+    "overall_percentage": 0.0,
+    "category_breakdown": {
+      "MATHEMATICS": {
+        "percentage": 0.0,
+        "correct": 0,
+        "total": 2
+      },
+      "READING_COMPREHENSION": {
+        "percentage": 0.0,
+        "correct": 0,
+        "total": 1
+      },
+      "GRAMMAR": {
+        "percentage": 0.0,
+        "correct": 0,
+        "total": 1
+      }
+    },
+    "time_taken": 0,
+    "time_limit": 300,
+    "completion_rate": 0.0,
+    "test_config": {
+      "company": "Test Company",
+      "role": "Test Role",
+      "experience_level": "Mid Level",
+      "time_limit": 5,
+      "total_questions": 4,
+      "assessment_config": {
+        "assessment_id": "assessment_1759152193",
+        "name": "Test Role Assessment - Test Company",
+        "description": "Comprehensive assessment for Test Role position",
+        "assessment_types": [
+          "AssessmentType.DSA_CODING",
+          "AssessmentType.TECHNICAL_MCQ",
+          "AssessmentType.APTITUDE_QUANTITATIVE"
+        ],
+        "total_questions": 20,
+        "time_limit_minutes": 5,
+        "company_name": "Test Company",
+        "target_role": "Test Role",
+        "experience_level": "Mid Level",
+        "passing_score": 70.0,
+        "dsa_questions": 8,
+        "mcq_questions": 8,
+        "aptitude_questions": 4,
+        "easy_percent": 30.0,
+        "medium_percent": 50.0,
+        "hard_percent": 20.0
+      }
+    },
+    "started_at": "2025-09-29T18:53:13.348732",
+    "completed_at": "2025-09-29T18:53:13.348732"
+  },
+  "archived_at": "2025-09-29T18:53:13.349793"
+}

@@ -139,6 +139,17 @@ def ProcessQuery(Query: str):
         git_keywords = ['save', 'push', 'pull', 'sync', 'git status', 'git add', 'git commit', 'git push', 'git pull', 'git init', 'git clone', 'git branch']
         is_git_command = any(keyword in Query.lower() for keyword in git_keywords) and mode_type == "project"
         
+        # Check for NEXUS career acceleration commands
+        nexus_keywords = [
+            'nexus', 'career', 'company research', 'build resume', 'optimize resume', 
+            'start assessment', 'start interview', 'mock interview', 'practice interview',
+            'career progress', 'interview simulation', 'behavioral interview', 'technical interview',
+            'company intelligence', 'resume building', 'skill assessment', 'interview practice',
+            'research google', 'research microsoft', 'research amazon', 'research apple',
+            'research netflix', 'research meta', 'research facebook', 'tell me about.*company'
+        ]
+        is_nexus = any(keyword in Query.lower() for keyword in nexus_keywords) or any(d.startswith("nexus") for d in Decision)
+        
         # Determine query type - prioritize explicit decisions over current mode
         is_general = any(d.startswith("general") for d in Decision)
         is_realtime = any(d.startswith("realtime") for d in Decision)
@@ -170,10 +181,32 @@ def ProcessQuery(Query: str):
             elif mode_type == "project":
                 is_project = True
         
-        print(f"Debug: mode={get_current_mode()}, is_stock={is_stock}, is_dsa={is_dsa}, is_project={is_project}, is_setup_dsa={is_setup_dsa}, is_setup_github={is_setup_github}, is_reminder={is_reminder}, is_mode={is_mode}, is_general={is_general}, is_realtime={is_realtime}")
+        print(f"Debug: mode={get_current_mode()}, is_stock={is_stock}, is_dsa={is_dsa}, is_project={is_project}, is_setup_dsa={is_setup_dsa}, is_setup_github={is_setup_github}, is_reminder={is_reminder}, is_mode={is_mode}, is_general={is_general}, is_realtime={is_realtime}, is_nexus={is_nexus}")
         
-        if is_general or is_realtime or is_stock or is_dsa or is_setup_dsa or is_setup_github or is_reminder or is_mode or is_project:
-            if is_stock:
+        if is_nexus or is_general or is_realtime or is_stock or is_dsa or is_setup_dsa or is_setup_github or is_reminder or is_mode or is_project:
+            if is_nexus:
+                print(f"🚀 Calling NEXUS Career Acceleration System with query: '{Query}'")
+                try:
+                    from Backend.Agents.NEXUSAgent import NEXUS
+                    Answer = NEXUS(Query)
+                except ImportError:
+                    Answer = """
+🚀 **NEXUS Career Acceleration System**
+⚠️ NEXUS system components are being initialized...
+
+Available career acceleration features:
+🏢 Company Intelligence & Research
+📄 Resume Building & Optimization  
+📊 Skill Assessment & Testing
+🎬 AI Interview Simulation
+
+To activate NEXUS, ensure all system components are properly installed.
+For now, try specific commands like:
+• "DSA practice" for coding challenges
+• "Project mode" for development work
+• "Stock analysis" for market insights
+                    """
+            elif is_stock:
                 query = " ".join([" ".join(i.split()[1:]) for i in Decision if i.startswith("stock")])
                 print(f"📈 Calling StockAgent with query: '{query}'")
                 Answer = StockAgent(query)

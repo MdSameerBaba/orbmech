@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-09-29T18:53:13.386367",
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "success_rate": 100.0
+  },
+  "detailed_results": [
+    {
+      "test": "Assessment Engine Basics",
+      "status": "PASSED"
+    },
+    {
+      "test": "Question Database Loading",
+      "status": "PASSED"
+    },
+    {
+      "test": "Company-Specific Assessments",
+      "status": "PASSED"
+    },
+    {
+      "test": "Traditional Assessment Flow",
+      "status": "PASSED"
+    },
+    {
+      "test": "Timed Test Environment",
+      "status": "PASSED"
+    },
+    {
+      "test": "Performance Analytics",
+      "status": "PASSED"
+    },
+    {
+      "test": "Complete Workflow Integration",
+      "status": "PASSED"
+    }
+  ]
+}
