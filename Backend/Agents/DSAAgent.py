@@ -629,7 +629,7 @@ Commands available after setup:
                 
                 whatsapp_sent = send_dsa_progress_to_whatsapp(dsa_data)
                 if whatsapp_sent:
-                    return "✅ DSA progress report scheduled for WhatsApp! Check your phone in ~1 minute."
+                    return "✅ DSA progress report scheduled for WhatsApp! Check your phone in ~5 minutes."
                 else:
                     return "❌ Failed to send to WhatsApp. Please check your phone number configuration."
             except Exception as e:
@@ -665,7 +665,7 @@ Commands available after setup:
                 
                 whatsapp_sent = send_study_guide_to_whatsapp(topic, guide_data)
                 if whatsapp_sent:
-                    return f"✅ {topic.replace('_', ' ').title()} study guide scheduled for WhatsApp! Check your phone in ~1 minute."
+                    return f"✅ {topic.replace('_', ' ').title()} study guide scheduled for WhatsApp! Check your phone in ~5 minutes."
                 else:
                     return "❌ Failed to send study guide to WhatsApp. Please check your phone number configuration."
             except Exception as e:

@@ -12,14 +12,14 @@ env_vars = dotenv_values(".env")
 USERNAME = env_vars.get("Username", "User")
 USER_PHONE = env_vars.get("USER_PHONE", "")  # User's WhatsApp number
 
-def send_whatsapp_message(phone_number, message, delay_minutes=2):
+def send_whatsapp_message(phone_number, message, delay_minutes=5):
     """
     Send WhatsApp message using pywhatkit
     
     Args:
         phone_number (str): Phone number with country code (e.g., "+919876543210")
         message (str): Message to send
-        delay_minutes (int): Minutes to wait before sending (default: 2)
+        delay_minutes (int): Minutes to wait before sending (default: 5)
     
     Returns:
         bool: True if scheduled successfully, False otherwise
@@ -31,12 +31,14 @@ def send_whatsapp_message(phone_number, message, delay_minutes=2):
         minute = send_time.minute
         
         print(f"📱 Scheduling WhatsApp message to {phone_number}")
-        print(f"⏰ Message will be sent at {hour:02d}:{minute:02d}")
+        print(f"⏰ Message will be sent at {hour:02d}:{minute:02d} ({delay_minutes} minutes from now)")
+        print(f"💡 Extended delay for reliable delivery!")
         
-        # Schedule the message with longer wait time
-        kit.sendwhatmsg(phone_number, message, hour, minute, wait_time=20, tab_close=True)
+        # Schedule the message with longer wait time for stability
+        kit.sendwhatmsg(phone_number, message, hour, minute, wait_time=30, tab_close=True)
         
         print("✅ WhatsApp message scheduled successfully!")
+        print(f"🕐 Please wait {delay_minutes} minutes for automatic delivery")
         return True
         
     except Exception as e:
@@ -191,7 +193,7 @@ def send_dsa_progress_to_whatsapp(dsa_data, phone_number=None):
             return False
         
         message = format_dsa_progress_message(dsa_data)
-        return send_whatsapp_message(target_phone, message, delay_minutes=2)
+        return send_whatsapp_message(target_phone, message, delay_minutes=5)
         
     except Exception as e:
         print(f"❌ Error sending DSA progress to WhatsApp: {e}")
@@ -217,7 +219,7 @@ def send_study_guide_to_whatsapp(topic, guide_data, phone_number=None):
             return False
         
         message = format_study_guide_message(topic, guide_data)
-        return send_whatsapp_message(target_phone, message, delay_minutes=2)
+        return send_whatsapp_message(target_phone, message, delay_minutes=5)
         
     except Exception as e:
         print(f"❌ Error sending study guide to WhatsApp: {e}")
@@ -263,7 +265,7 @@ def send_scraped_content_to_whatsapp(content_title, scraped_data, phone_number=N
         message += f"\n\n📅 Scraped: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
         message += "*Powered by NEXUS AI Career Acceleration System* 🚀"
         
-        return send_whatsapp_message(target_phone, message, delay_minutes=2)
+        return send_whatsapp_message(target_phone, message, delay_minutes=5)
         
     except Exception as e:
         print(f"❌ Error sending scraped content to WhatsApp: {e}")
@@ -287,7 +289,7 @@ def test_whatsapp_integration():
     
     test_message = f"🚀 NEXUS WhatsApp Integration Test\n\nHi {USERNAME}!\n\nThis is a test message from your NEXUS AI system.\n\nIf you received this, WhatsApp integration is working perfectly! 🎉\n\n*Powered by NEXUS AI Career Acceleration System*"
     
-    return send_whatsapp_message(USER_PHONE, test_message, delay_minutes=2)
+    return send_whatsapp_message(USER_PHONE, test_message, delay_minutes=5)
 
 if __name__ == "__main__":
     # Test the integration

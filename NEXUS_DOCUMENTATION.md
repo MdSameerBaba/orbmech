@@ -417,7 +417,7 @@ python test_whatsapp_dsa_integration.py
 #### **WhatsApp Message Features**
 - **📊 Progress Reports**: Platform stats, topic mastery, recent activity
 - **📚 Study Guides**: YouTube videos, practice problems, key concepts
-- **⏰ Smart Scheduling**: Messages sent with 1-minute delay
+- **⏰ Smart Scheduling**: Messages sent with 5-minute delay for reliability
 - **📱 Mobile-Optimized**: Formatted for WhatsApp readability
 - **🔗 Direct Links**: Clickable YouTube and problem URLs
 
