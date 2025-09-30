@@ -187,7 +187,9 @@ def convert_comprehensive_to_guide_format(comprehensive_data):
         "total_guides": len(guides),
         "sources": ["Striver A2Z", "Love Babbar 450", "Aditya Verma", "Apna College"],
         "guides": guides
-    }:
+    }
+
+try:
     from WhatsAppIntegration import (
         send_dsa_progress_to_whatsapp, 
         send_study_guide_to_whatsapp,

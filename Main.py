@@ -29,6 +29,7 @@ from Backend.Agents.DSASetup import setup_dsa_usernames
 from Backend.ModeManager import switch_mode, get_mode_info, should_route_to_mode, get_current_mode
 from Backend.Agents.ProjectAgent import ProjectAgent, start_project_reminders, get_project_exit_warning
 from Backend.SharedServices import gui_queue, backend_queue
+from personal_assistant_manager import PersonalAssistantManager
 
 # --- CONFIGURATION ---
 def setup_environment():
@@ -148,7 +149,16 @@ def ProcessQuery(Query: str):
             'research google', 'research microsoft', 'research amazon', 'research apple',
             'research netflix', 'research meta', 'research facebook', 'tell me about.*company'
         ]
+        
+        # Check for personal assistant commands
+        personal_assistant_keywords = [
+            'schedule', 'calendar', 'appointment', 'meeting', 'task', 'todo', 'expense', 'budget', 
+            'health', 'fitness', 'contact', 'bill', 'reminder', 'shopping', 'movie', 'music',
+            'entertainment', 'weather', 'news', 'personal assistant', 'show calendar', 'show tasks',
+            'show expenses', 'show contacts', 'show bills', 'add task', 'add expense', 'add contact'
+        ]
         is_nexus = any(keyword in Query.lower() for keyword in nexus_keywords) or any(d.startswith("nexus") for d in Decision)
+        is_personal_assistant = any(keyword in Query.lower() for keyword in personal_assistant_keywords) or any(d.startswith("personal") for d in Decision)
         
         # Determine query type - prioritize explicit decisions over current mode
         is_general = any(d.startswith("general") for d in Decision)
@@ -173,7 +183,7 @@ def ProcessQuery(Query: str):
             print("🔄 Detected misclassified git command in project mode, routing to ProjectAgent")
         
         # Only use mode fallback if no explicit decision was made
-        if not any([is_general, is_realtime, is_stock, is_dsa, is_setup_dsa, is_setup_github, is_reminder, is_project]):
+        if not any([is_general, is_realtime, is_stock, is_dsa, is_setup_dsa, is_setup_github, is_reminder, is_project, is_personal_assistant]):
             if mode_type == "stock":
                 is_stock = True
             elif mode_type == "dsa":
@@ -181,9 +191,9 @@ def ProcessQuery(Query: str):
             elif mode_type == "project":
                 is_project = True
         
-        print(f"Debug: mode={get_current_mode()}, is_stock={is_stock}, is_dsa={is_dsa}, is_project={is_project}, is_setup_dsa={is_setup_dsa}, is_setup_github={is_setup_github}, is_reminder={is_reminder}, is_mode={is_mode}, is_general={is_general}, is_realtime={is_realtime}, is_nexus={is_nexus}")
+        print(f"Debug: mode={get_current_mode()}, is_stock={is_stock}, is_dsa={is_dsa}, is_project={is_project}, is_setup_dsa={is_setup_dsa}, is_setup_github={is_setup_github}, is_reminder={is_reminder}, is_mode={is_mode}, is_general={is_general}, is_realtime={is_realtime}, is_nexus={is_nexus}, is_personal_assistant={is_personal_assistant}")
         
-        if is_nexus or is_general or is_realtime or is_stock or is_dsa or is_setup_dsa or is_setup_github or is_reminder or is_mode or is_project:
+        if is_nexus or is_general or is_realtime or is_stock or is_dsa or is_setup_dsa or is_setup_github or is_reminder or is_mode or is_project or is_personal_assistant:
             if is_nexus:
                 print(f"🚀 Calling NEXUS Career Acceleration System with query: '{Query}'")
                 try:
@@ -275,6 +285,25 @@ For now, try specific commands like:
                 query = " ".join([" ".join(i.split()[1:]) for i in Decision if i.startswith("dsa")])
                 print(f"📚 Calling DSAAgent with query: '{query}'")
                 Answer = DSAAgent(query)
+            elif is_personal_assistant:
+                print(f"🤖 Calling Personal Assistant with query: '{Query}'")
+                try:
+                    pa = PersonalAssistantManager()
+                    Answer = pa.process_personal_assistant_query(Query)
+                except Exception as e:
+                    Answer = f"""🤖 **Personal Assistant**
+⚠️ System temporarily unavailable: {str(e)}
+
+🏠 **Available Features:**
+• Calendar management
+• Task tracking  
+• Expense monitoring
+• Health logging
+• Contact management
+• Bill tracking
+• Entertainment recommendations
+
+Please try again in a moment!"""
             elif is_realtime:
                 query = " ".join([" ".join(i.split()[1:]) for i in Decision if i.startswith("realtime")])
                 print(f"🌐 Calling RealtimeSearchEngine with query: '{query}'")
