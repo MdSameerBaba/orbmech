@@ -1,0 +1,1962 @@
+{
+  "programming_language": "Python",
+  "last_updated": "2025-09-30 23:07:54",
+  "total_topics": 25,
+  "guides": {
+    "arrays": {
+      "title": "Arrays",
+      "topic_id": "arrays",
+      "last_updated": "2025-09-30 23:07:02",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [
+        {
+          "title": "Arrays Complete Course - All Concepts & Problems",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=37E9ckMDdTk",
+          "duration": "4:30:00",
+          "difficulty": "Beginner to Advanced",
+          "topics_covered": [
+            "Basic operations",
+            "Two pointers",
+            "Sliding window",
+            "Kadane's algorithm"
+          ]
+        },
+        {
+          "title": "Array Data Structure - Complete Tutorial",
+          "channel": "Love Babbar",
+          "url": "https://www.youtube.com/watch?v=AT14lCXuMKI",
+          "duration": "2:45:00",
+          "difficulty": "Beginner",
+          "topics_covered": [
+            "Arrays basics",
+            "Memory allocation",
+            "Operations"
+          ]
+        },
+        {
+          "title": "Two Pointer Technique - All Problems",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=OnLoX6Nhvmg",
+          "duration": "1:20:00",
+          "difficulty": "Intermediate",
+          "topics_covered": [
+            "Two sum",
+            "3Sum",
+            "Container with most water"
+          ]
+        },
+        {
+          "title": "Sliding Window Technique - Complete Guide",
+          "channel": "Aditya Verma",
+          "url": "https://www.youtube.com/watch?v=GBuHwyt0JV4",
+          "duration": "2:10:00",
+          "difficulty": "Intermediate to Advanced",
+          "topics_covered": [
+            "Fixed window",
+            "Variable window",
+            "Problems"
+          ]
+        },
+        {
+          "title": "Array Interview Questions - Top 50",
+          "channel": "GeeksforGeeks",
+          "url": "https://www.youtube.com/watch?v=Wj9dyqUy_38",
+          "duration": "3:00:00",
+          "difficulty": "Advanced",
+          "topics_covered": [
+            "Interview patterns",
+            "Advanced problems"
+          ]
+        }
+      ],
+      "video_count": 5,
+      "leetcode_problems": [
+        {
+          "name": "Two Sum",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/two-sum/",
+          "pattern": "Hash Map"
+        },
+        {
+          "name": "Best Time to Buy and Sell Stock",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+          "pattern": "Single Pass"
+        },
+        {
+          "name": "Contains Duplicate",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/contains-duplicate/",
+          "pattern": "Hash Set"
+        },
+        {
+          "name": "Maximum Subarray",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/maximum-subarray/",
+          "pattern": "Kadane's Algorithm"
+        },
+        {
+          "name": "Product of Array Except Self",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/product-of-array-except-self/",
+          "pattern": "Prefix/Suffix"
+        },
+        {
+          "name": "3Sum",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/3sum/",
+          "pattern": "Two Pointers"
+        },
+        {
+          "name": "Container With Most Water",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/container-with-most-water/",
+          "pattern": "Two Pointers"
+        },
+        {
+          "name": "Sliding Window Maximum",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/sliding-window-maximum/",
+          "pattern": "Sliding Window + Deque"
+        },
+        {
+          "name": "Trapping Rain Water",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/trapping-rain-water/",
+          "pattern": "Two Pointers"
+        },
+        {
+          "name": "First Missing Positive",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/first-missing-positive/",
+          "pattern": "Cyclic Sort"
+        },
+        {
+          "name": "Merge Intervals",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/merge-intervals/",
+          "pattern": "Intervals"
+        },
+        {
+          "name": "Rotate Array",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/rotate-array/",
+          "pattern": "Cyclic Replacement"
+        },
+        {
+          "name": "Find Peak Element",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/find-peak-element/",
+          "pattern": "Binary Search"
+        },
+        {
+          "name": "Search in Rotated Sorted Array",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+          "pattern": "Modified Binary Search"
+        },
+        {
+          "name": "Longest Increasing Subsequence",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+          "pattern": "DP + Binary Search"
+        }
+      ],
+      "leetcode_count": 15,
+      "codechef_problems": [
+        {
+          "name": "LAPIN",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/LAPIN",
+          "category": "String Arrays"
+        },
+        {
+          "name": "SUBINC",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/SUBINC",
+          "category": "Subsequences"
+        },
+        {
+          "name": "KADANE",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/KADANE",
+          "category": "Maximum Subarray"
+        },
+        {
+          "name": "RAINBOWA",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/RAINBOWA",
+          "category": "Array Properties"
+        },
+        {
+          "name": "ARRAYSUB",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/ARRAYSUB",
+          "category": "Sliding Window"
+        },
+        {
+          "name": "CIELAB",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/CIELAB",
+          "category": "Array Difference"
+        },
+        {
+          "name": "SUMQ",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/SUMQ",
+          "category": "Array Sums"
+        },
+        {
+          "name": "SORTING",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/SORTING",
+          "category": "Array Sorting"
+        }
+      ],
+      "codechef_count": 8,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Arrays - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/arrays/",
+          "type": "Article"
+        },
+        {
+          "title": "Arrays - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Arrays - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [
+          "Two Sum",
+          "Best Time to Buy and Sell Stock",
+          "Contains Duplicate",
+          "Maximum Subarray",
+          "Product of Array Except Self"
+        ],
+        "common_patterns": [
+          "Two Pointers",
+          "Sliding Window",
+          "Hash Map",
+          "Prefix Sum",
+          "Sorting"
+        ],
+        "time_complexity_analysis": true,
+        "coding_tips": [
+          "Always check array bounds",
+          "Consider edge cases like empty arrays",
+          "Use two pointers for optimization",
+          "Hash maps can reduce time complexity"
+        ]
+      }
+    },
+    "strings": {
+      "title": "Strings",
+      "topic_id": "strings",
+      "last_updated": "2025-09-30 23:07:05",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Strings - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/strings/",
+          "type": "Article"
+        },
+        {
+          "title": "Strings - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Strings - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "linked_lists": {
+      "title": "Linked Lists",
+      "topic_id": "linked_lists",
+      "last_updated": "2025-09-30 23:07:07",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Linked_Lists - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/linked-lists/",
+          "type": "Article"
+        },
+        {
+          "title": "Linked_Lists - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Linked_Lists - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "stacks": {
+      "title": "Stacks",
+      "topic_id": "stacks",
+      "last_updated": "2025-09-30 23:07:09",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Stacks - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/stacks/",
+          "type": "Article"
+        },
+        {
+          "title": "Stacks - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Stacks - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "queues": {
+      "title": "Queues",
+      "topic_id": "queues",
+      "last_updated": "2025-09-30 23:07:11",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Queues - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/queues/",
+          "type": "Article"
+        },
+        {
+          "title": "Queues - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Queues - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "trees": {
+      "title": "Trees",
+      "topic_id": "trees",
+      "last_updated": "2025-09-30 23:07:13",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [
+        {
+          "title": "Binary Trees Complete Course",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=_SqXVeaGKEY",
+          "duration": "5:00:00",
+          "difficulty": "Beginner to Advanced",
+          "topics_covered": [
+            "Tree traversals",
+            "Views",
+            "Diameter",
+            "LCA"
+          ]
+        },
+        {
+          "title": "Tree Data Structure Fundamentals",
+          "channel": "mycodeschool",
+          "url": "https://www.youtube.com/watch?v=qH6yxkw0u78",
+          "duration": "1:30:00",
+          "difficulty": "Beginner",
+          "topics_covered": [
+            "Tree basics",
+            "Terminology",
+            "Types"
+          ]
+        },
+        {
+          "title": "Binary Search Tree Complete Tutorial",
+          "channel": "Abdul Bari",
+          "url": "https://www.youtube.com/watch?v=gcULXE7ViZw",
+          "duration": "2:20:00",
+          "difficulty": "Intermediate",
+          "topics_covered": [
+            "BST operations",
+            "Insertion",
+            "Deletion",
+            "Search"
+          ]
+        },
+        {
+          "title": "Tree Interview Questions - Most Asked",
+          "channel": "Love Babbar",
+          "url": "https://www.youtube.com/watch?v=BHx7iukGQrY",
+          "duration": "4:15:00",
+          "difficulty": "Advanced",
+          "topics_covered": [
+            "Complex tree problems",
+            "Interview patterns"
+          ]
+        }
+      ],
+      "video_count": 4,
+      "leetcode_problems": [
+        {
+          "name": "Maximum Depth of Binary Tree",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+          "pattern": "DFS/BFS"
+        },
+        {
+          "name": "Same Tree",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/same-tree/",
+          "pattern": "Tree Comparison"
+        },
+        {
+          "name": "Invert Binary Tree",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/invert-binary-tree/",
+          "pattern": "Tree Manipulation"
+        },
+        {
+          "name": "Binary Tree Level Order Traversal",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+          "pattern": "BFS"
+        },
+        {
+          "name": "Validate Binary Search Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+          "pattern": "BST Validation"
+        },
+        {
+          "name": "Lowest Common Ancestor of a Binary Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+          "pattern": "LCA"
+        },
+        {
+          "name": "Binary Tree Zigzag Level Order Traversal",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+          "pattern": "Modified BFS"
+        },
+        {
+          "name": "Construct Binary Tree from Preorder and Inorder",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+          "pattern": "Tree Construction"
+        },
+        {
+          "name": "Serialize and Deserialize Binary Tree",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+          "pattern": "Tree Serialization"
+        },
+        {
+          "name": "Binary Tree Maximum Path Sum",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+          "pattern": "Tree DP"
+        },
+        {
+          "name": "Recover Binary Search Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/recover-binary-search-tree/",
+          "pattern": "BST Properties"
+        },
+        {
+          "name": "Flatten Binary Tree to Linked List",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+          "pattern": "Tree Flattening"
+        },
+        {
+          "name": "Binary Tree Right Side View",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+          "pattern": "Tree Views"
+        },
+        {
+          "name": "Count Complete Tree Nodes",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/count-complete-tree-nodes/",
+          "pattern": "Complete Tree Properties"
+        },
+        {
+          "name": "House Robber III",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/house-robber-iii/",
+          "pattern": "Tree DP"
+        }
+      ],
+      "leetcode_count": 15,
+      "codechef_problems": [
+        {
+          "name": "BTREE",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/BTREE",
+          "category": "Binary Trees"
+        },
+        {
+          "name": "TREEPATH",
+          "difficulty": "Hard",
+          "url": "https://www.codechef.com/problems/TREEPATH",
+          "category": "Tree Paths"
+        },
+        {
+          "name": "LCA",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/LCA",
+          "category": "Lowest Common Ancestor"
+        },
+        {
+          "name": "QTREE",
+          "difficulty": "Hard",
+          "url": "https://www.codechef.com/problems/QTREE",
+          "category": "Tree Queries"
+        },
+        {
+          "name": "TREEROOT",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/TREEROOT",
+          "category": "Tree Basics"
+        },
+        {
+          "name": "DIAMETER",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/DIAMETER",
+          "category": "Tree Diameter"
+        }
+      ],
+      "codechef_count": 6,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Trees - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/trees/",
+          "type": "Article"
+        },
+        {
+          "title": "Trees - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Trees - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [
+          "Maximum Depth of Binary Tree",
+          "Same Tree",
+          "Invert Binary Tree",
+          "Binary Tree Level Order Traversal",
+          "Validate Binary Search Tree"
+        ],
+        "common_patterns": [
+          "DFS",
+          "BFS",
+          "Recursion",
+          "Tree DP",
+          "Tree Traversal"
+        ],
+        "time_complexity_analysis": true,
+        "coding_tips": [
+          "Handle null nodes carefully",
+          "Recursive solutions are often elegant",
+          "Consider iterative approaches for optimization",
+          "Level order traversal uses queue"
+        ]
+      }
+    },
+    "binary_trees": {
+      "title": "Binary Trees",
+      "topic_id": "binary_trees",
+      "last_updated": "2025-09-30 23:07:15",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Binary_Trees - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/binary-trees/",
+          "type": "Article"
+        },
+        {
+          "title": "Binary_Trees - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Binary_Trees - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "binary_search_trees": {
+      "title": "Binary Search Trees",
+      "topic_id": "binary_search_trees",
+      "last_updated": "2025-09-30 23:07:17",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Binary_Search_Trees - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/binary-search-trees/",
+          "type": "Article"
+        },
+        {
+          "title": "Binary_Search_Trees - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Binary_Search_Trees - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "heaps": {
+      "title": "Heaps",
+      "topic_id": "heaps",
+      "last_updated": "2025-09-30 23:07:19",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Heaps - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/heaps/",
+          "type": "Article"
+        },
+        {
+          "title": "Heaps - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Heaps - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "graphs": {
+      "title": "Graphs",
+      "topic_id": "graphs",
+      "last_updated": "2025-09-30 23:07:21",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [
+        {
+          "title": "Graph Theory Complete Course",
+          "channel": "William Fiset",
+          "url": "https://www.youtube.com/watch?v=09_LlHjoEiY",
+          "duration": "10:00:00",
+          "difficulty": "Beginner to Advanced",
+          "topics_covered": [
+            "Graph basics",
+            "BFS",
+            "DFS",
+            "Shortest paths",
+            "MST"
+          ]
+        },
+        {
+          "title": "Graph Algorithms Masterclass",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+          "duration": "7:20:00",
+          "difficulty": "Intermediate to Advanced",
+          "topics_covered": [
+            "Traversals",
+            "Cycle detection",
+            "Topological sort"
+          ]
+        },
+        {
+          "title": "Advanced Graph Algorithms",
+          "channel": "Errichto",
+          "url": "https://www.youtube.com/watch?v=yhYuThJGoiI",
+          "duration": "4:30:00",
+          "difficulty": "Advanced",
+          "topics_covered": [
+            "Network flows",
+            "Matching",
+            "Advanced algorithms"
+          ]
+        }
+      ],
+      "video_count": 3,
+      "leetcode_problems": [
+        {
+          "name": "Number of Islands",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/number-of-islands/",
+          "pattern": "DFS/BFS"
+        },
+        {
+          "name": "Clone Graph",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/clone-graph/",
+          "pattern": "Graph Traversal"
+        },
+        {
+          "name": "Course Schedule",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/course-schedule/",
+          "pattern": "Topological Sort"
+        },
+        {
+          "name": "Pacific Atlantic Water Flow",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+          "pattern": "Multi-source BFS"
+        },
+        {
+          "name": "Graph Valid Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/graph-valid-tree/",
+          "pattern": "Union Find"
+        },
+        {
+          "name": "Network Delay Time",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/network-delay-time/",
+          "pattern": "Dijkstra"
+        },
+        {
+          "name": "Cheapest Flights Within K Stops",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+          "pattern": "Bellman-Ford"
+        },
+        {
+          "name": "Word Ladder",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/word-ladder/",
+          "pattern": "BFS"
+        },
+        {
+          "name": "Alien Dictionary",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/alien-dictionary/",
+          "pattern": "Topological Sort"
+        },
+        {
+          "name": "Minimum Spanning Tree",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+          "pattern": "MST"
+        },
+        {
+          "name": "Critical Connections in a Network",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/critical-connections-in-a-network/",
+          "pattern": "Tarjan's Algorithm"
+        },
+        {
+          "name": "Reconstruct Itinerary",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/reconstruct-itinerary/",
+          "pattern": "Eulerian Path"
+        },
+        {
+          "name": "Swim in Rising Water",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/swim-in-rising-water/",
+          "pattern": "Binary Search + BFS"
+        },
+        {
+          "name": "Accounts Merge",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/accounts-merge/",
+          "pattern": "Union Find"
+        },
+        {
+          "name": "Word Search II",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/word-search-ii/",
+          "pattern": "Trie + Backtracking"
+        }
+      ],
+      "leetcode_count": 15,
+      "codechef_problems": [
+        {
+          "name": "BFS",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/BFS",
+          "category": "Breadth First Search"
+        },
+        {
+          "name": "DFS",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/DFS",
+          "category": "Depth First Search"
+        },
+        {
+          "name": "SHORTEST",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/SHORTEST",
+          "category": "Shortest Path"
+        },
+        {
+          "name": "MST",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/MST",
+          "category": "Minimum Spanning Tree"
+        },
+        {
+          "name": "CYCLE",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/CYCLE",
+          "category": "Cycle Detection"
+        },
+        {
+          "name": "TOPO",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/TOPO",
+          "category": "Topological Sort"
+        }
+      ],
+      "codechef_count": 6,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Graphs - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/graphs/",
+          "type": "Article"
+        },
+        {
+          "title": "Graphs - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Graphs - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [
+          "Number of Islands",
+          "Clone Graph",
+          "Course Schedule",
+          "Pacific Atlantic Water Flow",
+          "Graph Valid Tree"
+        ],
+        "common_patterns": [
+          "DFS",
+          "BFS",
+          "Dijkstra",
+          "Union Find",
+          "Topological Sort"
+        ],
+        "time_complexity_analysis": true,
+        "coding_tips": [
+          "Choose appropriate representation",
+          "Handle disconnected components",
+          "Use visited array to avoid cycles",
+          "Consider both DFS and BFS"
+        ]
+      }
+    },
+    "dynamic_programming": {
+      "title": "Dynamic Programming",
+      "topic_id": "dynamic_programming",
+      "last_updated": "2025-09-30 23:07:23",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [
+        {
+          "title": "Dynamic Programming Complete Course",
+          "channel": "Aditya Verma",
+          "url": "https://www.youtube.com/watch?v=nqowUJzG-iM",
+          "duration": "8:00:00",
+          "difficulty": "Intermediate to Advanced",
+          "topics_covered": [
+            "DP patterns",
+            "Memoization",
+            "Tabulation"
+          ]
+        },
+        {
+          "title": "DP Fundamentals - From Beginner to Expert",
+          "channel": "Striver",
+          "url": "https://www.youtube.com/watch?v=FfXoiwwnxFw",
+          "duration": "6:30:00",
+          "difficulty": "All levels",
+          "topics_covered": [
+            "1D DP",
+            "2D DP",
+            "Grid problems",
+            "String DP"
+          ]
+        },
+        {
+          "title": "Dynamic Programming Patterns",
+          "channel": "Back To Back SWE",
+          "url": "https://www.youtube.com/watch?v=5gNgq2u_GH4",
+          "duration": "3:45:00",
+          "difficulty": "Advanced",
+          "topics_covered": [
+            "Knapsack",
+            "LIS",
+            "LCS",
+            "Palindromes"
+          ]
+        }
+      ],
+      "video_count": 3,
+      "leetcode_problems": [
+        {
+          "name": "Climbing Stairs",
+          "difficulty": "Easy",
+          "url": "https://leetcode.com/problems/climbing-stairs/",
+          "pattern": "1D DP"
+        },
+        {
+          "name": "House Robber",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/house-robber/",
+          "pattern": "1D DP"
+        },
+        {
+          "name": "Coin Change",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/coin-change/",
+          "pattern": "Unbounded Knapsack"
+        },
+        {
+          "name": "Longest Common Subsequence",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/longest-common-subsequence/",
+          "pattern": "2D DP"
+        },
+        {
+          "name": "Word Break",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/word-break/",
+          "pattern": "String DP"
+        },
+        {
+          "name": "Combination Sum IV",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/combination-sum-iv/",
+          "pattern": "Combination DP"
+        },
+        {
+          "name": "House Robber II",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/house-robber-ii/",
+          "pattern": "Circular DP"
+        },
+        {
+          "name": "Decode Ways",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/decode-ways/",
+          "pattern": "String DP"
+        },
+        {
+          "name": "Unique Paths",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/unique-paths/",
+          "pattern": "Grid DP"
+        },
+        {
+          "name": "Jump Game",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/jump-game/",
+          "pattern": "Greedy/DP"
+        },
+        {
+          "name": "Palindromic Substrings",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/palindromic-substrings/",
+          "pattern": "Palindrome DP"
+        },
+        {
+          "name": "Longest Palindromic Subsequence",
+          "difficulty": "Medium",
+          "url": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+          "pattern": "Interval DP"
+        },
+        {
+          "name": "Edit Distance",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/edit-distance/",
+          "pattern": "2D DP"
+        },
+        {
+          "name": "Regular Expression Matching",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/regular-expression-matching/",
+          "pattern": "Complex DP"
+        },
+        {
+          "name": "Burst Balloons",
+          "difficulty": "Hard",
+          "url": "https://leetcode.com/problems/burst-balloons/",
+          "pattern": "Interval DP"
+        }
+      ],
+      "leetcode_count": 15,
+      "codechef_problems": [
+        {
+          "name": "FIBO",
+          "difficulty": "Easy",
+          "url": "https://www.codechef.com/problems/FIBO",
+          "category": "Fibonacci DP"
+        },
+        {
+          "name": "COINS",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/COINS",
+          "category": "Coin Change"
+        },
+        {
+          "name": "KSUM",
+          "difficulty": "Hard",
+          "url": "https://www.codechef.com/problems/KSUM",
+          "category": "K-Sum Problem"
+        },
+        {
+          "name": "KNAPSACK",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/KNAPSACK",
+          "category": "0/1 Knapsack"
+        },
+        {
+          "name": "LCS",
+          "difficulty": "Medium",
+          "url": "https://www.codechef.com/problems/LCS",
+          "category": "Longest Common Subsequence"
+        },
+        {
+          "name": "MATRIX",
+          "difficulty": "Hard",
+          "url": "https://www.codechef.com/problems/MATRIX",
+          "category": "Matrix Chain Multiplication"
+        }
+      ],
+      "codechef_count": 6,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Dynamic_Programming - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/dynamic-programming/",
+          "type": "Article"
+        },
+        {
+          "title": "Dynamic_Programming - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Dynamic_Programming - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [
+          "Climbing Stairs",
+          "House Robber",
+          "Coin Change",
+          "Longest Common Subsequence",
+          "Word Break"
+        ],
+        "common_patterns": [
+          "Memoization",
+          "Tabulation",
+          "State Machine",
+          "Interval DP"
+        ],
+        "time_complexity_analysis": true,
+        "coding_tips": [
+          "Start with recursive approach",
+          "Identify overlapping subproblems",
+          "Use memoization for top-down",
+          "Use tabulation for bottom-up"
+        ]
+      }
+    },
+    "backtracking": {
+      "title": "Backtracking",
+      "topic_id": "backtracking",
+      "last_updated": "2025-09-30 23:07:25",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Backtracking - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/backtracking/",
+          "type": "Article"
+        },
+        {
+          "title": "Backtracking - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Backtracking - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "greedy": {
+      "title": "Greedy",
+      "topic_id": "greedy",
+      "last_updated": "2025-09-30 23:07:27",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Greedy - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/greedy/",
+          "type": "Article"
+        },
+        {
+          "title": "Greedy - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Greedy - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "sorting": {
+      "title": "Sorting",
+      "topic_id": "sorting",
+      "last_updated": "2025-09-30 23:07:29",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Sorting - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/sorting/",
+          "type": "Article"
+        },
+        {
+          "title": "Sorting - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Sorting - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "searching": {
+      "title": "Searching",
+      "topic_id": "searching",
+      "last_updated": "2025-09-30 23:07:31",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Searching - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/searching/",
+          "type": "Article"
+        },
+        {
+          "title": "Searching - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Searching - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "hashing": {
+      "title": "Hashing",
+      "topic_id": "hashing",
+      "last_updated": "2025-09-30 23:07:33",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Hashing - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/hashing/",
+          "type": "Article"
+        },
+        {
+          "title": "Hashing - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Hashing - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "tries": {
+      "title": "Tries",
+      "topic_id": "tries",
+      "last_updated": "2025-09-30 23:07:35",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Tries - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/tries/",
+          "type": "Article"
+        },
+        {
+          "title": "Tries - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Tries - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "segment_trees": {
+      "title": "Segment Trees",
+      "topic_id": "segment_trees",
+      "last_updated": "2025-09-30 23:07:37",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Segment_Trees - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/segment-trees/",
+          "type": "Article"
+        },
+        {
+          "title": "Segment_Trees - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Segment_Trees - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "fenwick_trees": {
+      "title": "Fenwick Trees",
+      "topic_id": "fenwick_trees",
+      "last_updated": "2025-09-30 23:07:39",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Fenwick_Trees - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/fenwick-trees/",
+          "type": "Article"
+        },
+        {
+          "title": "Fenwick_Trees - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Fenwick_Trees - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "disjoint_sets": {
+      "title": "Disjoint Sets",
+      "topic_id": "disjoint_sets",
+      "last_updated": "2025-09-30 23:07:41",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Disjoint_Sets - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/disjoint-sets/",
+          "type": "Article"
+        },
+        {
+          "title": "Disjoint_Sets - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Disjoint_Sets - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "mathematical_algorithms": {
+      "title": "Mathematical Algorithms",
+      "topic_id": "mathematical_algorithms",
+      "last_updated": "2025-09-30 23:07:44",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Mathematical_Algorithms - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/mathematical-algorithms/",
+          "type": "Article"
+        },
+        {
+          "title": "Mathematical_Algorithms - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Mathematical_Algorithms - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "number_theory": {
+      "title": "Number Theory",
+      "topic_id": "number_theory",
+      "last_updated": "2025-09-30 23:07:46",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Number_Theory - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/number-theory/",
+          "type": "Article"
+        },
+        {
+          "title": "Number_Theory - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Number_Theory - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "combinatorics": {
+      "title": "Combinatorics",
+      "topic_id": "combinatorics",
+      "last_updated": "2025-09-30 23:07:48",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Combinatorics - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/combinatorics/",
+          "type": "Article"
+        },
+        {
+          "title": "Combinatorics - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Combinatorics - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "game_theory": {
+      "title": "Game Theory",
+      "topic_id": "game_theory",
+      "last_updated": "2025-09-30 23:07:50",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Game_Theory - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/game-theory/",
+          "type": "Article"
+        },
+        {
+          "title": "Game_Theory - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Game_Theory - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    },
+    "geometry": {
+      "title": "Geometry",
+      "topic_id": "geometry",
+      "last_updated": "2025-09-30 23:07:52",
+      "difficulty_levels": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "estimated_study_time": "8-12 hours",
+      "youtube_videos": [],
+      "video_count": 0,
+      "leetcode_problems": [],
+      "leetcode_count": 0,
+      "codechef_problems": [],
+      "codechef_count": 0,
+      "comprehensive_explanation": "",
+      "additional_resources": [
+        {
+          "title": "Geometry - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/geometry/",
+          "type": "Article"
+        },
+        {
+          "title": "Geometry - CP-Algorithms",
+          "url": "https://cp-algorithms.com/",
+          "type": "Reference"
+        },
+        {
+          "title": "Geometry - LeetCode Explore",
+          "url": "https://leetcode.com/explore/",
+          "type": "Interactive"
+        }
+      ],
+      "study_plan": {
+        "week_1": "Understand basic concepts and watch foundational videos",
+        "week_2": "Solve easy problems and implement basic algorithms",
+        "week_3": "Tackle medium problems and learn advanced patterns",
+        "week_4": "Master hard problems and interview questions"
+      },
+      "interview_focus": {
+        "must_know_problems": [],
+        "common_patterns": [],
+        "time_complexity_analysis": true,
+        "coding_tips": []
+      }
+    }
+  }
+}

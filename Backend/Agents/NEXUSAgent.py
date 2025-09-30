@@ -29,6 +29,7 @@ try:
     from .InterviewHelper.AIInterviewEngine import AIInterviewEngine
     from .InterviewHelper.InterviewSessionManager import InterviewSessionManager
     from .InterviewHelper.InterviewAnalytics import InterviewAnalytics
+    from .DSAAgent import DSAAgent
     PHASES_AVAILABLE = True
     print("✅ All NEXUS phases imported successfully!")
 except ImportError as e:
@@ -49,6 +50,7 @@ class NEXUSAgent:
         self.resume_processor = None
         self.assessment_engine = None
         self.interview_engine = None
+        self.dsa_agent = None
         
         # Performance tracking
         self.metrics = {
@@ -56,7 +58,9 @@ class NEXUSAgent:
             "assessments_taken": 0,
             "interviews_conducted": 0,
             "resumes_optimized": 0,
-            "companies_researched": 0
+            "companies_researched": 0,
+            "dsa_problems_solved": 0,
+            "whatsapp_messages_sent": 0
         }
         
         self.initialize_nexus()
@@ -82,6 +86,24 @@ class NEXUSAgent:
                 # Initialize Phase 4: AI Interview System
                 self.interview_engine = AIInterviewEngine()
                 print("✅ Phase 4: AI Interview Simulator - READY")
+                
+                # Initialize DSA Agent with WhatsApp Integration
+                try:
+                    from .DSAAgent import DSAAgent
+                    self.dsa_agent = DSAAgent
+                    print("✅ DSA Agent: Learning & WhatsApp Integration - READY")
+                except ImportError:
+                    # Try absolute import as fallback
+                    try:
+                        import sys
+                        import os
+                        sys.path.append(os.path.dirname(__file__))
+                        from DSAAgent import DSAAgent
+                        self.dsa_agent = DSAAgent
+                        print("✅ DSA Agent: Learning & WhatsApp Integration - READY")
+                    except ImportError:
+                        self.dsa_agent = None
+                        print("⚠️ DSA Agent: Not available")
                 
                 print("🎯 NEXUS System fully initialized!")
                 print("💼 Ready for complete career acceleration!")
@@ -137,6 +159,18 @@ class NEXUSAgent:
                 r'mock interview'
             ],
             
+            # DSA & WhatsApp Integration
+            'dsa_whatsapp': [
+                r'send (.*?) guide to whatsapp',
+                r'whatsapp (.*?) guide',
+                r'send progress to whatsapp',
+                r'whatsapp my progress',
+                r'whatsapp my dsa summary',
+                r'dsa progress',
+                r'leetcode progress',
+                r'codechef progress'
+            ],
+            
             # System commands
             'system': [
                 r'nexus status',
@@ -159,6 +193,8 @@ class NEXUSAgent:
             return self.handle_assessment(query)
         elif command_type == 'interview':
             return self.handle_interview(query)
+        elif command_type == 'dsa_whatsapp':
+            return self.handle_dsa_whatsapp(query)
         elif command_type == 'system':
             return self.handle_system_commands(query)
         else:
@@ -362,6 +398,92 @@ To activate full system: Ensure all Phase 4 components are installed
         except Exception as e:
             return f"❌ Error processing interview request: {e}"
     
+    def handle_dsa_whatsapp(self, query: str) -> str:
+        """Handle DSA learning and WhatsApp integration"""
+        print("📱 Processing DSA/WhatsApp request...")
+        self.active_phase = "DSA Agent: Learning & WhatsApp"
+        
+        try:
+            if self.dsa_agent:
+                result = self.dsa_agent(query)
+                
+                # Update metrics based on action
+                if 'whatsapp' in query.lower():
+                    self.metrics["whatsapp_messages_sent"] += 1
+                if any(topic in query.lower() for topic in ['arrays', 'trees', 'graphs', 'dp', 'strings']):
+                    self.metrics["dsa_problems_solved"] += 1
+                
+                return f"""
+📱 **DSA Agent with WhatsApp Integration**
+
+{result}
+
+💡 **NEXUS Integration Active:**
+• 🎯 Multi-platform progress tracking (LeetCode, CodeChef)
+• 📱 WhatsApp delivery with 5-minute optimization
+• 📚 Study guides with YouTube links
+• 📊 Progress reports with detailed analytics
+
+💡 **Next Steps:**
+• Practice more DSA topics: "send trees guide to whatsapp"
+• Check progress: "send progress to whatsapp" 
+• Take assessments: "start assessment"
+• Practice interviews: "start interview simulation"
+                """
+            else:
+                # Try direct import as fallback
+                try:
+                    import sys
+                    import os
+                    sys.path.append(os.path.dirname(__file__))
+                    from DSAAgent import DSAAgent
+                    
+                    result = DSAAgent(query)
+                    
+                    # Update metrics
+                    if 'whatsapp' in query.lower():
+                        self.metrics["whatsapp_messages_sent"] += 1
+                    if any(topic in query.lower() for topic in ['arrays', 'trees', 'graphs', 'dp', 'strings']):
+                        self.metrics["dsa_problems_solved"] += 1
+                    
+                    return f"""
+📱 **DSA Agent with WhatsApp Integration - NEXUS MODE**
+
+{result}
+
+💡 **NEXUS Integration Active:**
+• 🎯 Multi-platform progress tracking (LeetCode, CodeChef)
+• 📱 WhatsApp delivery with 5-minute optimization
+• 📚 Study guides with YouTube links
+• 📊 Progress reports with detailed analytics
+
+💡 **Next Steps:**
+• Practice more DSA topics: "send trees guide to whatsapp"
+• Check progress: "send progress to whatsapp" 
+• Take assessments: "start assessment"
+• Practice interviews: "start interview simulation"
+                    """
+                except ImportError:
+                    return """
+📱 **DSA Agent with WhatsApp Integration**
+
+DSA learning features available:
+• Multi-platform progress tracking
+• WhatsApp integration for guides and progress
+• Study material with YouTube links
+• LeetCode and CodeChef synchronization
+
+Available commands:
+• "send arrays guide to whatsapp"
+• "send progress to whatsapp"
+• "whatsapp dynamic programming guide"
+
+To activate: Ensure DSA agent is available
+                """
+                
+        except Exception as e:
+            return f"❌ Error processing DSA/WhatsApp request: {e}"
+    
     def handle_system_commands(self, query: str) -> str:
         """Handle system and status commands"""
         query_lower = query.lower()
@@ -400,6 +522,11 @@ I didn't recognize that specific command. Here's what I can help you with:
 • "Practice behavioral interview"
 • "Mock interview simulation"
 
+📱 **DSA Learning & WhatsApp**
+• "Send arrays guide to whatsapp"
+• "Send progress to whatsapp"
+• "Whatsapp dynamic programming guide"
+
 🎯 **System Commands**
 • "NEXUS status"
 • "Career progress" 
@@ -436,6 +563,12 @@ Try being more specific or use one of the examples above!
             phase_status.append("✅ Phase 4: AI Interviews - ACTIVE")
         else:
             phase_status.append("⚠️ Phase 4: AI Interviews - LIMITED")
+            
+        # Check DSA Agent
+        if self.dsa_agent:
+            phase_status.append("✅ DSA Agent: Learning & WhatsApp - ACTIVE")
+        else:
+            phase_status.append("⚠️ DSA Agent: Learning & WhatsApp - LIMITED")
         
         return f"""
 🚀 **NEXUS SYSTEM STATUS**
@@ -447,6 +580,8 @@ Try being more specific or use one of the examples above!
 • Resumes Optimized: {self.metrics['resumes_optimized']}  
 • Assessments Taken: {self.metrics['assessments_taken']}
 • Interviews Conducted: {self.metrics['interviews_conducted']}
+• DSA Problems Solved: {self.metrics['dsa_problems_solved']}
+• WhatsApp Messages Sent: {self.metrics['whatsapp_messages_sent']}
 • Total Sessions: {self.metrics['sessions_completed']}
 
 🎯 **Active Phase:** {self.active_phase or "None"}
@@ -476,7 +611,9 @@ Try being more specific or use one of the examples above!
 • 📄 Resumes Optimized: {self.metrics['resumes_optimized']}
 • 📊 Assessments Completed: {self.metrics['assessments_taken']}  
 • 🎬 Interviews Practiced: {self.metrics['interviews_conducted']}
-• 🚀 Total Sessions: {self.metrics['sessions_completed']}
+• � DSA Problems Solved: {self.metrics['dsa_problems_solved']}
+• 📱 WhatsApp Messages Sent: {self.metrics['whatsapp_messages_sent']}
+• �🚀 Total Sessions: {self.metrics['sessions_completed']}
 
 💡 **Recommendations:**
 {self.get_personalized_recommendations()}
@@ -499,10 +636,17 @@ Try being more specific or use one of the examples above!
             
         if self.metrics['interviews_conducted'] < 5:
             recommendations.append("• Practice more mock interviews to build confidence")
+            
+        if self.metrics['dsa_problems_solved'] < 10:
+            recommendations.append("• Practice more DSA problems: 'send arrays guide to whatsapp'")
+            
+        if self.metrics['whatsapp_messages_sent'] < 3:
+            recommendations.append("• Use WhatsApp integration: 'send progress to whatsapp'")
         
         if not recommendations:
             recommendations.append("• You're doing great! Consider exploring advanced interview scenarios")
             recommendations.append("• Try practicing for senior-level positions")
+            recommendations.append("• Share your progress via WhatsApp: 'send progress to whatsapp'")
             
         return '\n'.join(recommendations)
     
@@ -537,9 +681,16 @@ Practice with AI interviewer using camera analysis
 • "Mock behavioral interview"
 • "Technical interview practice"
 
+**DSA Learning & WhatsApp Integration**
+Practice coding and get study guides delivered to WhatsApp
+• "Send arrays guide to whatsapp"
+• "Send progress to whatsapp"
+• "Whatsapp dynamic programming guide"
+
 **🎯 Integrated Workflow:**
 1. Research target company → 2. Build optimized resume → 
-3. Take skill assessments → 4. Practice interviews → 5. GET HIRED! 
+3. Take skill assessments → 4. Practice DSA via WhatsApp → 
+5. Practice interviews → 6. GET HIRED! 
 
 💼 **Ready to accelerate your career? Start with any command above!**
         """

@@ -1,0 +1,3186 @@
+{
+  "metadata": {
+    "generated_on": "2025-09-30T23:19:27.797700",
+    "language": "cpp",
+    "sources": {
+      "striver": {
+        "name": "Striver A2Z DSA Sheet",
+        "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+        "youtube": "https://www.youtube.com/@takeUforward",
+        "focus": "Complete A2Z coverage with optimal approaches"
+      },
+      "love_babbar": {
+        "name": "Love Babbar DSA Sheet",
+        "url": "https://www.lovebabbar.in/",
+        "youtube": "https://www.youtube.com/@CodeHelp",
+        "focus": "450+ problems with detailed explanations"
+      },
+      "aditya_verma": {
+        "name": "Aditya Verma DSA Patterns",
+        "url": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "focus": "Pattern-based problem solving approach"
+      },
+      "apna_college": {
+        "name": "Apna College DSA",
+        "url": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "focus": "Beginner to advanced with practical examples"
+      }
+    },
+    "total_topics": 15,
+    "description": "Comprehensive DSA study material combining premium sources"
+  },
+  "topics": {
+    "arrays": {
+      "topic_name": "Arrays & Vectors",
+      "priority": 1,
+      "difficulty": "Beginner to Advanced",
+      "language": "cpp",
+      "total_problems": 75,
+      "patterns": [
+        "Two Pointers",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 30,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Two Pointers Technique",
+            "Sliding Window Maximum",
+            "Kadane's Algorithm",
+            "Moore's Voting Algorithm",
+            "Dutch National Flag Algorithm"
+          ],
+          "problems": [
+            {
+              "name": "Maximum Subarray Sum",
+              "difficulty": "Medium",
+              "pattern": "Kadane's Algorithm"
+            },
+            {
+              "name": "Two Sum",
+              "difficulty": "Easy",
+              "pattern": "Two Pointers/Hashing"
+            },
+            {
+              "name": "3Sum",
+              "difficulty": "Medium",
+              "pattern": "Two Pointers"
+            },
+            {
+              "name": "Container With Most Water",
+              "difficulty": "Medium",
+              "pattern": "Two Pointers"
+            },
+            {
+              "name": "Trapping Rain Water",
+              "difficulty": "Hard",
+              "pattern": "Two Pointers"
+            },
+            {
+              "name": "Merge Intervals",
+              "difficulty": "Medium",
+              "pattern": "Sorting"
+            },
+            {
+              "name": "Next Permutation",
+              "difficulty": "Medium",
+              "pattern": "In-place Manipulation"
+            },
+            {
+              "name": "Rotate Array",
+              "difficulty": "Medium",
+              "pattern": "Cyclic Replacement"
+            },
+            {
+              "name": "Find Duplicate Number",
+              "difficulty": "Medium",
+              "pattern": "Floyd's Algorithm"
+            },
+            {
+              "name": "Missing Number",
+              "difficulty": "Easy",
+              "pattern": "XOR/Math"
+            }
+          ],
+          "cpp_implementations": {
+            "kadanes_algorithm": "\n// Kadane's Algorithm - Maximum Subarray Sum\nclass Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        int maxSoFar = nums[0];\n        int maxEndingHere = nums[0];\n        \n        for(int i = 1; i < nums.size(); i++) {\n            maxEndingHere = max(nums[i], maxEndingHere + nums[i]);\n            maxSoFar = max(maxSoFar, maxEndingHere);\n        }\n        \n        return maxSoFar;\n    }\n};\n",
+            "two_pointers": "\n// Two Pointers - Two Sum (Sorted Array)\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        int left = 0, right = nums.size() - 1;\n        \n        while(left < right) {\n            int sum = nums[left] + nums[right];\n            if(sum == target) {\n                return {left + 1, right + 1}; // 1-indexed\n            }\n            else if(sum < target) left++;\n            else right--;\n        }\n        \n        return {}; // No solution found\n    }\n};\n"
+          }
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 45,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for arrays",
+          "problem_patterns": [
+            "Two Pointers",
+            "Sliding Window",
+            "Prefix Sum"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for arrays problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Arrays & Vectors",
+        "What are the time and space complexities of common arrays operations?",
+        "When would you choose arrays over other data structures/algorithms?",
+        "Implement a basic arrays solution in C++",
+        "Optimize this arrays solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Arrays",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Arrays",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Arrays Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Arrays",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/arrays/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/arrays/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks arrays articles",
+          "CP-Algorithms arrays section",
+          "Topcoder arrays tutorials"
+        ]
+      }
+    },
+    "strings": {
+      "topic_name": "Strings & Pattern Matching",
+      "priority": 2,
+      "difficulty": "Beginner to Advanced",
+      "language": "cpp",
+      "total_problems": 60,
+      "patterns": [
+        "KMP",
+        "Rabin Karp",
+        "Manacher's Algorithm"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Strings fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic strings problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 35,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for strings",
+          "problem_patterns": [
+            "KMP",
+            "Rabin Karp",
+            "Manacher's Algorithm"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for strings problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Strings & Pattern Matching",
+        "What are the time and space complexities of common strings operations?",
+        "When would you choose strings over other data structures/algorithms?",
+        "Implement a basic strings solution in C++",
+        "Optimize this strings solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Strings",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Strings",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Strings Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Strings",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/strings/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/strings/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks strings articles",
+          "CP-Algorithms strings section",
+          "Topcoder strings tutorials"
+        ]
+      }
+    },
+    "linked_lists": {
+      "topic_name": "Linked Lists",
+      "priority": 3,
+      "difficulty": "Beginner to Intermediate",
+      "language": "cpp",
+      "total_problems": 45,
+      "patterns": [
+        "Fast & Slow Pointers",
+        "Reversal",
+        "Merge Techniques"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Linked_Lists fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic linked_lists problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for linked_lists",
+          "problem_patterns": [
+            "Fast & Slow Pointers",
+            "Reversal",
+            "Merge Techniques"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for linked_lists problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Linked Lists",
+        "What are the time and space complexities of common linked_lists operations?",
+        "When would you choose linked_lists over other data structures/algorithms?",
+        "Implement a basic linked_lists solution in C++",
+        "Optimize this linked_lists solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Linked_Lists",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Linked_Lists",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Linked_Lists Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Linked_Lists",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/linked_lists/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/linked_lists/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks linked_lists articles",
+          "CP-Algorithms linked_lists section",
+          "Topcoder linked_lists tutorials"
+        ]
+      }
+    },
+    "binary_trees": {
+      "topic_name": "Binary Trees",
+      "priority": 4,
+      "difficulty": "Intermediate",
+      "language": "cpp",
+      "total_problems": 75,
+      "patterns": [
+        "DFS",
+        "BFS",
+        "Tree DP"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 35,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Binary_Trees fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic binary_trees problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 40,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for binary_trees",
+          "problem_patterns": [
+            "DFS",
+            "BFS",
+            "Tree DP"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for binary_trees problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Binary Trees",
+        "What are the time and space complexities of common binary_trees operations?",
+        "When would you choose binary_trees over other data structures/algorithms?",
+        "Implement a basic binary_trees solution in C++",
+        "Optimize this binary_trees solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Binary_Trees",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Binary_Trees",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Binary_Trees Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Binary_Trees",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/binary_trees/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/binary_trees/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks binary_trees articles",
+          "CP-Algorithms binary_trees section",
+          "Topcoder binary_trees tutorials"
+        ]
+      }
+    },
+    "binary_search_trees": {
+      "topic_name": "Binary Search Trees",
+      "priority": 5,
+      "difficulty": "Intermediate",
+      "language": "cpp",
+      "total_problems": 35,
+      "patterns": [
+        "BST Properties",
+        "Validation",
+        "Construction"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 15,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Binary_Search_Trees fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic binary_search_trees problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for binary_search_trees",
+          "problem_patterns": [
+            "BST Properties",
+            "Validation",
+            "Construction"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for binary_search_trees problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Binary Search Trees",
+        "What are the time and space complexities of common binary_search_trees operations?",
+        "When would you choose binary_search_trees over other data structures/algorithms?",
+        "Implement a basic binary_search_trees solution in C++",
+        "Optimize this binary_search_trees solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Binary_Search_Trees",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Binary_Search_Trees",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Binary_Search_Trees Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Binary_Search_Trees",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/binary_search_trees/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/binary_search_trees/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks binary_search_trees articles",
+          "CP-Algorithms binary_search_trees section",
+          "Topcoder binary_search_trees tutorials"
+        ]
+      }
+    },
+    "binary_search": {
+      "topic_name": "Binary Search",
+      "priority": 6,
+      "difficulty": "Intermediate",
+      "language": "cpp",
+      "total_problems": 55,
+      "patterns": [
+        "Search Space",
+        "Answer Binary Search",
+        "Matrix Search"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Binary_Search fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic binary_search problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 30,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for binary_search",
+          "problem_patterns": [
+            "Search Space",
+            "Answer Binary Search",
+            "Matrix Search"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for binary_search problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Binary Search",
+        "What are the time and space complexities of common binary_search operations?",
+        "When would you choose binary_search over other data structures/algorithms?",
+        "Implement a basic binary_search solution in C++",
+        "Optimize this binary_search solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Binary_Search",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Binary_Search",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Binary_Search Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Binary_Search",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/binary_search/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/binary_search/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks binary_search articles",
+          "CP-Algorithms binary_search section",
+          "Topcoder binary_search tutorials"
+        ]
+      }
+    },
+    "stacks_queues": {
+      "topic_name": "Stacks & Queues",
+      "priority": 7,
+      "difficulty": "Beginner to Intermediate",
+      "language": "cpp",
+      "total_problems": 45,
+      "patterns": [
+        "Monotonic Stack",
+        "Deque",
+        "Priority Queue"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Stacks_Queues fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic stacks_queues problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for stacks_queues",
+          "problem_patterns": [
+            "Monotonic Stack",
+            "Deque",
+            "Priority Queue"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for stacks_queues problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Stacks & Queues",
+        "What are the time and space complexities of common stacks_queues operations?",
+        "When would you choose stacks_queues over other data structures/algorithms?",
+        "Implement a basic stacks_queues solution in C++",
+        "Optimize this stacks_queues solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Stacks_Queues",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Stacks_Queues",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Stacks_Queues Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Stacks_Queues",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/stacks_queues/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/stacks_queues/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks stacks_queues articles",
+          "CP-Algorithms stacks_queues section",
+          "Topcoder stacks_queues tutorials"
+        ]
+      }
+    },
+    "heaps": {
+      "topic_name": "Heaps & Priority Queues",
+      "priority": 8,
+      "difficulty": "Intermediate",
+      "language": "cpp",
+      "total_problems": 35,
+      "patterns": [
+        "Min/Max Heap",
+        "K-way Merge",
+        "Top K Problems"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 15,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Heaps fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic heaps problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for heaps",
+          "problem_patterns": [
+            "Min/Max Heap",
+            "K-way Merge",
+            "Top K Problems"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for heaps problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Heaps & Priority Queues",
+        "What are the time and space complexities of common heaps operations?",
+        "When would you choose heaps over other data structures/algorithms?",
+        "Implement a basic heaps solution in C++",
+        "Optimize this heaps solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Heaps",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Heaps",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Heaps Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Heaps",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/heaps/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/heaps/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks heaps articles",
+          "CP-Algorithms heaps section",
+          "Topcoder heaps tutorials"
+        ]
+      }
+    },
+    "hashing": {
+      "topic_name": "Hashing & Hash Maps",
+      "priority": 9,
+      "difficulty": "Beginner to Intermediate",
+      "language": "cpp",
+      "total_problems": 45,
+      "patterns": [
+        "Frequency Counting",
+        "Anagram Problems",
+        "Subarray Problems"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Hashing fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic hashing problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for hashing",
+          "problem_patterns": [
+            "Frequency Counting",
+            "Anagram Problems",
+            "Subarray Problems"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for hashing problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Hashing & Hash Maps",
+        "What are the time and space complexities of common hashing operations?",
+        "When would you choose hashing over other data structures/algorithms?",
+        "Implement a basic hashing solution in C++",
+        "Optimize this hashing solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Hashing",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Hashing",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Hashing Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Hashing",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/hashing/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/hashing/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks hashing articles",
+          "CP-Algorithms hashing section",
+          "Topcoder hashing tutorials"
+        ]
+      }
+    },
+    "recursion": {
+      "topic_name": "Recursion & Backtracking",
+      "priority": 10,
+      "difficulty": "Intermediate to Advanced",
+      "language": "cpp",
+      "total_problems": 55,
+      "patterns": [
+        "Decision Tree",
+        "Subset Generation",
+        "Permutations"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Recursion fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic recursion problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 30,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for recursion",
+          "problem_patterns": [
+            "Decision Tree",
+            "Subset Generation",
+            "Permutations"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for recursion problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Recursion & Backtracking",
+        "What are the time and space complexities of common recursion operations?",
+        "When would you choose recursion over other data structures/algorithms?",
+        "Implement a basic recursion solution in C++",
+        "Optimize this recursion solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Recursion",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Recursion",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Recursion Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Recursion",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/recursion/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/recursion/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks recursion articles",
+          "CP-Algorithms recursion section",
+          "Topcoder recursion tutorials"
+        ]
+      }
+    },
+    "dynamic_programming": {
+      "topic_name": "Dynamic Programming",
+      "priority": 11,
+      "difficulty": "Advanced",
+      "language": "cpp",
+      "total_problems": 90,
+      "patterns": [
+        "Linear DP",
+        "Grid DP",
+        "Tree DP",
+        "Interval DP"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 40,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Tabulation vs Memoization",
+            "State Definition",
+            "Recurrence Relations",
+            "Space Optimization",
+            "DP on Grids",
+            "DP on Trees",
+            "DP on Strings"
+          ],
+          "problems": [
+            {
+              "name": "Climbing Stairs",
+              "difficulty": "Easy",
+              "pattern": "Linear DP"
+            },
+            {
+              "name": "House Robber",
+              "difficulty": "Medium",
+              "pattern": "Linear DP"
+            },
+            {
+              "name": "Coin Change",
+              "difficulty": "Medium",
+              "pattern": "Unbounded Knapsack"
+            },
+            {
+              "name": "Longest Common Subsequence",
+              "difficulty": "Medium",
+              "pattern": "String DP"
+            },
+            {
+              "name": "Edit Distance",
+              "difficulty": "Hard",
+              "pattern": "String DP"
+            },
+            {
+              "name": "Maximum Product Subarray",
+              "difficulty": "Medium",
+              "pattern": "Modified Kadane's"
+            },
+            {
+              "name": "Word Break",
+              "difficulty": "Medium",
+              "pattern": "String DP"
+            },
+            {
+              "name": "Palindromic Substrings",
+              "difficulty": "Medium",
+              "pattern": "String DP"
+            },
+            {
+              "name": "Best Time to Buy and Sell Stock",
+              "difficulty": "Easy",
+              "pattern": "State Machine DP"
+            }
+          ],
+          "cpp_implementations": {
+            "fibonacci_dp": "\n// Basic DP - Fibonacci with Memoization\nclass Solution {\npublic:\n    unordered_map<int, int> dp;\n    \n    int fib(int n) {\n        if(n <= 1) return n;\n        if(dp.find(n) != dp.end()) return dp[n];\n        \n        dp[n] = fib(n-1) + fib(n-2);\n        return dp[n];\n    }\n};\n",
+            "lcs_dp": "\n// Longest Common Subsequence - String DP\nclass Solution {\npublic:\n    int longestCommonSubsequence(string text1, string text2) {\n        int m = text1.length(), n = text2.length();\n        vector<vector<int>> dp(m+1, vector<int>(n+1, 0));\n        \n        for(int i = 1; i <= m; i++) {\n            for(int j = 1; j <= n; j++) {\n                if(text1[i-1] == text2[j-1]) {\n                    dp[i][j] = 1 + dp[i-1][j-1];\n                } else {\n                    dp[i][j] = max(dp[i-1][j], dp[i][j-1]);\n                }\n            }\n        }\n        \n        return dp[m][n];\n    }\n};\n"
+          }
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 50,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for dynamic_programming",
+          "problem_patterns": [
+            "Linear DP",
+            "Grid DP",
+            "Tree DP",
+            "Interval DP"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for dynamic_programming problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Dynamic Programming",
+        "What are the time and space complexities of common dynamic_programming operations?",
+        "When would you choose dynamic_programming over other data structures/algorithms?",
+        "Implement a basic dynamic_programming solution in C++",
+        "Optimize this dynamic_programming solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Dynamic_Programming",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Dynamic_Programming",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Dynamic_Programming Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Dynamic_Programming",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/dynamic_programming/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/dynamic_programming/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks dynamic_programming articles",
+          "CP-Algorithms dynamic_programming section",
+          "Topcoder dynamic_programming tutorials"
+        ]
+      }
+    },
+    "graphs": {
+      "topic_name": "Graph Algorithms",
+      "priority": 12,
+      "difficulty": "Advanced",
+      "language": "cpp",
+      "total_problems": 80,
+      "patterns": [
+        "DFS/BFS",
+        "Shortest Path",
+        "MST",
+        "Topological Sort"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 35,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Graphs fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic graphs problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 45,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for graphs",
+          "problem_patterns": [
+            "DFS/BFS",
+            "Shortest Path",
+            "MST",
+            "Topological Sort"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for graphs problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Graph Algorithms",
+        "What are the time and space complexities of common graphs operations?",
+        "When would you choose graphs over other data structures/algorithms?",
+        "Implement a basic graphs solution in C++",
+        "Optimize this graphs solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Graphs",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Graphs",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Graphs Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Graphs",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/graphs/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/graphs/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks graphs articles",
+          "CP-Algorithms graphs section",
+          "Topcoder graphs tutorials"
+        ]
+      }
+    },
+    "tries": {
+      "topic_name": "Tries & Advanced Strings",
+      "priority": 13,
+      "difficulty": "Advanced",
+      "language": "cpp",
+      "total_problems": 25,
+      "patterns": [
+        "Prefix Trees",
+        "Autocomplete",
+        "Word Search"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 10,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Tries fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic tries problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 15,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for tries",
+          "problem_patterns": [
+            "Prefix Trees",
+            "Autocomplete",
+            "Word Search"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for tries problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Tries & Advanced Strings",
+        "What are the time and space complexities of common tries operations?",
+        "When would you choose tries over other data structures/algorithms?",
+        "Implement a basic tries solution in C++",
+        "Optimize this tries solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Tries",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Tries",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Tries Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Tries",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/tries/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/tries/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks tries articles",
+          "CP-Algorithms tries section",
+          "Topcoder tries tutorials"
+        ]
+      }
+    },
+    "greedy": {
+      "topic_name": "Greedy Algorithms",
+      "priority": 14,
+      "difficulty": "Intermediate to Advanced",
+      "language": "cpp",
+      "total_problems": 45,
+      "patterns": [
+        "Activity Selection",
+        "Huffman Coding",
+        "Job Scheduling"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Greedy fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic greedy problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 25,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for greedy",
+          "problem_patterns": [
+            "Activity Selection",
+            "Huffman Coding",
+            "Job Scheduling"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for greedy problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Greedy Algorithms",
+        "What are the time and space complexities of common greedy operations?",
+        "When would you choose greedy over other data structures/algorithms?",
+        "Implement a basic greedy solution in C++",
+        "Optimize this greedy solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Greedy",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Greedy",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Greedy Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Greedy",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/greedy/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/greedy/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks greedy articles",
+          "CP-Algorithms greedy section",
+          "Topcoder greedy tutorials"
+        ]
+      }
+    },
+    "bit_manipulation": {
+      "topic_name": "Bit Manipulation",
+      "priority": 15,
+      "difficulty": "Intermediate",
+      "language": "cpp",
+      "total_problems": 35,
+      "patterns": [
+        "XOR Properties",
+        "Bit Masking",
+        "Power of 2"
+      ],
+      "striver_content": {
+        "source": "Striver A2Z DSA Sheet",
+        "approach": "Optimal solutions with detailed explanations",
+        "total_problems": 15,
+        "youtube_channel": "https://www.youtube.com/@takeUforward",
+        "content": {
+          "key_concepts": [
+            "Bit_Manipulation fundamentals from Striver A2Z"
+          ],
+          "problems": [
+            {
+              "name": "Basic bit_manipulation problems",
+              "difficulty": "Mixed"
+            }
+          ],
+          "cpp_implementations": {}
+        }
+      },
+      "love_babbar_content": {
+        "source": "Love Babbar 450 DSA Sheet",
+        "approach": "Complete problem coverage with step-by-step solutions",
+        "total_problems": 20,
+        "youtube_channel": "https://www.youtube.com/@CodeHelp",
+        "content": {
+          "focus": "450+ handpicked problems covering all interview scenarios",
+          "teaching_style": "Beginner-friendly with detailed explanations",
+          "cpp_focus": "Industry-standard C++ implementations",
+          "interview_prep": "Direct mapping to company interview questions"
+        }
+      },
+      "aditya_verma_content": {
+        "source": "Aditya Verma Pattern-Based DSA",
+        "approach": "Pattern recognition and template-based problem solving",
+        "youtube_channel": "https://www.youtube.com/@AdityaVermaTheProgrammingLord",
+        "content": {
+          "focus": "Pattern identification and template creation",
+          "teaching_style": "Pattern-based learning for quick recognition",
+          "templates": "Ready-to-use C++ templates for bit_manipulation",
+          "problem_patterns": [
+            "XOR Properties",
+            "Bit Masking",
+            "Power of 2"
+          ]
+        }
+      },
+      "apna_college_content": {
+        "source": "Apna College DSA",
+        "approach": "Beginner to advanced with practical examples",
+        "youtube_channel": "https://www.youtube.com/@ApnaCollegeOfficial",
+        "content": {
+          "focus": "Complete beginner to placement ready",
+          "teaching_style": "Interactive learning with live coding",
+          "cpp_focus": "Clear C++ syntax and STL usage",
+          "placement_prep": "Direct company placement preparation"
+        }
+      },
+      "study_plan": {
+        "duration": "2-3 weeks",
+        "daily_commitment": "2-3 hours",
+        "phases": {
+          "Phase 1 (Days 1-5)": {
+            "focus": "Theory and Basic Understanding",
+            "resources": [
+              "Apna College basics",
+              "Striver theory videos"
+            ],
+            "goals": [
+              "Understand core concepts",
+              "Learn basic implementations"
+            ]
+          },
+          "Phase 2 (Days 6-12)": {
+            "focus": "Pattern Recognition and Problem Solving",
+            "resources": [
+              "Aditya Verma patterns",
+              "Love Babbar problems"
+            ],
+            "goals": [
+              "Recognize common patterns",
+              "Solve 20-30 problems"
+            ]
+          },
+          "Phase 3 (Days 13-21)": {
+            "focus": "Advanced Problems and Optimization",
+            "resources": [
+              "Striver advanced problems",
+              "Company-specific questions"
+            ],
+            "goals": [
+              "Master advanced techniques",
+              "Achieve optimal solutions"
+            ]
+          }
+        }
+      },
+      "practice_problems": {
+        "beginner": {
+          "count": 10,
+          "source": "Apna College + Love Babbar easy"
+        },
+        "intermediate": {
+          "count": 15,
+          "source": "Striver + Love Babbar medium"
+        },
+        "advanced": {
+          "count": 10,
+          "source": "Striver hard + Company questions"
+        },
+        "total_problems": 35,
+        "estimated_time": "40-50 hours"
+      },
+      "implementation_guide": {
+        "language": "C++",
+        "cpp_version": "C++17",
+        "stl_libraries": [
+          "vector",
+          "algorithm",
+          "queue",
+          "stack",
+          "unordered_map"
+        ],
+        "coding_standards": "Industry-standard practices",
+        "templates": "Ready-to-use templates for bit_manipulation problems",
+        "optimization_tips": [
+          "Time complexity optimization",
+          "Space complexity reduction"
+        ]
+      },
+      "interview_questions": [
+        "Explain the core concepts of Bit Manipulation",
+        "What are the time and space complexities of common bit_manipulation operations?",
+        "When would you choose bit_manipulation over other data structures/algorithms?",
+        "Implement a basic bit_manipulation solution in C++",
+        "Optimize this bit_manipulation solution for better performance"
+      ],
+      "youtube_playlists": [
+        {
+          "creator": "Striver (TakeUForward)",
+          "playlist": "A2Z DSA Course - Bit_Manipulation",
+          "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2",
+          "focus": "Complete theoretical + practical coverage"
+        },
+        {
+          "creator": "Love Babbar (CodeHelp)",
+          "playlist": "DSA Supreme - Bit_Manipulation",
+          "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+          "focus": "450 problem-based learning"
+        },
+        {
+          "creator": "Aditya Verma",
+          "playlist": "Bit_Manipulation Patterns",
+          "url": "https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go",
+          "focus": "Pattern-based problem solving"
+        },
+        {
+          "creator": "Apna College",
+          "playlist": "DSA in C++ - Bit_Manipulation",
+          "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ",
+          "focus": "Beginner to advanced placement prep"
+        }
+      ],
+      "additional_resources": {
+        "practice_platforms": [
+          {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/tag/bit_manipulation/"
+          },
+          {
+            "name": "GeeksforGeeks",
+            "url": "https://www.geeksforgeeks.org/bit_manipulation/"
+          },
+          {
+            "name": "CodeChef",
+            "url": "https://www.codechef.com/practice"
+          },
+          {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/problemset"
+          }
+        ],
+        "books": [
+          "Introduction to Algorithms (CLRS)",
+          "Algorithms by Robert Sedgewick",
+          "Data Structures and Algorithms Made Easy"
+        ],
+        "articles": [
+          "GeeksforGeeks bit_manipulation articles",
+          "CP-Algorithms bit_manipulation section",
+          "Topcoder bit_manipulation tutorials"
+        ]
+      }
+    }
+  }
+}
