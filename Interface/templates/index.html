@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Advanced Personal Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static_files', filename='styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Background Elements -->
+        <div class="background-gradient"></div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h1 class="logo-text">NEXUS</h1>
+                </div>
+                <div class="status-indicator online"></div>
+            </div>
+
+            <div class="nav-menu">
+                <a href="/" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/chat" class="nav-item" data-page="chat">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat</span>
+                </a>
+                <a href="/assistant" class="nav-item" data-page="assistant">
+                    <i class="fas fa-robot"></i>
+                    <span>Assistant</span>
+                </a>
+                <a href="/analytics" class="nav-item" data-page="analytics">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </div>
+
+            <!-- Voice Control -->
+            <div class="voice-control">
+                <button class="voice-btn" id="voiceBtn">
+                    <i class="fas fa-microphone"></i>
+                    <div class="voice-ripple"></div>
+                </button>
+                <span class="voice-status">Ready to listen</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <h2 class="page-title">Dashboard</h2>
+                    <div class="breadcrumb">
+                        <span>Home</span> / <span class="current">Dashboard</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="currentTime"></span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-calendar"></i>
+                            <span id="currentDate"></span>
+                        </div>
+                    </div>
+                    <button class="interrupt-btn" id="interruptBtn">
+                        <i class="fas fa-stop"></i>
+                        Stop
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>{{ stats.active_tasks }}</h3>
+                            <p>Active Tasks</p>
+                        </div>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +12%
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>{{ stats.meetings_today }}</h3>
+                            <p>Meetings Today</p>
+                        </div>
+                        <div class="stat-trend neutral">
+                            <i class="fas fa-minus"></i>
+                            0%
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>${{ stats.monthly_expenses }}</h3>
+                            <p>Monthly Expenses</p>
+                        </div>
+                        <div class="stat-trend negative">
+                            <i class="fas fa-arrow-down"></i>
+                            -5%
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>{{ stats.fitness_score }}%</h3>
+                            <p>Fitness Score</p>
+                        </div>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +8%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Dashboard Widgets -->
+                <div class="dashboard-widgets">
+                    <!-- Quick Actions -->
+                    <div class="widget quick-actions">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="action-grid">
+                                <button class="action-btn" data-action="schedule-meeting">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    <span>Schedule Meeting</span>
+                                </button>
+                                <button class="action-btn" data-action="send-email">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Send Email</span>
+                                </button>
+                                <button class="action-btn" data-action="add-expense">
+                                    <i class="fas fa-receipt"></i>
+                                    <span>Add Expense</span>
+                                </button>
+                                <button class="action-btn" data-action="check-weather">
+                                    <i class="fas fa-cloud-sun"></i>
+                                    <span>Weather</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Feed -->
+                    <div class="widget activity-feed">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-stream"></i> Recent Activity</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>New chat message received</p>
+                                        <span class="activity-time">2 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-calendar"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Meeting reminder: Team Standup</p>
+                                        <span class="activity-time">15 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Expense added: Coffee - $4.50</p>
+                                        <span class="activity-time">1 hour ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Status -->
+                    <div class="widget system-status">
+                        <div class="widget-header">
+                            <h3><i class="fas fa-cog"></i> System Status</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="status-grid">
+                                <div class="status-item">
+                                    <div class="status-label">Voice Recognition</div>
+                                    <div class="status-indicator online"></div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-label">AI Processing</div>
+                                    <div class="status-indicator online"></div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-label">Database</div>
+                                    <div class="status-indicator online"></div>
+                                </div>
+                                <div class="status-item">
+                                    <div class="status-label">Network</div>
+                                    <div class="status-indicator online"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Jarvis Animation Overlay -->
+    <div class="jarvis-overlay" id="jarvisOverlay">
+        <div class="jarvis-animation">
+            <img src="{{ url_for('static_files', filename='jarvis.gif') }}" alt="Jarvis" id="jarvisGif">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="{{ url_for('static_files', filename='app.js') }}"></script>
+</body>
+</html>

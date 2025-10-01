@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Assistant - Personal Life Management</title>
+    <link rel="stylesheet" href="{{ url_for('static_files', filename='styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Background Elements -->
+        <div class="background-gradient"></div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h1 class="logo-text">NEXUS</h1>
+                </div>
+                <div class="status-indicator online"></div>
+            </div>
+
+            <div class="nav-menu">
+                <a href="/" class="nav-item" data-page="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/chat" class="nav-item" data-page="chat">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat</span>
+                </a>
+                <a href="/assistant" class="nav-item active" data-page="assistant">
+                    <i class="fas fa-robot"></i>
+                    <span>Assistant</span>
+                </a>
+                <a href="/analytics" class="nav-item" data-page="analytics">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </div>
+
+            <!-- Voice Control -->
+            <div class="voice-control">
+                <button class="voice-btn" id="voiceBtn">
+                    <i class="fas fa-microphone"></i>
+                    <div class="voice-ripple"></div>
+                </button>
+                <span class="voice-status">Ready to listen</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <h2 class="page-title">Personal Assistant</h2>
+                    <div class="breadcrumb">
+                        <span>Home</span> / <span class="current">Assistant</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="assistant-status">
+                        <div class="status-dot online"></div>
+                        <span>Assistant Active</span>
+                    </div>
+                    <button class="interrupt-btn" id="interruptBtn">
+                        <i class="fas fa-stop"></i>
+                        Stop
+                    </button>
+                </div>
+            </header>
+
+            <!-- Assistant Content -->
+            <div class="assistant-container">
+                <!-- Assistant Tabs -->
+                <div class="assistant-tabs">
+                    <button class="tab-btn active" data-tab="overview">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Overview
+                    </button>
+                    <button class="tab-btn" data-tab="calendar">
+                        <i class="fas fa-calendar"></i>
+                        Calendar
+                    </button>
+                    <button class="tab-btn" data-tab="tasks">
+                        <i class="fas fa-tasks"></i>
+                        Tasks
+                    </button>
+                    <button class="tab-btn" data-tab="expenses">
+                        <i class="fas fa-dollar-sign"></i>
+                        Expenses
+                    </button>
+                    <button class="tab-btn" data-tab="health">
+                        <i class="fas fa-heartbeat"></i>
+                        Health
+                    </button>
+                    <button class="tab-btn" data-tab="contacts">
+                        <i class="fas fa-address-book"></i>
+                        Contacts
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content-container">
+                    <!-- Overview Tab -->
+                    <div class="tab-content active" id="overview">
+                        <div class="overview-grid">
+                            <!-- Daily Summary -->
+                            <div class="summary-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-sun"></i> Today's Summary</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="summary-item">
+                                        <span class="summary-label">Meetings</span>
+                                        <span class="summary-value">3 scheduled</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Tasks</span>
+                                        <span class="summary-value">5 pending</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Expenses</span>
+                                        <span class="summary-value">$47.50</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Fitness</span>
+                                        <span class="summary-value">78% goal</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Actions -->
+                            <div class="quick-actions-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="action-buttons">
+                                        <button class="action-button" data-action="add-meeting">
+                                            <i class="fas fa-calendar-plus"></i>
+                                            <span>Add Meeting</span>
+                                        </button>
+                                        <button class="action-button" data-action="add-task">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <span>Add Task</span>
+                                        </button>
+                                        <button class="action-button" data-action="add-expense">
+                                            <i class="fas fa-receipt"></i>
+                                            <span>Add Expense</span>
+                                        </button>
+                                        <button class="action-button" data-action="log-workout">
+                                            <i class="fas fa-dumbbell"></i>
+                                            <span>Log Workout</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Activity -->
+                            <div class="activity-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="activity-timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">
+                                                <i class="fas fa-calendar"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>Team standup meeting scheduled</p>
+                                                <span class="timeline-time">10 minutes ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>Task "Review reports" completed</p>
+                                                <span class="timeline-time">1 hour ago</span>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-icon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>Expense added: Coffee - $4.50</p>
+                                                <span class="timeline-time">2 hours ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Tab -->
+                    <div class="tab-content" id="calendar">
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button class="calendar-nav" id="prevMonth">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h3 id="currentMonth">December 2024</h3>
+                                <button class="calendar-nav" id="nextMonth">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </div>
+                            <div class="calendar-events">
+                                <h4>Upcoming Events</h4>
+                                <div class="event-list" id="eventList">
+                                    <div class="event-item">
+                                        <div class="event-time">09:00 AM</div>
+                                        <div class="event-details">
+                                            <h5>Team Standup</h5>
+                                            <p>Daily team synchronization</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-item">
+                                        <div class="event-time">02:00 PM</div>
+                                        <div class="event-details">
+                                            <h5>Client Meeting</h5>
+                                            <p>Project review and feedback</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tasks Tab -->
+                    <div class="tab-content" id="tasks">
+                        <div class="tasks-container">
+                            <div class="tasks-header">
+                                <h3>Task Management</h3>
+                                <button class="add-task-btn" id="addTaskBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Add Task
+                                </button>
+                            </div>
+                            
+                            <div class="task-filters">
+                                <button class="filter-btn active" data-filter="all">All</button>
+                                <button class="filter-btn" data-filter="pending">Pending</button>
+                                <button class="filter-btn" data-filter="completed">Completed</button>
+                                <button class="filter-btn" data-filter="overdue">Overdue</button>
+                            </div>
+
+                            <div class="task-list" id="taskList">
+                                <div class="task-item pending">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task1">
+                                        <label for="task1"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <h4>Review project requirements</h4>
+                                        <p>Analyze client requirements and create technical specifications</p>
+                                        <div class="task-meta">
+                                            <span class="task-priority high">High Priority</span>
+                                            <span class="task-due">Due: Today</span>
+                                        </div>
+                                    </div>
+                                    <div class="task-actions">
+                                        <button class="task-action-btn">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="task-action-btn">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="task-item pending">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task2">
+                                        <label for="task2"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <h4>Update documentation</h4>
+                                        <p>Update API documentation with latest changes</p>
+                                        <div class="task-meta">
+                                            <span class="task-priority medium">Medium Priority</span>
+                                            <span class="task-due">Due: Tomorrow</span>
+                                        </div>
+                                    </div>
+                                    <div class="task-actions">
+                                        <button class="task-action-btn">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="task-action-btn">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expenses Tab -->
+                    <div class="tab-content" id="expenses">
+                        <div class="expenses-container">
+                            <div class="expenses-header">
+                                <h3>Expense Tracking</h3>
+                                <button class="add-expense-btn" id="addExpenseBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Add Expense
+                                </button>
+                            </div>
+
+                            <div class="expense-summary">
+                                <div class="summary-stats">
+                                    <div class="expense-stat">
+                                        <h4>This Month</h4>
+                                        <p class="amount">$847.50</p>
+                                    </div>
+                                    <div class="expense-stat">
+                                        <h4>This Week</h4>
+                                        <p class="amount">$156.20</p>
+                                    </div>
+                                    <div class="expense-stat">
+                                        <h4>Today</h4>
+                                        <p class="amount">$47.50</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="expense-list" id="expenseList">
+                                <div class="expense-item">
+                                    <div class="expense-icon">
+                                        <i class="fas fa-coffee"></i>
+                                    </div>
+                                    <div class="expense-details">
+                                        <h5>Coffee & Breakfast</h5>
+                                        <p>Morning coffee and croissant</p>
+                                        <span class="expense-category">Food & Dining</span>
+                                    </div>
+                                    <div class="expense-amount">
+                                        <span class="amount">$12.50</span>
+                                        <span class="date">Dec 20, 2024</span>
+                                    </div>
+                                </div>
+
+                                <div class="expense-item">
+                                    <div class="expense-icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div class="expense-details">
+                                        <h5>Uber Ride</h5>
+                                        <p>Trip to downtown office</p>
+                                        <span class="expense-category">Transportation</span>
+                                    </div>
+                                    <div class="expense-amount">
+                                        <span class="amount">$35.00</span>
+                                        <span class="date">Dec 20, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health Tab -->
+                    <div class="tab-content" id="health">
+                        <div class="health-container">
+                            <div class="health-header">
+                                <h3>Health & Fitness</h3>
+                                <button class="log-workout-btn" id="logWorkoutBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Log Workout
+                                </button>
+                            </div>
+
+                            <div class="health-dashboard">
+                                <div class="health-card">
+                                    <div class="health-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                    <div class="health-info">
+                                        <h4>Fitness Score</h4>
+                                        <p class="health-value">78%</p>
+                                        <p class="health-change">+5% this week</p>
+                                    </div>
+                                </div>
+
+                                <div class="health-card">
+                                    <div class="health-icon">
+                                        <i class="fas fa-running"></i>
+                                    </div>
+                                    <div class="health-info">
+                                        <h4>Steps Today</h4>
+                                        <p class="health-value">8,432</p>
+                                        <p class="health-change">Goal: 10,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="health-card">
+                                    <div class="health-icon">
+                                        <i class="fas fa-dumbbell"></i>
+                                    </div>
+                                    <div class="health-info">
+                                        <h4>Workouts</h4>
+                                        <p class="health-value">3</p>
+                                        <p class="health-change">This week</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recent-workouts">
+                                <h4>Recent Workouts</h4>
+                                <div class="workout-list">
+                                    <div class="workout-item">
+                                        <div class="workout-type">
+                                            <i class="fas fa-running"></i>
+                                            <span>Morning Run</span>
+                                        </div>
+                                        <div class="workout-details">
+                                            <span>30 minutes • 5.2 km</span>
+                                            <span class="workout-date">Dec 19, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="workout-item">
+                                        <div class="workout-type">
+                                            <i class="fas fa-dumbbell"></i>
+                                            <span>Strength Training</span>
+                                        </div>
+                                        <div class="workout-details">
+                                            <span>45 minutes • Upper body</span>
+                                            <span class="workout-date">Dec 18, 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contacts Tab -->
+                    <div class="tab-content" id="contacts">
+                        <div class="contacts-container">
+                            <div class="contacts-header">
+                                <h3>Contact Management</h3>
+                                <button class="add-contact-btn" id="addContactBtn">
+                                    <i class="fas fa-plus"></i>
+                                    Add Contact
+                                </button>
+                            </div>
+
+                            <div class="contact-search">
+                                <div class="search-input-wrapper">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" placeholder="Search contacts..." id="contactSearch">
+                                </div>
+                            </div>
+
+                            <div class="contact-list" id="contactList">
+                                <div class="contact-item">
+                                    <div class="contact-avatar">
+                                        <img src="https://via.placeholder.com/40" alt="John Doe">
+                                    </div>
+                                    <div class="contact-info">
+                                        <h4>John Doe</h4>
+                                        <p>Project Manager</p>
+                                        <span class="contact-email">john.doe@company.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <button class="contact-action-btn" title="Call">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                        <button class="contact-action-btn" title="Email">
+                                            <i class="fas fa-envelope"></i>
+                                        </button>
+                                        <button class="contact-action-btn" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item">
+                                    <div class="contact-avatar">
+                                        <img src="https://via.placeholder.com/40" alt="Jane Smith">
+                                    </div>
+                                    <div class="contact-info">
+                                        <h4>Jane Smith</h4>
+                                        <p>Designer</p>
+                                        <span class="contact-email">jane.smith@company.com</span>
+                                    </div>
+                                    <div class="contact-actions">
+                                        <button class="contact-action-btn" title="Call">
+                                            <i class="fas fa-phone"></i>
+                                        </button>
+                                        <button class="contact-action-btn" title="Email">
+                                            <i class="fas fa-envelope"></i>
+                                        </button>
+                                        <button class="contact-action-btn" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Jarvis Animation Overlay -->
+    <div class="jarvis-overlay" id="jarvisOverlay">
+        <div class="jarvis-animation">
+            <img src="{{ url_for('static_files', filename='jarvis.gif') }}" alt="Jarvis" id="jarvisGif">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="{{ url_for('static_files', filename='app.js') }}"></script>
+    <script src="{{ url_for('static_files', filename='assistant.js') }}"></script>
+</body>
+</html>
